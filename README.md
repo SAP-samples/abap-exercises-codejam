@@ -25,10 +25,10 @@ If you finish an exercise early, please resist the temptation to continue with t
 Here's an overview of the exercises in this CodeJam.
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 01 - Hello World](exercises/ex1/)
-- [Exercise 02 - Consuming Services via HTTP](exercises/ex2/)
-- [Exercise 02 - ABAP RESTFul Programming Model - Unmanaged](exercises/ex3/)
-- [Exercise 03 - ABAP RESTFul Programming Model - Managed](exercises/ex4/)
+- [Exercise 1 - Hello World](exercises/ex1/)
+- [Exercise 2 - Consuming Services via HTTP](exercises/ex2/)
+- [Exercise 3 - ABAP RESTFul Programming Model - Unmanaged](exercises/ex3/)
+- [Exercise 4 - ABAP RESTFul Programming Model - Managed](exercises/ex4/)
 
 ### Further experimentation
 
