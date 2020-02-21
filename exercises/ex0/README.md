@@ -42,4 +42,4 @@ After completing these steps...
 ## Summary
 
 Now that you have connected to the system, logged on, and created your package, you are ready to start building your application.  
-Continue to [Exercise 01](exercises/ex1/).
+Continue to - [Exercise 1 - Hello World](../ex1/readme.md)

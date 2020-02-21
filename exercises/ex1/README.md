@@ -61,12 +61,12 @@ After completing these steps...
 ```abap
 DATA(lt_params) = request->get_form_fields(  ).
 READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-    IF sy-subrc <> 0.
-      response->set_status( i_code = 400
-                       i_reason = 'Bad request').
-      RETURN.
-    ENDIF.
-    CASE lr_params->value.
+  IF sy-subrc <> 0.
+    response->set_status( i_code = 400
+                     i_reason = 'Bad request').
+    RETURN.
+  ENDIF.
+  CASE lr_params->value.
       WHEN `hello`.
         response->set_text( |Hello World! | ).
       WHEN `timestamp`.
@@ -74,8 +74,8 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
                              cl_abap_context_info=>get_user_technical_name(  ) } | &&
                               | on {  cl_abap_context_info=>get_system_date() DATE = ENVIRONMENT } | &&
                               | at { cl_abap_context_info=>get_system_time(  ) TIME = ENVIRONMENT } | ).
-  WHEN OTHERS.
-   response->set_status( i_code = 400 i_reason = 'Bad request').
+      WHEN OTHERS.
+      response->set_status( i_code = 400 i_reason = 'Bad request').
   ENDCASE.
 ```
 
@@ -115,4 +115,4 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
 
 You've now...
 
-Continue to [Exercise 02](exercises/ex2/).
+Continue to - [Exercise 2 - Consuming Services via HTTP ](../ex2/readme.md)
