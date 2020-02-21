@@ -7,8 +7,7 @@ In this exercise, you will connect to the system and create your package. Be sur
 
 After completing these steps...
 
-1.  Access the SCP, ABAP Environment Trial system by following the directions outlined in this tutorial. Once complete, return to this document and continue with step 2.  https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html
-
+1.  Access the SCP, ABAP Environment Trial system by following the directions outlined in this [tutorial](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html). Once complete, return to this document and continue with step 2.  
 
 2.	Right-click on the “Favorite Packages“ and choose “Add Package“.
 
@@ -18,7 +17,7 @@ After completing these steps...
 
 ![](/exercises/ex0/images/00_00_0030.png)
 
-4.	Under the “Favorite Packages” folder, expand the ZLOCAL folder.  
+4.	Under the “Favorite Packages” folder, expand the ZLOCAL folder.
 
 ![](/exercises/ex0/images/00_00_0040.png)
 
