@@ -30,29 +30,35 @@ Here's an overview of the exercises in this CodeJam.
 - [Exercise 3 - ABAP RESTFul Programming Model - Unmanaged](exercises/ex3/)
 - [Exercise 4 - ABAP RESTFul Programming Model - Managed](exercises/ex4/)
 
+<!---
 ### Further experimentation
 
 If you want to further your learning based on what you've built in these exercises, we suggest you extend the workflow definition you've created to add more features. For example, you could set up a Mail Task with appropriate configuration to send a message.
+-->
 
+<!---
 ### Feedback
 
 At the end of this CodeJam, we would be really grateful if you could spend a minute providing us with your thoughts in this [feedback form](https://bit.ly/codejam-workflow-feedback). Thank you.
+
+-->
 
 
 ## Requirements
 
 The requirements to follow the exercises in this repository, including hardware and software, are detailed in the [prerequisites](prerequisites.md) file.
 
-
+<!---
 ## Download and installation
 
 You do not need to download this repository nor install anything from it. You can just follow the exercises by visiting each of them as listed in the [exercises](#the-exercises) section.
+-->
 
-
+<!---
 ## How to obtain support
 
 Support for the content in this repository is available during CodeJam events, for which this content has been designed. Otherwise, this content is provided "as-is" with no other support.
-
+-->
 
 ## License
 
