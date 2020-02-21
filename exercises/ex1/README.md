@@ -115,4 +115,4 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
 
 You've now...
 
-Continue to - [Exercise 2 - Consuming Services via HTTP ](../ex2/readme.md)
+Continue to - [Exercise 2 - Consuming Services via HTTP ](../ex2/README.MD)
