@@ -7,49 +7,39 @@ In this exercise, we will create a very simple HTTP service in ABAP which can th
 After completing these steps...
 
 1. Right-click on your package and choose “New“, “Other ABAP Repository Object“.
-
 ![](/exercises/ex1/images/01_01_0010.png)
+<br>
 
 2. Expand “Connectivity” folder and choose “HTTP Service”.  Click “Next”.
-
 ![](/exercises/ex1/images/01_01_0020.png)
-
+<br>
 3.	Name the service as ZHELLO_WORLD_XXX where XXX is your group number.  Give a meaningful description.  Leave the default name for the Handler Class.  Click “Next”.  Make sure to replace XXX with your group number.
-
 ![](/exercises/ex1/images/01_01_0030.png)
-
+<br>
 4.	Click “Finish”. 
-
 ![](/exercises/ex1/images/01_01_0040.png)
-
+<br>
 5.	Click on “Handler Class“.
-
 ![](/exercises/ex1/images/01_01_0050.png)
-
+<br>
 6.	The shell of the handler class is then shown.  Here we need to create the implementation for the handle_request method.
-
 ![](/exercises/ex1/images/01_01_0060.png)
-
+<br>
 7.	Insert this line of code in the HANDLE_REQUEST method.
-
-```response->set_text( |Hello World! | ).```
-      
+  ```response->set_text( |Hello World! | ).```
+<br>
 8.	Your method should now look like this. 
-
 ![](/exercises/ex1/images/01_01_0080.png)
-
+<br>
 9.	Save and activate your work.
-
 ![](/exercises/ex1/images/01_01_0090.png)
-
+<br>
 10.	Return to the HTTP Service definition and click on URL
-
 ![](/exercises/ex1/images/01_01_0100.png)
-
+<br>
 11.	The browser should open where you may be asked to log in.  Log in and you should get Hello World! Congratulations!
-
 ![](/exercises/ex1/images/01_01_0110.png)
-
+<br>
 
 
 ## Exercise 1.2 Extending Hello World
@@ -57,7 +47,6 @@ After completing these steps...
 After completing these steps...
 
 1.	Return to the handler class and modify the hand_request method as shown here.  Call the get_form_fields method of the request object to get URL parameters, then check for specific commands such as “hello“ and “timestamp“.
-
 ```abap
 DATA(lt_params) = request->get_form_fields(  ).
 READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
@@ -78,7 +67,7 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
       response->set_status( i_code = 400 i_reason = 'Bad request').
   ENDCASE.
 ```
-
+<br>
 2.	You code should now look like this. 
  
 ![](/exercises/ex1/images/01_02_0020.png)
