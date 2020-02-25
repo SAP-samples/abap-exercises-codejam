@@ -4,7 +4,7 @@ In this exercise, we will create a very simple HTTP service in ABAP which can th
 
 ## Exercise 1.1 Creating Hello World
 
-After completing these steps...
+After completing these steps you will have created an HTTP Service, an HTTP Handler Class, and executed your HTTP service from the browser.
 
 1. Right-click on your package and choose “New“, “Other ABAP Repository Object“.
 <br>![](/exercises/ex1/images/01_01_0010.png)
@@ -45,7 +45,7 @@ response->set_text( |Hello World! | ).
 
 ## Exercise 1.2 Extending Hello World
 
-After completing these steps...
+After completing these steps you will have modified your HTTP Handler Class to handle passing of URL parameters.
 
 1.	Return to the handler class and modify the hand_request method as shown here.  Call the get_form_fields method of the request object to get URL parameters, then check for specific commands such as “hello“ and “timestamp“.
 ```abap
@@ -95,6 +95,6 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
 
 ## Summary
 
-You've now...
+You've now created your Hello World application using ABAP, and exposed it as an HTTP service. 
 
 Continue to - [Exercise 2 - Consuming Services via HTTP ](../ex2/README.md)
