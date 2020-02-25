@@ -7,37 +7,39 @@ In this exercise, we will create a very simple HTTP service in ABAP which can th
 After completing these steps...
 
 1. Right-click on your package and choose “New“, “Other ABAP Repository Object“.
-<br>![](/exercises/ex1/images/01_01_0010.png)<br>
+<br>![](/exercises/ex1/images/01_01_0010.png)
 
 2. Expand “Connectivity” folder and choose “HTTP Service”.  Click “Next”.
-<br>![](/exercises/ex1/images/01_01_0020.png)<br>
+<br>![](/exercises/ex1/images/01_01_0020.png)
 
 3.	Name the service as ZHELLO_WORLD_XXX where XXX is your group number.  Give a meaningful description.  Leave the default name for the Handler Class.  Click “Next”.  Make sure to replace XXX with your group number.
-<br>![](/exercises/ex1/images/01_01_0030.png)<br>
+<br>![](/exercises/ex1/images/01_01_0030.png)
 
 4.	Click “Finish”. 
-<br>![](/exercises/ex1/images/01_01_0040.png)<br>
+<br>![](/exercises/ex1/images/01_01_0040.png)
 
 5.	Click on “Handler Class“.
-<br>![](/exercises/ex1/images/01_01_0050.png)<br>
+<br>![](/exercises/ex1/images/01_01_0050.png)
 
 6.	The shell of the handler class is then shown.  Here we need to create the implementation for the handle_request method.
-<br>![](/exercises/ex1/images/01_01_0060.png)<br>
+<br>![](/exercises/ex1/images/01_01_0060.png)
 
 7.	Insert this line of code in the HANDLE_REQUEST method.
-```response->set_text( |Hello World! | ). ```
+```abap
+response->set_text( |Hello World! | ). 
+```
 
 8.	Your method should now look like this. 
-<br>![](/exercises/ex1/images/01_01_0080.png)<br>
+<br>![](/exercises/ex1/images/01_01_0080.png)
 
 9.	Save and activate your work.
-<br>![](/exercises/ex1/images/01_01_0090.png)<br>
+<br>![](/exercises/ex1/images/01_01_0090.png)
 
 10.	Return to the HTTP Service definition and click on URL
-<br>![](/exercises/ex1/images/01_01_0100.png)<br>
+<br>![](/exercises/ex1/images/01_01_0100.png)
 
 11.	The browser should open where you may be asked to log in.  Log in and you should get Hello World! Congratulations!
-<br>![](/exercises/ex1/images/01_01_0110.png)<br>
+<br>![](/exercises/ex1/images/01_01_0110.png)
 
 
 
