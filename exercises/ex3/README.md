@@ -1828,7 +1828,7 @@ annotate view Z_C_BookingSupplement_U_XXX with
 8.	Save and activate.
 <br>![](/exercises/ex3/images/03_04_0080.png)
 
-## Exercise 3.5 Create the Projection Behavior Definitions
+## Exercise 3.5 Create the Behavior Definition Projection
 
 After completing these steps...
 
