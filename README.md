@@ -35,7 +35,7 @@ Here's an overview of the exercises in this CodeJam.
     - [Exercise 3.3 - Create the Projection Views](exercises/ex3#exercise-33-create-the-projection-views)
     - [Exercise 3.4 - Create the Metadata Extensions](exercises/ex3#exercise-34-create-the-metadata-extensions)
     - [Exercise 3.5 - Create the Projection Behavior Defintions](exercises/ex3#exercise-35-create-the-projection-behavior-definitions)
-    - [Exercise 3.6 - Create the Sevice Definition and Service Binding](exercises/ex3#exercise-36-create-the-service-defintion-and-service-binding)
+    - [Exercise 3.6 - Create the Sevice Definition and Service Binding](exercises/ex3#exercise-36-create-the-service-definition-and-service-binding)
 - [Exercise 4 - ABAP RESTFul Programming Model - Managed](exercises/ex4/)
 
 <!---
