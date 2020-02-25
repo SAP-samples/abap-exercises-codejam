@@ -24,7 +24,7 @@ After completing these steps...
 6.	The shell of the handler class is then shown.  Here we need to create the implementation for the handle_request method.
 <br>![](/exercises/ex1/images/01_01_0060.png)
 
-7.	Insert this line of code in the HANDLE_REQUEST method.
+7.	Insert this line of code in the *HANDLE_REQUEST* method.
 ```abap
 response->set_text( |Hello World! | ). 
 ```
@@ -70,28 +70,28 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
 ```
 
 2.	You code should now look like this.
-![](/exercises/ex1/images/01_02_0020.png)
+<br>![](/exercises/ex1/images/01_02_0020.png)
 
 3.	Save and activate your work.
-![](/exercises/ex1/images/01_02_0030.png)
+<br>![](/exercises/ex1/images/01_02_0030.png)
 
 4.	Return to the HTTP Service definition and click on URL.
-![](/exercises/ex1/images/01_02_0040.png)
+<br>![](/exercises/ex1/images/01_02_0040.png)
 
 5.	You should get a 400 error because now your service is expecting a URL parameter to determine what it needs to do.  
-![](/exercises/ex1/images/01_02_0050.png)
+<br>![](/exercises/ex1/images/01_02_0050.png)
 
 6.	Go to the URL in the browser windown and add the parameter as shown.
-![](/exercises/ex1/images/01_02_0060.png)
+<br>![](/exercises/ex1/images/01_02_0060.png)
 
 7.	Now you should once again get the “Hello World!“.
-![](/exercises/ex1/images/01_02_0070.png)
+<br>![](/exercises/ex1/images/01_02_0070.png)
 
 8.	Finally, change the cmd parameter value in the URL to “timestamp“ and hit enter.
-![](/exercises/ex1/images/01_02_0080.png)
+<br>![](/exercises/ex1/images/01_02_0080.png)
 
 9.	Now your service should return something a bit more.
-![](/exercises/ex1/images/01_02_0090.png)
+<br>![](/exercises/ex1/images/01_02_0090.png)
 
 ## Summary
 
