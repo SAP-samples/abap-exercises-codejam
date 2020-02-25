@@ -14,10 +14,8 @@ After completing these steps...
 
 3.	Name the service as ZHELLO_WORLD_XXX where XXX is your group number.  Give a meaningful description.  Leave the default name for the Handler Class.  Click “Next”.  Make sure to replace XXX with your group number.
 ![](/exercises/ex1/images/01_01_0030.png)
-
 4.	Click “Finish”.
 ![](/exercises/ex1/images/01_01_0040.png)
-
 5.	Click on “Handler Class“.
 ![](/exercises/ex1/images/01_01_0050.png)
 
