@@ -30,6 +30,12 @@ Here's an overview of the exercises in this CodeJam.
     - [Exercise 1.2 - Extending Hello World](exercises/ex1#exercise-12-extending-hello-world)
 - [Exercise 2 - Consuming Services via HTTP](exercises/ex2/)
 - [Exercise 3 - ABAP RESTFul Programming Model - Unmanaged](exercises/ex3/)
+    - [Exercise 3.1 - Create the Business Object Views](exercises/ex1#exercise-31-create-the-business-objects-views)
+    - [Exercise 3.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex1#exercise-32-create-the-business-objects-behavior-definition-and-implementation)
+    - [Exercise 3.3 - Create the Projection Views](exercises/ex1#exercise-33-create-the-projection-views)
+    - [Exercise 3.4 - Create the Metadata Extensions](exercises/ex1#exercise-34-create-the-metadata-extenstions)
+    - [Exercise 3.5 - Create the Projection Behavior Defintions](exercises/ex1#exercise-35-create-the-projection-behavior-definitions)
+    - [Exercise 3.6 - Create the Sevice Definition and Service Binding](exercises/ex1#exercise-36-create-the-service-defintion-and-service-binding)
 - [Exercise 4 - ABAP RESTFul Programming Model - Managed](exercises/ex4/)
 
 <!---
