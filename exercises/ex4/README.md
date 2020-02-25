@@ -7,7 +7,7 @@ In this exercise we will explore the new ABAP RESTful Programming Model.  We wil
 After completing these steps...
 
 1.	From your group package, right-click and choose “New“, then “Other ABAP Repository Object“.
-![](/exercises/ex3/images/03_01_0010.png)
+<br>![](/exercises/ex3/images/03_01_0010.png)
 
 
 
