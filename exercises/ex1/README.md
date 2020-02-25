@@ -2,7 +2,7 @@
 
 In this exercise, we will create a very simple HTTP service in ABAP which can then be called from the browser.
 
-## Exercise 1.1 Hello World
+## Exercise 1.1 Creating Hello World
 
 After completing these steps...
 

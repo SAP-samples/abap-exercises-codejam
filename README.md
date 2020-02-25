@@ -26,6 +26,8 @@ Here's an overview of the exercises in this CodeJam.
 
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Hello World](exercises/ex1/)
+    - [Exercise 1.1 - Create Hello World](exercises/ex1#exercise-11-creating-hello-world)
+    - [Exercise 1.2 - Extending Hello World](exercises/ex1#exercise-12-extending-hello-world))
 - [Exercise 2 - Consuming Services via HTTP](exercises/ex2/)
 - [Exercise 3 - ABAP RESTFul Programming Model - Unmanaged](exercises/ex3/)
 - [Exercise 4 - ABAP RESTFul Programming Model - Managed](exercises/ex4/)
