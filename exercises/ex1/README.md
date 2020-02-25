@@ -8,38 +8,37 @@ After completing these steps...
 
 1. Right-click on your package and choose “New“, “Other ABAP Repository Object“.
 ![](/exercises/ex1/images/01_01_0010.png)
-<br>
 
 2. Expand “Connectivity” folder and choose “HTTP Service”.  Click “Next”.
 ![](/exercises/ex1/images/01_01_0020.png)
-<br>
+
 3.	Name the service as ZHELLO_WORLD_XXX where XXX is your group number.  Give a meaningful description.  Leave the default name for the Handler Class.  Click “Next”.  Make sure to replace XXX with your group number.
 ![](/exercises/ex1/images/01_01_0030.png)
-<br>
+
 4.	Click “Finish”. 
 ![](/exercises/ex1/images/01_01_0040.png)
-<br>
+
 5.	Click on “Handler Class“.
 ![](/exercises/ex1/images/01_01_0050.png)
-<br>
+
 6.	The shell of the handler class is then shown.  Here we need to create the implementation for the handle_request method.
 ![](/exercises/ex1/images/01_01_0060.png)
-<br>
+
 7.	Insert this line of code in the HANDLE_REQUEST method.
-  ```response->set_text( |Hello World! | ).```
-<br>
+ ```response->set_text( |Hello World! | ). ```
+
 8.	Your method should now look like this. 
 ![](/exercises/ex1/images/01_01_0080.png)
-<br>
+
 9.	Save and activate your work.
 ![](/exercises/ex1/images/01_01_0090.png)
-<br>
+
 10.	Return to the HTTP Service definition and click on URL
 ![](/exercises/ex1/images/01_01_0100.png)
-<br>
+
 11.	The browser should open where you may be asked to log in.  Log in and you should get Hello World! Congratulations!
 ![](/exercises/ex1/images/01_01_0110.png)
-<br>
+
 
 
 ## Exercise 1.2 Extending Hello World
@@ -67,37 +66,29 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
       response->set_status( i_code = 400 i_reason = 'Bad request').
   ENDCASE.
 ```
-<br>
-2.	You code should now look like this. 
- 
+
+2.	You code should now look like this.
 ![](/exercises/ex1/images/01_02_0020.png)
 
 3.	Save and activate your work.
-
 ![](/exercises/ex1/images/01_02_0030.png)
 
 4.	Return to the HTTP Service definition and click on URL.
-
 ![](/exercises/ex1/images/01_02_0040.png)
 
 5.	You should get a 400 error because now your service is expecting a URL parameter to determine what it needs to do.  
-
 ![](/exercises/ex1/images/01_02_0050.png)
 
 6.	Go to the URL in the browser windown and add the parameter as shown.
-
 ![](/exercises/ex1/images/01_02_0060.png)
 
 7.	Now you should once again get the “Hello World!“.
-
 ![](/exercises/ex1/images/01_02_0070.png)
 
 8.	Finally, change the cmd parameter value in the URL to “timestamp“ and hit enter.
-
 ![](/exercises/ex1/images/01_02_0080.png)
 
 9.	Now your service should return something a bit more.
-
 ![](/exercises/ex1/images/01_02_0090.png)
 
 ## Summary
