@@ -37,6 +37,14 @@ Here's an overview of the exercises in this CodeJam.
     - [Exercise 3.5 - Create the Projection Behavior Defintions](exercises/ex3#exercise-35-create-the-projection-behavior-definitions)
     - [Exercise 3.6 - Create the Sevice Definition and Service Binding](exercises/ex3#exercise-36-create-the-service-definition-and-service-binding)
 - [Exercise 4 - ABAP RESTFul Programming Model - Managed](exercises/ex4/)
+    - [Exercise 4.1 - Create the Business Object Views](exercises/ex3#exercise-41-create-the-business-objects-views)
+    - [Exercise 4.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex3#exercise-42-create-the-business-object-behavior-definition-and-implementation)
+    - [Exercise 4.3 - Create the Projection Views](exercises/ex3#exercise-43-create-the-projection-views)
+    - [Exercise 4.4 - Create the Metadata Extensions](exercises/ex3#exercise-44-create-the-metadata-extensions)
+    - [Exercise 4.5 - Create the Projection Behavior Defintions](exercises/ex3#exercise-45-create-the-projection-behavior-definitions)
+    - [Exercise 4.6 - Create the Sevice Definition and Service Binding](exercises/ex3#exercise-46-create-the-service-definition-and-service-binding)
+    - [Exercise 4.7 - Add Validations to the Behavior Definitions](exercises/ex3#exercise-47-add-validations-to-the-behavior-definitions)
+    - [Exercise 4.8 - Add Field Attributes and Custom Actions to the Behavior Definitions](exercises/ex3#exercise-47-add-field-attributes-and-custom-actions-to-the-behavior-definitions)
 
 <!---
 ### Further experimentation
