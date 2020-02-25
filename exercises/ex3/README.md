@@ -7,25 +7,25 @@ In this exercise we will explore the new ABAP RESTful Programming Model.  We wil
 After completing these steps...
 
 1.	From your group package, right-click and choose “New“, then “Other ABAP Repository Object“.
-![](/exercises/ex3/images/03_01_0010.png)
+<br>![](/exercises/ex3/images/03_01_0010.png)
 
 2.	Expand Core Data Services and choose “Data Definition”.  Click “Next”.
-![](/exercises/ex3/images/03_01_0020.png)
+<br>![](/exercises/ex3/images/03_01_0020.png)
 
 3.	Enter the name of the CDS view as Z_I_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description.  Click “Next”.
-![](/exercises/ex3/images/03_01_0030.png)
+<br>![](/exercises/ex3/images/03_01_0030.png)
 
 4.	Click “Finish”.
-![](/exercises/ex3/images/03_01_0040.png)
+<br>![](/exercises/ex3/images/03_01_0040.png)
 
 5.	The CDS definition editor will open with the following code.
-![](/exercises/ex3/images/03_01_0050.png)
+<br>![](/exercises/ex3/images/03_01_0050.png)
 
 6.	First, change the name of the sqlViewName annotation as shown here where XXX is your group number.  If you DO NOT want to type all of this code in the following steps, you may copy it from the solution.
-![](/exercises/ex3/images/03_01_0060.png)
+<br>![](/exercises/ex3/images/03_01_0060.png)
 
 7.	There is a lot of code to add here. We’ll try to take it by sections.  This code is not only defining the associations to other tables/views as well as the columns that we want in our view, but also how these columns are presented in the user interface later on. The annotations are what drive this funtionality.  In this first section at the top, make sure that you add these annotations if they are not already there. 
-![](/exercises/ex3/images/03_01_0070.png)
+<br>![](/exercises/ex3/images/03_01_0070.png)
 
 8.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
 ```abap
@@ -70,7 +70,7 @@ define root view Z_I_TRAVEL_U_XXX
 }
 ```
 11.	Save your work, but do not try to activate at this point as we have not created the **Booking** view yet.
-![](/exercises/ex3/images/03_01_0110.png)
+<br>![](/exercises/ex3/images/03_01_0110.png)
 
 12.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX. 
 ```abap
@@ -118,7 +118,7 @@ define view Z_I_BOOKING_U_XXX
 
 ```
 13. Save your work.
-![](/exercises/ex3/images/03_01_0130.png)
+<br>![](/exercises/ex3/images/03_01_0130.png)
 
 14. Use what you have learned and create another view in the same way called Z_I_BOOKINGSUPPLEMENT_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX.
 ```abap
@@ -162,13 +162,13 @@ define view Z_I_BookingSupplement_U_XXX
 
 ```
 15. Save your work.
-![](/exercises/ex3/images/03_01_0150.png)
+<br>![](/exercises/ex3/images/03_01_0150.png)
 
 16. Select all three of the views that you have created.  
-![](/exercises/ex3/images/03_01_0160.png)
+<br>![](/exercises/ex3/images/03_01_0160.png)
 
 17. Right-click on the selection and choose “Activate“.
-![](/exercises/ex3/images/03_01_0170.png)
+<br>![](/exercises/ex3/images/03_01_0170.png)
 
 
 ## Exercise 3.2 Create the Business Object Behavior Definition and Implementation
@@ -176,19 +176,19 @@ define view Z_I_BookingSupplement_U_XXX
 After completing these steps...
 
 1.	Right-click on the Z_I_TRAVEL_U_XXX CDS Artifact and choose “New Behavior Defintion“.
-![](/exercises/ex3/images/03_02_0010.png)
+<br>![](/exercises/ex3/images/03_02_0010.png)
 
 2.	Provide the default description, and change the Implementation Type to “Unmanaged”.  Then click “Next”, then “Finish”.
-![](/exercises/ex3/images/03_02_0020.png)
+<br>![](/exercises/ex3/images/03_02_0020.png)
 
 3.	You will then see the Behavior Defintion editor. You should see 3 seperate behavior definitions here, one for Travel, Bookings, and BookingSupplement. 
-![](/exercises/ex3/images/03_02_0030.png)
+<br>![](/exercises/ex3/images/03_02_0030.png)
 
 4.	Let’s modify this definition.  In this case, we don’t want a single implementation class for Travel, Booking, and BookingSupplement.  Instead lets define the implementation classes specifically for each definition.  First remove that from the first line so that it only contains the unmanaged key word.
-![](/exercises/ex3/images/03_02_0040.png)
+<br>![](/exercises/ex3/images/03_02_0040.png)
 
 5.	Give aliases to all definitions. Also add these lines for the implementation classes for each definition. Be use to replace XXX with your group number.
-![](/exercises/ex3/images/03_02_0050.png)
+<br>![](/exercises/ex3/images/03_02_0050.png)
 
 6.	Inside the definition, add the following code before the create statement in the first definition.  The field keyword here allows you to set specific attributes of fields, for example, to set as read-only  or as required. 
 ```abap
@@ -225,7 +225,7 @@ action set_status_booked result [1] $self;
 ```
 
 10.	Now remove the create keyword, since we will handle the creation of bookings in association with the travel. So we only need the update and delete keywords.
-![](/exercises/ex3/images/03_02_0100.png)
+<br>![](/exercises/ex3/images/03_02_0100.png)
 
 11. After the delete keyword, add the following mapping statement.
 ```abap
@@ -251,7 +251,7 @@ action set_status_booked result [1] $self;
 
 ```
 13.	Now remove the create keyword, since we will handle the creation of bookingsupplement in association with the booking. So we only need the update and delete keywords.
-![](/exercises/ex3/images/03_02_0130.png)
+<br>![](/exercises/ex3/images/03_02_0130.png)
 
 14.	After the delete keyword, add the following mapping statement.
 ```abap
@@ -361,19 +361,19 @@ implementation in class Z_BP_i_bookingsupplement_U_XXX unique
 ```
 
 16.	Save and Activate your work.  Yes, you have not created the behavior implementation classes yet, but that is ok. You can still activate at this point.
-![](/exercises/ex3/images/03_02_0160.png)
+<br>![](/exercises/ex3/images/03_02_0160.png)
 
 17.	Now we will create Behavior Implementations for *Travel, Booking and BookingSupplement*. Right-clilck on your behavior definition and choose, “New Behavior Implementation“.
-![](/exercises/ex3/images/03_02_0170.png)
+<br>![](/exercises/ex3/images/03_02_0170.png)
 
 18.	Give the name of the ABAP Class as Z_BP_I_TRAVEL_U_XXX.  Be sure to replace XXX with your group number. Technically, we refer to this as a “Behavior Pool“.  Click “Next“ and then “Finish“.
-![](/exercises/ex3/images/03_02_0180.png)
+<br>![](/exercises/ex3/images/03_02_0180.png)
 
 19.	The class editor will then be shown.   Click the “Local Types“ tab.
-![](/exercises/ex3/images/03_02_0190.png)
+<br>![](/exercises/ex3/images/03_02_0190.png)
 
 20.	We will create a set of local classes here which will implement the behavior. 
-![](/exercises/ex3/images/03_02_0200.png)
+<br>![](/exercises/ex3/images/03_02_0200.png)
 
 21.	Enter the class definition for lhc_travel as shown here.  This class definition includes methods for all of the require operations.
 ```abap
@@ -856,7 +856,7 @@ ENDCLASS.
 ```
 
 31.	Save and activate your work.
-![](/exercises/ex3/images/03_02_0310.png)
+<br>![](/exercises/ex3/images/03_02_0310.png)
 
 32.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKING_U_XXX.  Copy the following code tot the “Local Types“ tab.  Once again, be sure to replace XXX with your group number in the TYPES statement of the PUBLIC section of the both the message helper local class and the booking handler local class. As you can see, this Behavior Pool contains implementations for the READ, UPDATE and DELETE operations for **Bookings** as well as READ and CREATE for **BookingSupplement**.  
 ```abap
@@ -1243,7 +1243,7 @@ ENDCLASS.
 
 ```
 33.	Save and activate your work.
-![](/exercises/ex3/images/03_02_0330.png)
+<br>![](/exercises/ex3/images/03_02_0330.png)
 
 34.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKINGSUPPLEMENT_U_XXX.  Copy the following code tot the “Local Types“ tab.  Once again, be sure to replace XXX with your group number in the TYPES statement of the PUBLIC section of the both the message helper local class and the booking handler local class. As you can see, this Behavior Pool contains implementations for the UPDATE and DELETE operations for **BookingSupplement**.  
 ```abap
@@ -1445,17 +1445,17 @@ ENDCLASS.
 
 ```
 35.	Save and activate your work.
-![](/exercises/ex3/images/03_02_0350.png)
+<br>![](/exercises/ex3/images/03_02_0350.png)
 
 ## Exercise 3.3 Create the Projection Views
 
 After completing these steps...
 
 1.	Right-click  on the “Data Definitions“ folder and choose “New Data Definition“.
-![](/exercises/ex3/images/03_03_0010.png)
+<br>![](/exercises/ex3/images/03_03_0010.png)
 
 2.	Give the name as Z_C_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description and click “Next”, then “Finish”.
-![](/exercises/ex3/images/03_03_0020.png)
+<br>![](/exercises/ex3/images/03_03_0020.png)
 
 3.	Enter the code as shown here, and replace XXX with your group number. Note, that in the DEFINE ROOT VIEW statement, there ist he extension  AS PROJECTION ON pointing to your Business Object view Z_I_TRAVEL_U_XXX.  In this projection view, not only are we filtering columsn, but we are adding value help declarations as well using annotations.  
 ```abap
@@ -1506,7 +1506,7 @@ define root view entity Z_C_Travel_U_XXX
 
 ```
 4.	Save your work, but don’t try to activate it yet because we haven’t created the projection view for **Booking** or **BookingSupplement** yet.
-![](/exercises/ex3/images/03_03_0040.png)
+<br>![](/exercises/ex3/images/03_03_0040.png)
 
 5.	Use what you have learned and create another projection view called Z_C_BOOKING_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are filtering the columns and adding value helps via annotations.
 ```abap
@@ -1575,7 +1575,7 @@ _BookSupplement: redirected to composition child Z_C_BookingSupplement_U_XXX,
 
 ```
 6.	Save your work.
-![](/exercises/ex3/images/03_03_0060.png)
+<br>![](/exercises/ex3/images/03_03_0060.png)
 
 7.	Use what you have learned and create another projection view called Z_C_BOOKINGSUPPLEMENT_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are filtering the columns and adding value helps via annotations.
 ```abap
@@ -1624,20 +1624,20 @@ define view entity Z_C_BookingSupplement_U_XXX
 ```
 
 8. Save your work.
-![](/exercises/ex3/images/03_03_0080.png)
+<br>![](/exercises/ex3/images/03_03_0080.png)
 
 9.	Select all projection views, and right-click and choose “Activate“.
-![](/exercises/ex3/images/03_03_0090.png)
+<br>![](/exercises/ex3/images/03_03_0090.png)
 
 ## Exercise 3.4 Create the Metadata Extensions
 
 After completing these steps...
 
 1.	Right-click on the Z_C_TRAVEL_U_XXX CDS artifact and choose “New Metadata Extension“.
-![](/exercises/ex3/images/03_04_0010.png)
+<br>![](/exercises/ex3/images/03_04_0010.png)
 
 2.	Give the name as Z_C_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description and click “Next”, then “Finish”.
-![](/exercises/ex3/images/03_04_0020.png)
+<br>![](/exercises/ex3/images/03_04_0020.png)
 
 3.	Enter the code as shown here, and replace XXX with your group number.  Here we are using the @UI annotations to define what the user interface will look like.    
 ```abap
@@ -1712,7 +1712,7 @@ annotate view Z_C_Travel_U_XXX with
 ```
 
 4.	Save and activate.
-![](/exercises/ex3/images/03_04_0040.png)
+<br>![](/exercises/ex3/images/03_04_0040.png)
 
 5.	Use what you have learned and create another metadata extension called Z_C_BOOKING_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are defining the user interface with @UI annotations.
 ```abap
@@ -1783,7 +1783,7 @@ annotate view Z_C_Booking_U_XXX with
 ```
 
 6.	Save and activate.
-![](/exercises/ex3/images/03_04_0060.png)
+<br>![](/exercises/ex3/images/03_04_0060.png)
 
 7.	Use what you have learned and create another metadata extension called Z_C_BOOKINGSUPPLEMENT_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are defining the user interface with @UI annotations.
 ```abap
@@ -1826,36 +1826,36 @@ annotate view Z_C_BookingSupplement_U_XXX with
 ```
 
 8.	Save and activate.
-![](/exercises/ex3/images/03_04_0080.png)
+<br>![](/exercises/ex3/images/03_04_0080.png)
 
 ## Exercise 3.5 Create the Projection Behavior Definitions
 
 After completing these steps...
 
 1.	Select the Z_C_TRAVEL_U_XXX CDS artifact and right-click it and choose “New Behavior Definition“.
-![](/exercises/ex3/images/03_05_0010.png)
+<br>![](/exercises/ex3/images/03_05_0010.png)
 
 2.	Notice the implementation type is Projection. Click “Next”, then “Finish”.
-![](/exercises/ex3/images/03_05_0020.png) 
+<br>![](/exercises/ex3/images/03_05_0020.png) 
 
 3.	The behavior definition is prefilled with all operations and actions of the underlying Business Object.  Define aliases for the behaviors as shown. For now, we will allow all operations.  
-![](/exercises/ex3/images/03_05_0030.png) 
+<br>![](/exercises/ex3/images/03_05_0030.png) 
 
 4.	Save and activate your work.
-![](/exercises/ex3/images/03_05_0040.png) 
+<br>![](/exercises/ex3/images/03_05_0040.png) 
 
 ## Exercise 3.6 Create the Service Definition and Service Binding
 
 After completing these steps...
 
 1.	Select the Z_C_TRAVEL_U_XXX CDS artifact and right-click and choose “New Service Definition“.
-![](/exercises/ex3/images/03_06_0010.png)
+<br>![](/exercises/ex3/images/03_06_0010.png)
 
 2.	Give the name of the service definition as Z_SD_C_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description.  Click “Next“, then “Finish“.
-![](/exercises/ex3/images/03_06_0020.png)
+<br>![](/exercises/ex3/images/03_06_0020.png)
 
 3.	The service definition is prefilled for you.  Here we are exposing only the Z_C_TRAVEL_U_XXX entity.
-![](/exercises/ex3/images/03_06_0030.png)
+<br>![](/exercises/ex3/images/03_06_0030.png)
 
 4.	Update the definition to expose the Z_C_BOOKING_U_XXX entity and Z_C_BOOKINGSUPPLEMENT_U_XXX as well.  Also add aliases to both as shown here. 
 ```abap
@@ -1868,22 +1868,22 @@ define service Z_SD_C_TRAVEL_U_XXX {
 
 ```
 5.	Save and activation your work.
-![](/exercises/ex3/images/03_06_0050.png)
+<br>![](/exercises/ex3/images/03_06_0050.png)
 
 6.	Go to the sevice definition folder and right-click on your service definnition and choose “New Service Binding“.
-![](/exercises/ex3/images/03_06_0060.png)
+<br>![](/exercises/ex3/images/03_06_0060.png)
 
 7.	Give the name as Z_UI_C_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description.  Make sure the binding type is ODATA V2 -UI.  Click “Next“, then “Finish“.
-![](/exercises/ex3/images/03_06_0070.png)
+<br>![](/exercises/ex3/images/03_06_0070.png)
 
 8.	In the service binding, click the “Activate“ button.
-![](/exercises/ex3/images/03_06_0080.png)
+<br>![](/exercises/ex3/images/03_06_0080.png)
 
 9.	Select the Travel entity set, and click “Preview“.
-![](/exercises/ex3/images/03_06_0090.png)
+<br>![](/exercises/ex3/images/03_06_0090.png)
 
 10.	The browser will be launched where it may ask for you to log in.  Here you can preview the data and test the create, update, delete behaviors.  Play around with this preview UI and test your CRUD operations. Set some breakpoints in your code and what methods are triggered in what senarios.
-![](/exercises/ex3/images/03_06_0100.png)
+<br>![](/exercises/ex3/images/03_06_0100.png)
 
 ## Summary
 
