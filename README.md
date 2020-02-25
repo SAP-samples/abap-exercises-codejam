@@ -43,8 +43,8 @@ Here's an overview of the exercises in this CodeJam.
     - [Exercise 4.4 - Create the Metadata Extensions](exercises/ex4#exercise-44-create-the-metadata-extensions)
     - [Exercise 4.5 - Create the Behavior Definition Projection](exercises/ex4#exercise-45-create-the-behavior-definition-projection)
     - [Exercise 4.6 - Create the Sevice Definition and Service Binding](exercises/ex4#exercise-46-create-the-service-definition-and-service-binding)
-    - [Exercise 4.7 - Add Validations to the Behavior Definitions](exercises/ex4#exercise-47-add-validations-to-the-behavior-definitions)
-    - [Exercise 4.8 - Add Field Attributes and Custom Actions to the Behavior Definitions](exercises/ex4#exercise-47-add-field-attributes-and-custom-actions-to-the-behavior-definitions)
+    - [Exercise 4.7 - Add Validations to the Behavior Definition](exercises/ex4#exercise-47-add-validations-to-the-behavior-definition)
+    - [Exercise 4.8 - Add Field Attributes and Custom Actions to the Behavior Definition](exercises/ex4#exercise-47-add-field-attributes-and-custom-actions-to-the-behavior-definition)
 
 <!---
 ### Further experimentation
