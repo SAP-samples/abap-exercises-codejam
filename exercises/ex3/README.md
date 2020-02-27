@@ -1,10 +1,10 @@
 # Exercise 3 - ABAP RESTful Programming Model - Unmanaged
 
-In this exercise we will explore the new ABAP RESTful Programming Model.  We will create views over our data model, define behaviors, and service enable the data model as well.  
+In this exercise we will explore the new ABAP RESTful Programming Model, specifically the Unmanaged Scenario.  The unmanaged scenario provides a framework for the developer to have full control over the CRUD operations of their application. It is designed to allow developers to leverage existing assets, such as existing class/methods and function modules. The developer is fully responsible for handling all aspects of the transaction, from validation and locking of the data, to the save mechanism. We will create views over our data model, define behaviors, and service enable the data model as well.  
 
 ## Exercise 3.1 Create the Business Object Views
 
-After completing these steps...
+After completing these steps you will have created the Business Object Views over the base database tables.
 
 1.	From your group package, right-click and choose “New“, then “Other ABAP Repository Object“.
 <br>![](/exercises/ex3/images/03_01_0010.png)
@@ -173,7 +173,7 @@ define view Z_I_BookingSupplement_U_XXX
 
 ## Exercise 3.2 Create the Business Object Behavior Definition and Implementation
 
-After completing these steps...
+After completing these steps you will hae created the Behavior Definitionand Implementation for your Busines Object Views.  The behavior definition defines what operations are possible for your Business Object. 
 
 1.	Right-click on the Z_I_TRAVEL_U_XXX CDS Artifact and choose “New Behavior Defintion“.
 <br>![](/exercises/ex3/images/03_02_0010.png)
@@ -1449,7 +1449,7 @@ ENDCLASS.
 
 ## Exercise 3.3 Create the Projection Views
 
-After completing these steps...
+After completing these steps you will have created Projection Views over your Business Object Views. The Projection Views are meant to further filter the data which is exposed. 
 
 1.	Right-click  on the “Data Definitions“ folder and choose “New Data Definition“.
 <br>![](/exercises/ex3/images/03_03_0010.png)
@@ -1631,7 +1631,7 @@ define view entity Z_C_BookingSupplement_U_XXX
 
 ## Exercise 3.4 Create the Metadata Extensions
 
-After completing these steps...
+After completing these steps have created the Metadata Extensions. The Metadata Extensions are meant to seperate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
 
 1.	Right-click on the Z_C_TRAVEL_U_XXX CDS artifact and choose “New Metadata Extension“.
 <br>![](/exercises/ex3/images/03_04_0010.png)
@@ -1830,7 +1830,7 @@ annotate view Z_C_BookingSupplement_U_XXX with
 
 ## Exercise 3.5 Create the Behavior Definition Projection
 
-After completing these steps...
+After completing these steps you will have created the Behavior Definition Projection.  This is meant to further restrict the behavior operations. The idea is that you will have one monolithic Business Object data model, while having several Projection Views and Behavior Projections on top. For example, if there were different operations that would be allowed for a "processor" and a "manager", these would be two different Projection Views and Behavior Projections, each exposing differnt data and/or allowing different operations.
 
 1.	Select the Z_C_TRAVEL_U_XXX CDS artifact and right-click it and choose “New Behavior Definition“.
 <br>![](/exercises/ex3/images/03_05_0010.png)
@@ -1846,7 +1846,7 @@ After completing these steps...
 
 ## Exercise 3.6 Create the Service Definition and Service Binding
 
-After completing these steps...
+After completing these steps you will have created the Service Definition which exposes the Projection Views, and the Service Binding which binds the Service Definition to a specific protocal and usage.
 
 1.	Select the Z_C_TRAVEL_U_XXX CDS artifact and right-click and choose “New Service Definition“.
 <br>![](/exercises/ex3/images/03_06_0010.png)
@@ -1887,6 +1887,6 @@ define service Z_SD_C_TRAVEL_U_XXX {
 
 ## Summary
 
-You've now...
+You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, and exposed your data model as an Odata service using the Unmanaged Scenario of the RESTful Programming Model
 
 Continue to - [Exercise 4 - ABAP RESTful Programming Model - Managed ](../ex4/README.md)

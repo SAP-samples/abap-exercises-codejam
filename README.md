@@ -30,6 +30,8 @@ Here's an overview of the exercises in this CodeJam.
     - [Exercise 1.1 - Create Hello World](exercises/ex1#exercise-11-creating-hello-world)
     - [Exercise 1.2 - Extending Hello World](exercises/ex1#exercise-12-extending-hello-world)
 - [Exercise 2 - Consuming Services via HTTP](exercises/ex2/)
+   - [Exercise 2.1 - Create the API Hub Manager Class](exercises/ex3#exercise-21-create-the-api-hub-manager-class)
+    - [Exercise 2.2 - Update Hello World](exercises/ex3#exercise-22-update-hellow-world)
 - [Exercise 3 - ABAP RESTFul Programming Model - Unmanaged](exercises/ex3/)
     - [Exercise 3.1 - Create the Business Object Views](exercises/ex3#exercise-31-create-the-business-objects-views)
     - [Exercise 3.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex3#exercise-32-create-the-business-object-behavior-definition-and-implementation)

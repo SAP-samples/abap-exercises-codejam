@@ -8,9 +8,9 @@ In this exercise, we will use the Bank – Read API, which allows us to retrieve
 
 https://api.sap.com/api/API_BANKDETAIL_SRV/resource
 
-## Exercise 2.1 Hello World
+## Exercise 2.1 Create API Hub Manager Class
 
-After completing these steps...
+After completing these steps you will created a class which calls the whitelisted HTTP connecitivity classes.
 
 1. Right-click on your package and choose “New“, “Other ABAP Repository Object“.
 <br>![](/exercises/ex2/images/02_01_0010.png)
@@ -68,27 +68,31 @@ r_json = lv_response.
 10.	Save and activate your work.
 <br>![](/exercises/ex2/images/02_01_0100.png)
 
-11.	Now return to your ZCL_HELLO_WORLD_XXX class and modify it.  Add another WHEN condition to your CASE statement as shown here.  Make sure to replace XXX with your group number.
+## Exercise 2.2 Update Hello World 
+
+After completing these steps you will have consumed an external API from the SAP API hub, and viewed the results via the browser.
+
+1.	Now return to your ZCL_HELLO_WORLD_XXX class and modify it.  Add another WHEN condition to your CASE statement as shown here.  Make sure to replace XXX with your group number.
 ```abap
  when `bankdetails`.
     response->set_text( new zcl_api_hub_manager_xxx(  )->get_bank_details( ) ).
 ```
 
-12.	Your code should now look like this.
-<br>![](/exercises/ex2/images/02_01_0120.png)
+2.	Your code should now look like this.
+<br>![](/exercises/ex2/images/02_02_0120.png)
 
-13.	Return to the HTTP Service defintion and click the URL link.  
-<br>![](/exercises/ex2/images/02_01_0130.png)
+3.	Return to the HTTP Service defintion and click the URL link.  
+<br>![](/exercises/ex2/images/02_02_0130.png)
 
-14.	When the browser opens, change the URL to include cmd=bankdetails  
-<br>![](/exercises/ex2/images/02_01_0140.png)
+4.	When the browser opens, change the URL to include cmd=bankdetails  
+<br>![](/exercises/ex2/images/02_02_0140.png)
 
-15.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_API_HUB_MANAGER class for a another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud?section=Artifacts. Choose one that is an ODATA API and perhaps one that is a READ type operation
-<br>![](/exercises/ex2/images/02_01_0150.png)
+5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_API_HUB_MANAGER class for a another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud?section=Artifacts. Choose one that is an ODATA API and perhaps one that is a READ type operation
+<br>![](/exercises/ex2/images/02_02_0150.png)
 
 
 ## Summary
 
-You've now...
+You've now created a new class which calls the SAP API Hub, updated your hello World to call this new class, and viewed your results in the browser. 
 
 Continue to - [Exercise 3 - ABAP RESTful Programming Model - Unmanaged ](../ex3/README.md)
