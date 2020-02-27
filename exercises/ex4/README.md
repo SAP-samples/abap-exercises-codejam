@@ -33,7 +33,7 @@ After completing these steps you will have created the Business Object Views ove
 9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
 ```abap
 define root view Z_I_TRAVEL_M_XXX
-  as select from /dmo/travel as Travel
+  as select from /dmo/travel_m as Travel
 
 ```
 10.	Next, add the composition and associations to other tables/views.  In this case we add a composition to the Booking view which we have not created yet. Make sure to replace XXX with your group number.
@@ -87,7 +87,7 @@ define root view Z_I_TRAVEL_M_XXX
 @EndUserText.label: 'Booking View'
 
 define view Z_I_BOOKING_M_XXX
-     as select from /dmo/booking as Booking
+     as select from /dmo/booking_m as Booking
 
   association to parent Z_I_TRAVEL_M_XXX     as _Travel    
                      on  $projection.TravelID = _Travel.TravelID
@@ -135,7 +135,7 @@ define view Z_I_BOOKING_M_XXX
 @EndUserText.label: 'Booking Supplement view - CDS data model'
 
 define view Z_I_BookingSupplement_M_XXX
-  as select from /dmo/book_suppl as BookingSupplement
+  as select from /dmo/book_suppl_m as BookingSupplement
 
   association        to parent Z_I_Booking_M_XXX as _Booking        on  $projection.TravelID  = _Booking.TravelID
                                                                    and $projection.BookingID = _Booking.BookingID
