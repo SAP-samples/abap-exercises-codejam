@@ -61,9 +61,9 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
         response->set_text( |Hello World! | ).
       WHEN `timestamp`.
         response->set_text( |Hello World! application executed by {
-                             cl_abap_context_info=>get_user_technical_name(  ) } | &&
-                              | on {  cl_abap_context_info=>get_system_date() DATE = ENVIRONMENT } | &&
-                              | at { cl_abap_context_info=>get_system_time(  ) TIME = ENVIRONMENT } | ).
+                             cl_abap_context_info=>get_user_technical_name( ) } | &&
+                              | on { cl_abap_context_info=>get_system_date( ) DATE = ENVIRONMENT } | &&
+                              | at { cl_abap_context_info=>get_system_time( ) TIME = ENVIRONMENT } | ).
       WHEN OTHERS.
       response->set_status( i_code = 400 i_reason = 'Bad request').
   ENDCASE.
