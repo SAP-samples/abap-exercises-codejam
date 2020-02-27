@@ -15,25 +15,28 @@ After completing these steps you will have created the Business Object Views ove
 3.	Enter the name of the CDS view as Z_I_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description.  Click “Next”.
 <br>![](/exercises/ex3/images/03_01_0030.png)
 
-4.	Click “Finish”.
+4.	Click “Next”.
 <br>![](/exercises/ex3/images/03_01_0040.png)
 
-5.	The CDS definition editor will open with the following code.
+5.	Click “Finish”.
+<br>![](/exercises/ex3/images/03_01_0041.png)
+
+6.	The CDS definition editor will open with the following code.
 <br>![](/exercises/ex3/images/03_01_0050.png)
 
-6.	First, change the name of the sqlViewName annotation as shown here where XXX is your group number.  If you DO NOT want to type all of this code in the following steps, you may copy it from the solution.
+7.	First, change the name of the sqlViewName annotation as shown here where XXX is your group number.  If you DO NOT want to type all of this code in the following steps, you may copy it from the solution.
 <br>![](/exercises/ex3/images/03_01_0060.png)
 
-7.	There is a lot of code to add here. We’ll try to take it by sections.  This code is not only defining the associations to other tables/views as well as the columns that we want in our view, but also how these columns are presented in the user interface later on. The annotations are what drive this funtionality.  In this first section at the top, make sure that you add these annotations if they are not already there. 
+8.	There is a lot of code to add here. We’ll try to take it by sections.  This code is not only defining the associations to other tables/views as well as the columns that we want in our view, but also how these columns are presented in the user interface later on. The annotations are what drive this funtionality.  In this first section at the top, make sure that you add these annotations if they are not already there. 
 <br>![](/exercises/ex3/images/03_01_0070.png)
 
-8.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
+9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
 ```abap
 define root view Z_I_TRAVEL_U_XXX
   as select from /dmo/travel as Travel
 
 ```
-9.	Next, add the composition and associations to other tables/views.  In this case we add a composition to the **Booking** view which we have not created yet. Make sure to replace XXX with your group number.
+10.	Next, add the composition and associations to other tables/views.  In this case we add a composition to the **Booking** view which we have not created yet. Make sure to replace XXX with your group number.
 ```abap
   composition [0..*] of Z_I_BOOKING_U_XXX as _Booking
 
@@ -44,7 +47,7 @@ define root view Z_I_TRAVEL_U_XXX
   association [0..1] to I_Currency       as _Currency  
                      on $projection.CurrencyCode    = _Currency.Currency
 ```
-10.	Finally add the columns and association references
+11.	Finally add the columns and association references
 ```abap
 {
  key Travel.travel_id     as TravelID,
@@ -69,10 +72,10 @@ define root view Z_I_TRAVEL_U_XXX
      _Currency
 }
 ```
-11.	Save your work, but do not try to activate at this point as we have not created the **Booking** view yet.
+12.	Save your work, but do not try to activate at this point as we have not created the **Booking** view yet.
 <br>![](/exercises/ex3/images/03_01_0110.png)
 
-12.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX. 
+13.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX. 
 ```abap
 @AbapCatalog.sqlViewName: 'ZIBOOKING_U_XXX'
 @AbapCatalog.compiler.compareFilter: true
@@ -117,10 +120,10 @@ define view Z_I_BOOKING_U_XXX
 }
 
 ```
-13. Save your work.
+14. Save your work.
 <br>![](/exercises/ex3/images/03_01_0130.png)
 
-14. Use what you have learned and create another view in the same way called Z_I_BOOKINGSUPPLEMENT_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX.
+15. Use what you have learned and create another view in the same way called Z_I_BOOKINGSUPPLEMENT_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX.
 ```abap
 @AbapCatalog.sqlViewName: 'ZIBOOKSUPP_U_XXX'
 @AbapCatalog.compiler.compareFilter: true
@@ -161,13 +164,13 @@ define view Z_I_BookingSupplement_U_XXX
 }
 
 ```
-15. Save your work.
+16. Save your work.
 <br>![](/exercises/ex3/images/03_01_0150.png)
 
-16. Select all three of the views that you have created.  
+17. Select all three of the views that you have created.  
 <br>![](/exercises/ex3/images/03_01_0160.png)
 
-17. Right-click on the selection and choose “Activate“.
+18. Right-click on the selection and choose “Activate“.
 <br>![](/exercises/ex3/images/03_01_0170.png)
 
 
