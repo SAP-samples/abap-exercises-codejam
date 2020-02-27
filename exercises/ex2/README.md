@@ -72,10 +72,10 @@ r_json = lv_response.
 ```
 
 9.	Your code should now look like the following.
-<br>![](/exercises/ex2/images/02_01_0090.png)
+<br>![](/exercises/ex2/images/02_01_0120.png)
 
 10.	Save and activate your work.
-<br>![](/exercises/ex2/images/02_01_0100.png)
+<br>![](/exercises/ex2/images/02_01_0130.png)
 
 ## Exercise 2.2 Update Hello World 
 
