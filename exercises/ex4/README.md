@@ -86,7 +86,7 @@ define root view Z_I_TRAVEL_M_XXX
 
 13.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_M_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX. 
 ```abap
-@AbapCatalog.sqlViewName: '/DMO/IBOOKING_M'
+@AbapCatalog.sqlViewName: 'ZIBOOKING_M_XXX'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #NOT_REQUIRED
@@ -95,7 +95,7 @@ define root view Z_I_TRAVEL_M_XXX
 
 @EndUserText.label: 'Booking view'
 
-define view /DMO/I_Booking_M
+define view Z_I_Booking_M_XXX
   as select from /dmo/booking_m as Booking
   association        to parent Z_I_Travel_M_XXX as _Travel     on  $projection.travel_id = _Travel.travel_id
   composition [0..*] of Z_I_BookSuppl_M_XXX     as _BookSupplement
