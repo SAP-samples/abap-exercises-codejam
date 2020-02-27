@@ -18,7 +18,7 @@ After completing these steps you will have created the Business Object Views ove
 4.	Click “Next”.
 <br>![](/exercises/ex4/images/04_01_0040.png)
 
-5.	Click “Finish”.
+5.	Choose Define View from the selection box and click “Finish“.
 <br>![](/exercises/ex4/images/04_01_0050.png)
 
 6.	The CDS definition editor will open with the following code.
@@ -249,7 +249,13 @@ After completing these steps you will have created Projection Views over your Bu
 2.	Enter the name of the projection view as Z_C_TRAVEL_M_XXX where XXX is your group number.  Click “Next”, then “Finish”.
 <br>![](/exercises/ex4/images/04_03_0020.png)
 
-3.	Enter the code as shown here. 
+3.	Click “Next“.
+<br>![](/exercises/ex4/images/04_03_0030.png)
+
+4.	Choose Define Projection View from the selection box and click “Finish“.
+<br>![](/exercises/ex4/images/04_03_0040.png)
+
+5.	Enter the code as shown here. 
 ```abap
 @EndUserText.label: 'Travel Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
@@ -307,7 +313,7 @@ define root view entity Z_C_TRAVEL_M_XXX
 
 ```
 
-4.	Use what you have learned and create another projection view for **Booking**. 
+6.	Use what you have learned and create another projection view for **Booking**. 
 ```abap
 @EndUserText.label: 'Booking Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
@@ -379,7 +385,7 @@ define view entity Z_C_Booking_M_XXX
 
 ```
 
-5.	Use what you have learned and create another projection view for **BookingSupplement** called Z_C_BOOKSUPPL_M_XXX where XXX is your group number. Enter the following code as shown here. 
+7.	Use what you have learned and create another projection view for **BookingSupplement** called Z_C_BOOKSUPPL_M_XXX where XXX is your group number. Enter the following code as shown here. 
 ```abap
 @EndUserText.label: 'Booking Supplement Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
@@ -422,11 +428,11 @@ define view entity Z_C_BookSuppl_M_XXX
 
 ```
 
-6.	Save your work and click “Activate All“.
-<br>![](/exercises/ex4/images/04_03_0060.png)
+8.	Save your work and click “Activate All“.
+<br>![](/exercises/ex4/images/04_03_0080.png)
 
-7.	Click “Select All“, and “Activate“.
-<br>![](/exercises/ex4/images/04_03_0070.png)
+9.	Click “Select All“, and “Activate“.
+<br>![](/exercises/ex4/images/04_03_0090.png)
 
 
 ## Exercise 4.4 Create the Metadata Extensions
