@@ -97,8 +97,10 @@ After completing these steps you will have consumed an external API from the SAP
 4.	When the browser opens, change the URL to include cmd=bankdetails  
 <br>![](/exercises/ex2/images/02_02_0140.png)
 
-5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_API_HUB_MANAGER class for a another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud?section=Artifacts. Choose one that is an ODATA API and perhaps one that is a READ type operation
+5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_API_HUB_MANAGER_XXX class for a another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud?section=Artifacts. Choose one that is an ODATA API and perhaps one that is a READ type operation
 <br>![](/exercises/ex2/images/02_02_0150.png)
+
+6. As your API keys are now exposed in your code, I would highly recommend that you return to your ZCL_API_HUB_MANAGER_XXX class and remove any hardcoded API keys from your code.
 
 
 ## Summary
