@@ -38,40 +38,46 @@ define root view Z_I_TRAVEL_M_XXX
 ```
 10.	Next, add the composition and associations to other tables/views.  In this case we add a composition to the Booking view which we have not created yet. Make sure to replace XXX with your group number.
 ```abap
-  composition [0..*] of Z_I_BOOKING_M_XXX as _Booking
+  composition [0..*] of Z_I_Booking_M_XXX as _Booking
 
-  association [0..1] to /DMO/I_Agency    as _Agency    
-                     on $projection.AgencyID        = _Agency.AgencyID
-  association [0..1] to /DMO/I_Customer  as _Customer  
-                     on $projection.CustomerID      = _Customer.CustomerID
-  association [0..1] to I_Currency       as _Currency  
-                     on $projection.CurrencyCode    = _Currency.Currency
+  association [0..1] to /DMO/I_Agency    as _Agency   on $projection.agency_id     = _Agency.AgencyID
+  association [0..1] to /DMO/I_Customer  as _Customer on $projection.customer_id   = _Customer.CustomerID
+  association [0..1] to I_Currency       as _Currency on $projection.currency_code = _Currency.Currency  
+
 
 ```
 11.	Finally add the columns and association references.
 ```abap
-{
- key Travel.travel_id     as TravelID,
-     Travel.agency_id     as AgencyID,
-     Travel.customer_id   as CustomerID,
-     Travel.begin_date    as BeginDate,
-     Travel.end_date      as EndDate,
-     @Semantics.amount.currencyCode: 'CurrencyCode'
-     Travel.booking_fee   as BookingFee,
-     @Semantics.amount.currencyCode: 'CurrencyCode'
-     Travel.total_price   as TotalPrice,
-     @Semantics.currencyCode: true
-     Travel.currency_code as CurrencyCode,
-     Travel.description   as Memo,
-     Travel.status        as Status,
-     Travel.lastchangedat as LastChangedAt,
-
-     /* public associations */
-     _Booking,
-     _Agency,
-     _Customer,
-     _Currency
+{   
+  key travel_id,      
+    agency_id,         
+    customer_id,  
+    begin_date,  
+    end_date,   
+    @Semantics.amount.currencyCode: 'currency_code'
+    booking_fee,
+    @Semantics.amount.currencyCode: 'currency_code'
+    total_price,  
+    @Semantics.currencyCode: true
+    currency_code,  
+    overall_status,
+    description,   
+    @Semantics.user.createdBy: true 
+    created_by,
+    @Semantics.systemDateTime.createdAt: true       
+    created_at,
+    @Semantics.user.lastChangedBy: true    
+    last_changed_by,
+    @Semantics.systemDateTime.lastChangedAt: true
+    last_changed_at,                -- used as etag field
+    
+    /* Associations */
+    _Booking,
+    _Agency,
+    _Customer, 
+    _Currency
 }
+
 
 ```
 
@@ -80,47 +86,51 @@ define root view Z_I_TRAVEL_M_XXX
 
 13.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_M_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX. 
 ```abap
-@AbapCatalog.sqlViewName: 'ZIBOOKING_M_XXX'
+@AbapCatalog.sqlViewName: '/DMO/IBOOKING_M'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #NOT_REQUIRED
-@EndUserText.label: 'Booking View'
 
-define view Z_I_BOOKING_M_XXX
-     as select from /dmo/booking_m as Booking
+@Metadata.ignorePropagatedAnnotations:true
 
-  association to parent Z_I_TRAVEL_M_XXX     as _Travel    
-                     on  $projection.TravelID = _Travel.TravelID
-  composition [0..*] of Z_I_BookingSupplement_M_XXX as _BookSupplement
+@EndUserText.label: 'Booking view'
 
-  association [1..1] to /DMO/I_Customer       as _Customer   
-                     on  $projection.CustomerID = _Customer.CustomerID
-  association [1..1] to /DMO/I_Carrier        as _Carrier    
-                     on  $projection.AirlineID = _Carrier.AirlineID
-  association [1..1] to /DMO/I_Connection     as _Connection 
-                     on  $projection.AirlineID    = _Connection.AirlineID
-                   and $projection.ConnectionID = _Connection.ConnectionID
+define view /DMO/I_Booking_M
+  as select from /dmo/booking_m as Booking
+  association        to parent Z_I_Travel_M_XXX as _Travel     on  $projection.travel_id = _Travel.travel_id
+  composition [0..*] of Z_I_BookSuppl_M_XXX     as _BookSupplement
+
+  association [1..1] to /DMO/I_Customer        as _Customer   on  $projection.customer_id = _Customer.CustomerID
+  association [1..1] to /DMO/I_Carrier         as _Carrier    on  $projection.carrier_id = _Carrier.AirlineID
+  association [1..1] to /DMO/I_Connection      as _Connection on  $projection.carrier_id    = _Connection.AirlineID
+                                                              and $projection.connection_id = _Connection.ConnectionID
+
 {
-  key Booking.travel_id     as TravelID,
-  key Booking.booking_id    as BookingID,
-      Booking.booking_date  as BookingDate,
-      Booking.customer_id   as CustomerID,
-      Booking.carrier_id    as AirlineID,
-      Booking.connection_id as ConnectionID,
-      Booking.flight_date   as FlightDate,
-      @Semantics.amount.currencyCode: 'CurrencyCode'
-      Booking.flight_price  as FlightPrice,
-      @Semantics.currencyCode: true
-      Booking.currency_code as CurrencyCode,
-      _Travel.LastChangedAt as LastChangedAt, -- Take over ETag from parent
+  key travel_id,
+  key booking_id,
 
-      /* public associations */
+      booking_date,
+      customer_id,
+      carrier_id,
+      connection_id,
+      flight_date,
+      @Semantics.amount.currencyCode: 'currency_code'
+      flight_price,
+      @Semantics.currencyCode: true
+      currency_code,
+      booking_status,
+      @UI.hidden: true
+      _Travel.last_changed_at,
+
+      /* Associations */
       _Travel,
       _BookSupplement,
       _Customer,
       _Carrier,
       _Connection
+
 }
+
 
 ```
 14.	Save your work.
@@ -135,36 +145,35 @@ define view Z_I_BOOKING_M_XXX
 @EndUserText.label: 'Booking Supplement view - CDS data model'
 
 define view Z_I_BookingSupplement_M_XXX
-  as select from /dmo/book_suppl_m as BookingSupplement
+  as select from /DMO/I_book_suppl_m as BookingSupplement
+  association        to parent Z_I_Booking_M_XXX  as _Booking     on  $projection.travel_id    = _Booking.travel_id
+                                                                 and $projection.booking_id   = _Booking.booking_id
 
-  association        to parent Z_I_Booking_M_XXX as _Booking        on  $projection.TravelID  = _Booking.TravelID
-                                                                   and $projection.BookingID = _Booking.BookingID
-
-  association [1..1] to /DMO/I_Supplement       as _Product        on  $projection.SupplementID = _Product.SupplementID
-  association [1..*] to /DMO/I_SupplementText   as _SupplementText on  $projection.SupplementID = _SupplementText.SupplementID
-
+  association [1..1] to /DMO/I_Travel_M       as _Travel         on  $projection.travel_id    = _Travel.travel_id
+  association [1..1] to /DMO/I_Supplement     as _Product        on $projection.supplement_id = _Product.SupplementID
+  association [1..*] to /DMO/I_SupplementText as _SupplementText on $projection.supplement_id = _SupplementText.SupplementID
 {
-  key BookingSupplement.travel_id             as TravelID,
-
-  key BookingSupplement.booking_id            as BookingID,
-
-  key BookingSupplement.booking_supplement_id as BookingSupplementID,
-
-      BookingSupplement.supplement_id         as SupplementID,
-
-      @Semantics.amount.currencyCode: 'CurrencyCode'
-      BookingSupplement.price                 as Price,
-
+  key travel_id,
+  key booking_id,
+  key booking_supplement_id,
+      supplement_id,
+      @Semantics.amount.currencyCode: 'currency_code'
+      price,
       @Semantics.currencyCode: true
-      BookingSupplement.currency_code         as CurrencyCode,
+      currency_code,
 
-      _Booking.LastChangedAt                  as LastChangedAt,
+      @UI.hidden
+      _Travel.last_changed_at,  
 
       /* Associations */
+      _Travel, 
       _Booking,
-      _Product,
+      _Product, 
       _SupplementText
 }
+
+
+
 
 
 ```
