@@ -190,7 +190,7 @@ define view Z_I_BookSuppl_M_XXX
 
 After completing these steps you will hae created the Behavior Definitionand Implementation for your Busines Object Views.  The behavior definition defines what operations are possible for your Business Object.
 
-1.	Right-click on the Z_I_TRAVEL_M_XXX CDS Artifact and choose “New Behavior Defintion“.
+1.	Right-click on the Z_I_TRAVEL_M_XXX CDS Artifact and choose “New Behavior Defintion“.   
 <br>![](/exercises/ex4/images/04_02_0010.png)
 
 2.	Provide the default description, and change the Implementation Type to “Managed”.  Then click “Next”, then “Finish”.
@@ -252,7 +252,7 @@ lock dependent( travel_id = travel_id ) //authorization dependent( <local_field_
 
 After completing these steps you will have created Projection Views over your Business Object Views. The Projection Views are meant to further filter the data which is exposed. 
 
-1.	From the Data Definition folder, right-click and choose “New Data Definition“.
+1.	From the Data Definition folder, right-click and choose “New Data Definition“.  
 <br>![](/exercises/ex4/images/04_03_0010.png)
 
 2.	Enter the name of the projection view as Z_C_TRAVEL_M_XXX where XXX is your group number.  Click “Next”.
@@ -448,7 +448,7 @@ define view entity Z_C_BookSuppl_M_XXX
 
 After completing these steps have created the Metadata Extensions. The Metadata Extensions are meant to seperate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
 
-1.	Right-click on the Z_C_TRAVEL_M_XXX projection view and choose “New Metadata Extension“.
+1.	Right-click on the Z_C_TRAVEL_M_XXX projection view and choose “New Metadata Extension“.  
 <br>![](/exercises/ex4/images/04_04_0010.png)
 
 2.	Give the name as the same as the view, Z_C_TRAVEL_M_XXX where XXX is your group number.  Give a meaningful description and click “Next”, then “Finish”.
