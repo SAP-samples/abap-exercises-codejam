@@ -42,7 +42,8 @@ go_http_client = cl_web_http_client_manager=>create_by_http_destination(
 7. Your code should now look like this.
 <br>![](/exercises/ex2/images/02_01_0070.png)
 
-8.	Open the browser and go to the following URL and click “Log On“. https://api.sap.com/api/API_BANKDETAIL_SRV/resource 
+8.	Open the browser and go to the following URL and click “Log On“. If you don't have an account, please create one.
+https://api.sap.com/api/API_BANKDETAIL_SRV/resource 
 <br>![](/exercises/ex2/images/02_01_0080.png)
 
 9.	Click “Show API Key“.
