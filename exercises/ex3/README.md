@@ -1457,7 +1457,7 @@ After completing these steps you will have created Projection Views over your Bu
 1.	Right-click  on the “Data Definitions“ folder and choose “New Data Definition“.
 <br>![](/exercises/ex3/images/03_03_0010.png)
 
-2.	Give the name as Z_C_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description and click “Next”, then “Finish”.
+2.	Give the name as Z_C_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description and click “Next”.
 <br>![](/exercises/ex3/images/03_03_0020.png)
 
 3. Click “Next“.
