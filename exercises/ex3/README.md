@@ -1460,7 +1460,13 @@ After completing these steps you will have created Projection Views over your Bu
 2.	Give the name as Z_C_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description and click “Next”, then “Finish”.
 <br>![](/exercises/ex3/images/03_03_0020.png)
 
-3.	Enter the code as shown here, and replace XXX with your group number. Note, that in the DEFINE ROOT VIEW statement, there ist he extension  AS PROJECTION ON pointing to your Business Object view Z_I_TRAVEL_U_XXX.  In this projection view, not only are we filtering columsn, but we are adding value help declarations as well using annotations.  
+3. Click “Next“.
+<br>![](/exercises/ex3/images/03_03_0030.png)
+
+4. Choose Projection View from the selection box and click “Finish“.
+<br>![](/exercises/ex3/images/03_03_0040.png)
+
+5.	Enter the code as shown here, and replace XXX with your group number. Note, that in the DEFINE ROOT VIEW statement, there is the extension  AS PROJECTION ON pointing to your Business Object view Z_I_TRAVEL_U_XXX.  In this projection view, not only are we filtering columsn, but we are adding value help declarations as well using annotations.  
 ```abap
 @EndUserText.label: 'Travel Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
@@ -1508,10 +1514,10 @@ define root view entity Z_C_Travel_U_XXX
 }
 
 ```
-4.	Save your work, but don’t try to activate it yet because we haven’t created the projection view for **Booking** or **BookingSupplement** yet.
-<br>![](/exercises/ex3/images/03_03_0040.png)
+6.	Save your work, but don’t try to activate it yet because we haven’t created the projection view for **Booking** or **BookingSupplement** yet.
+<br>![](/exercises/ex3/images/03_03_0060.png)
 
-5.	Use what you have learned and create another projection view called Z_C_BOOKING_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are filtering the columns and adding value helps via annotations.
+7.	Use what you have learned and create another projection view called Z_C_BOOKING_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are filtering the columns and adding value helps via annotations.
 ```abap
 @EndUserText.label: 'Booking Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
@@ -1577,10 +1583,10 @@ _BookSupplement: redirected to composition child Z_C_BookingSupplement_U_XXX,
 }
 
 ```
-6.	Save your work.
-<br>![](/exercises/ex3/images/03_03_0060.png)
+8.	Save your work.
+<br>![](/exercises/ex3/images/03_03_0080.png)
 
-7.	Use what you have learned and create another projection view called Z_C_BOOKINGSUPPLEMENT_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are filtering the columns and adding value helps via annotations.
+9.	Use what you have learned and create another projection view called Z_C_BOOKINGSUPPLEMENT_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are filtering the columns and adding value helps via annotations.
 ```abap
 @EndUserText.label: 'Booking Supplement Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
@@ -1626,11 +1632,11 @@ define view entity Z_C_BookingSupplement_U_XXX
 
 ```
 
-8. Save your work.
-<br>![](/exercises/ex3/images/03_03_0080.png)
+10. Save your work.
+<br>![](/exercises/ex3/images/03_03_0100.png)
 
-9.	Select all projection views, and right-click and choose “Activate“.
-<br>![](/exercises/ex3/images/03_03_0090.png)
+11.	Select all projection views, and right-click and choose “Activate“.
+<br>![](/exercises/ex3/images/03_03_0110.png)
 
 ## Exercise 3.4 Create the Metadata Extensions
 
