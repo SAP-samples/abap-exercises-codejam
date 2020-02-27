@@ -59,7 +59,7 @@ DATA(lo_request) = go_http_client->get_http_request( ).
 lo_request->set_header_fields( VALUE #(
    (  name = 'Content-Type' value = 'application/json' )
    (  name = 'Accept' value = 'application/json' )
-   (  name = 'APIKey' value = '<insert API key here') ) ).
+   (  name = 'APIKey' value = '<insert API key here>') ) ).
 
 lo_request->set_uri_path( 
    i_uri_path = gv_url && 'API_BANKDETAIL_SRV/A_BankDetail?$top=25&$format=json'  ).
