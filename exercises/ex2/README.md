@@ -42,14 +42,23 @@ go_http_client = cl_web_http_client_manager=>create_by_http_destination(
 7. Your code should now look like this.
 <br>![](/exercises/ex2/images/02_01_0070.png)
 
-8. Next, implement the GET_BANK_DETAILS method.  In this method, get the request object and set the header fields with the content types and APIKey. Adjust the URI to include the full end point and query parameters. Finally, execute the request and get the response passing it tot he returning parameter of the method.
+8.	Open the browser and go to the following URL. https://api.sap.com/api/API_BANKDETAIL_SRV/resource  Click “Log On“.
+<br>![](/exercises/ex2/images/02_01_0080.png)
+
+9.	Click “Show API Key“.
+<br>![](/exercises/ex2/images/02_01_0090.png)
+
+10. Click “Copy Key and Close“.  Copy this key somewhere to use in the next step.
+<br>![](/exercises/ex2/images/02_01_0100.png)
+
+11. Next, implement the GET_BANK_DETAILS method.  In this method, get the request object and set the header fields with the content types. Adjust the URI to include the full end point and query parameters.  Also make sure that you update the APIKey value. Finally, execute the request and get the response passing it tot he returning parameter of the method.
 ```abap
 DATA(lo_request) = go_http_client->get_http_request( ).
 
 lo_request->set_header_fields( VALUE #(
    (  name = 'Content-Type' value = 'application/json' )
    (  name = 'Accept' value = 'application/json' )
-   (  name = 'APIKey' value = 'jwAEZKJrpHfGODtgZWb4YR3sLeMNgPLA') ) ).
+   (  name = 'APIKey' value = '<insert API key here') ) ).
 
 lo_request->set_uri_path( 
    i_uri_path = gv_url && 'API_BANKDETAIL_SRV/A_BankDetail?$top=25&$format=json'  ).
