@@ -861,7 +861,7 @@ ENDCLASS.
 31.	Save and activate your work.
 <br>![](/exercises/ex3/images/03_02_0310.png)
 
-32.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKING_U_XXX.  Copy the following code tot the “Local Types“ tab.  Once again, be sure to replace XXX with your group number in the TYPES statement of the PUBLIC section of the both the message helper local class and the booking handler local class. As you can see, this Behavior Pool contains implementations for the READ, UPDATE and DELETE operations for **Bookings** as well as READ and CREATE for **BookingSupplement**.  
+32.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKING_U_XXX.  Copy the following code tot the “Local Types“ tab.  As you can see, this Behavior Pool contains implementations for the READ, UPDATE and DELETE operations for **Bookings** as well as READ and CREATE for **BookingSupplement**.  
 ```abap
 **********************************************************************
 *
@@ -1248,7 +1248,7 @@ ENDCLASS.
 33.	Save and activate your work.
 <br>![](/exercises/ex3/images/03_02_0330.png)
 
-34.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKINGSUPPLEMENT_U_XXX.  Copy the following code tot the “Local Types“ tab.  Once again, be sure to replace XXX with your group number in the TYPES statement of the PUBLIC section of the both the message helper local class and the booking handler local class. As you can see, this Behavior Pool contains implementations for the UPDATE and DELETE operations for **BookingSupplement**.  
+34.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKINGSUPPLEMENT_U_XXX.  Copy the following code tot the “Local Types“ tab.  As you can see, this Behavior Pool contains implementations for the UPDATE and DELETE operations for **BookingSupplement**.  
 ```abap
 **********************************************************************
 *
