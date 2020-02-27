@@ -144,7 +144,7 @@ define view Z_I_Booking_M_XXX
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Booking Supplement view - CDS data model'
 
-define view Z_I_BookingSupplement_M_XXX
+define view Z_I_BookSuppl_M_XXX 
   as select from /DMO/booksuppl_m as BookingSupplement
   association        to parent Z_I_Booking_M_XXX  as _Booking     on  $projection.travel_id    = _Booking.travel_id
                                                                  and $projection.booking_id   = _Booking.booking_id
