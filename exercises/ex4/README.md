@@ -518,13 +518,7 @@ annotate view Z_C_TRAVEL_M_XXX
        TotalPrice;
 
       @UI: {
-          lineItem:       [ { position: 15, importance: #HIGH },
-                            { type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' },
-                            { type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' } ],
-          identification: [ { position: 15 }, 
-                            { type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' },
-                            { type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' } ] ,
-          selectionField: [ { position: 40 } ] }
+          identification:[ { position: 45 } ]  }
        TravelStatus;
 
       @UI: {
@@ -858,7 +852,20 @@ After completing these steps you will have added additional validation to your B
 
 After completing these steps you will have added  Field Attributes for defining mandatory fields statically, and defining these Field Attributes dynamically in the implementation.  You will have also created Custom Actions for your Behavior.
 
-1.	Go back to the Z_I_TRAVEL_M_XXX behavior definition. Before the create statement, add the following lines.  Here we are setting fields as mandatory, and also setting the travel_id field so that we can set the attributes of this field programatically in our behavior implementation.  We will circle back on that later.
+1. Return to the Metadata Extension called Z_C_TRAVEL_M_XXX and modify it.  Change the @UI annotation for the TravelStatus column as shown here.  Save and activate your work.
+```abap
+      @UI: {
+          lineItem:       [ { position: 15, importance: #HIGH },
+                            { type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' },
+                            { type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' } ],
+          identification: [ { position: 15 }, 
+                            { type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' },
+                            { type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' } ] ,
+          selectionField: [ { position: 40 } ] }
+
+```
+
+2.	Go back to the Z_I_TRAVEL_M_XXX behavior definition. Before the create statement, add the following lines.  Here we are setting fields as mandatory, and also setting the travel_id field so that we can set the attributes of this field programatically in our behavior implementation.  We will circle back on that later.
 ```abap
   // mandatory fields that are required to create a travel
   field ( mandatory ) agency_id, overall_status, booking_fee, currency_code;
@@ -866,7 +873,7 @@ After completing these steps you will have added  Field Attributes for defining 
 
 ```
 
-2.	Before the validation statements, enter the following codes as shown here.
+3.	Before the validation statements, enter the following codes as shown here.
 ```abap
 // instance action and dynamic action control
   action  ( features: instance ) acceptTravel result [1] $self;
@@ -874,17 +881,17 @@ After completing these steps you will have added  Field Attributes for defining 
 
 ```
 
-3.	Save and activate your work.
-<br>![](/exercises/ex4/images/04_08_0030.png)
+4.	Save and activate your work.
+<br>![](/exercises/ex4/images/04_08_0040.png)
 
-4.	Return to the projection behavior definition called Z_C_TRAVEL_M_XXX.  As we have created new actions in our business object behavior definition, we now have to expose these in our projection as well.  Add the following lines tot he Z_C_TRAVEL_M_XXX definition after the commented *use delete* statement.
+5.	Return to the projection behavior definition called Z_C_TRAVEL_M_XXX.  As we have created new actions in our business object behavior definition, we now have to expose these in our projection as well.  Add the following lines tot he Z_C_TRAVEL_M_XXX definition after the commented *use delete* statement.
 ```abap
   use action acceptTravel;
   use action rejectTravel;
 
 ```
 
-5.	Return to the behavior implementation called Z_BP_I_TRAVEL_M_XXX. Define two new methods for handling the *accept* and *reject* actions.
+6.	Return to the behavior implementation called Z_BP_I_TRAVEL_M_XXX. Define two new methods for handling the *accept* and *reject* actions.
 ```abap
     METHODS set_status_completed  FOR MODIFY 
       IMPORTING   keys FOR ACTION travel~acceptTravel RESULT result.
@@ -893,7 +900,7 @@ After completing these steps you will have added  Field Attributes for defining 
 
 ```
 
-6.	Add the implementation fort he *set_status_completed* method as shown here.  Make sure to replace XXX with your group number.
+7.	Add the implementation fort he *set_status_completed* method as shown here.  Make sure to replace XXX with your group number.
 ```abap
   METHOD set_status_completed.
 
@@ -931,7 +938,7 @@ After completing these steps you will have added  Field Attributes for defining 
   ENDMETHOD.
 
 ```
-7.	Add the implementation for the *set_status_cancelled* method as shown here. Make sure to replace XXX with your group number.
+8.	Add the implementation for the *set_status_cancelled* method as shown here. Make sure to replace XXX with your group number.
 ```abap
 METHOD set_status_cancelled.
 
@@ -969,13 +976,13 @@ METHOD set_status_cancelled.
   ENDMETHOD.
 
 ```
-8.	We want to control the display have these accept and reject buttons programmically.  In the behavior definition we used the keyword “feature“ when defining the actions.  Now in our implementation, we can get access to these features and control access to them.  Once again, add a new method called *get_features*.
+9.	We want to control the display have these accept and reject buttons programmically.  In the behavior definition we used the keyword “feature“ when defining the actions.  Now in our implementation, we can get access to these features and control access to them.  Once again, add a new method called *get_features*.
 ```abap
    METHODS get_features  FOR FEATURES 
       IMPORTING keys REQUEST  requested_features FOR travel  RESULT result.
 
 ```
-9.	Add the implementation fort he set_status_cancelled method as shown here. Make sure to replace XXX with your group number. This method reads the entity and gives us access to the actions and allows us to set the buttons to enable/disabled based on that selected lines current status.  Here we are also programmically setting the “Travel ID“ field to read-only in edit mode.
+10.	Add the implementation fort he set_status_cancelled method as shown here. Make sure to replace XXX with your group number. This method reads the entity and gives us access to the actions and allows us to set the buttons to enable/disabled based on that selected lines current status.  Here we are also programmically setting the “Travel ID“ field to read-only in edit mode.
 ```abap
 METHOD get_features.
 
@@ -999,14 +1006,14 @@ METHOD get_features.
   ENDMETHOD.
 
 ```
-10.	Save and activate your work. 
-<br>![](/exercises/ex4/images/04_08_0100.png)
-
-11.	Once again, launch the preview from the service binding and check that your new buttons are working correctly.
+11.	Save and activate your work. 
 <br>![](/exercises/ex4/images/04_08_0110.png)
 
-12.	Also, check that your fields have been marked as mandatory.
+12.	Once again, launch the preview from the service binding and check that your new buttons are working correctly.
 <br>![](/exercises/ex4/images/04_08_0120.png)
+
+13.	Also, check that your fields have been marked as mandatory.
+<br>![](/exercises/ex4/images/04_08_0130.png)
 
 ## Summary
 
