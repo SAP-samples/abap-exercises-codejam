@@ -145,11 +145,11 @@ define view Z_I_Booking_M_XXX
 @EndUserText.label: 'Booking Supplement view - CDS data model'
 
 define view Z_I_BookingSupplement_M_XXX
-  as select from /DMO/book_suppl_m as BookingSupplement
+  as select from /DMO/booksuppl_m as BookingSupplement
   association        to parent Z_I_Booking_M_XXX  as _Booking     on  $projection.travel_id    = _Booking.travel_id
                                                                  and $projection.booking_id   = _Booking.booking_id
 
-  association [1..1] to /DMO/I_Travel_M       as _Travel         on  $projection.travel_id    = _Travel.travel_id
+  association [1..1] to Z_I_Travel_M_XXX  as _Travel         on  $projection.travel_id    = _Travel.travel_id
   association [1..1] to /DMO/I_Supplement     as _Product        on $projection.supplement_id = _Product.SupplementID
   association [1..*] to /DMO/I_SupplementText as _SupplementText on $projection.supplement_id = _SupplementText.SupplementID
 {
