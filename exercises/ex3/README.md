@@ -19,16 +19,16 @@ After completing these steps you will have created the Business Object Views ove
 <br>![](/exercises/ex3/images/03_01_0040.png)
 
 5.	Click “Finish”.
-<br>![](/exercises/ex3/images/03_01_0041.png)
-
-6.	The CDS definition editor will open with the following code.
 <br>![](/exercises/ex3/images/03_01_0050.png)
 
-7.	First, change the name of the sqlViewName annotation as shown here where XXX is your group number.  If you DO NOT want to type all of this code in the following steps, you may copy it from the solution.
+6.	The CDS definition editor will open with the following code.
 <br>![](/exercises/ex3/images/03_01_0060.png)
 
-8.	There is a lot of code to add here. We’ll try to take it by sections.  This code is not only defining the associations to other tables/views as well as the columns that we want in our view, but also how these columns are presented in the user interface later on. The annotations are what drive this funtionality.  In this first section at the top, make sure that you add these annotations if they are not already there. 
+7.	First, change the name of the sqlViewName annotation as shown here where XXX is your group number.  If you DO NOT want to type all of this code in the following steps, you may copy it from the solution.
 <br>![](/exercises/ex3/images/03_01_0070.png)
+
+8.	There is a lot of code to add here. We’ll try to take it by sections.  This code is not only defining the associations to other tables/views as well as the columns that we want in our view, but also how these columns are presented in the user interface later on. The annotations are what drive this funtionality.  In this first section at the top, make sure that you add these annotations if they are not already there. 
+<br>![](/exercises/ex3/images/03_01_0080.png)
 
 9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
 ```abap
@@ -73,7 +73,7 @@ define root view Z_I_TRAVEL_U_XXX
 }
 ```
 12.	Save your work, but do not try to activate at this point as we have not created the **Booking** view yet.
-<br>![](/exercises/ex3/images/03_01_0110.png)
+<br>![](/exercises/ex3/images/03_01_0120.png)
 
 13.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX. 
 ```abap
@@ -121,7 +121,7 @@ define view Z_I_BOOKING_U_XXX
 
 ```
 14. Save your work.
-<br>![](/exercises/ex3/images/03_01_0130.png)
+<br>![](/exercises/ex3/images/03_01_0140.png)
 
 15. Use what you have learned and create another view in the same way called Z_I_BOOKINGSUPPLEMENT_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX.
 ```abap
@@ -165,13 +165,13 @@ define view Z_I_BookingSupplement_U_XXX
 
 ```
 16. Save your work.
-<br>![](/exercises/ex3/images/03_01_0150.png)
-
-17. Select all three of the views that you have created.  
 <br>![](/exercises/ex3/images/03_01_0160.png)
 
-18. Right-click on the selection and choose “Activate“.
+17. Select all three of the views that you have created.  
 <br>![](/exercises/ex3/images/03_01_0170.png)
+
+18. Right-click on the selection and choose “Activate“.
+<br>![](/exercises/ex3/images/03_01_0180.png)
 
 
 ## Exercise 3.2 Create the Business Object Behavior Definition and Implementation
