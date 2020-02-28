@@ -867,7 +867,7 @@ After completing these steps you will have added  Field Attributes for defining 
 
 2.	Go back to the Z_I_TRAVEL_M_XXX behavior definition. Before the create statement, add the following lines.  Here we are setting fields as mandatory, and also setting the travel_id field so that we can set the attributes of this field programatically in our behavior implementation.  We will circle back on that later.
 ```abap
-  // mandatory fields that are required to create a travel
+// mandatory fields that are required to create a travel
   field ( mandatory ) agency_id, overall_status, booking_fee, currency_code;
   field (features : instance ) travel_id;
 
