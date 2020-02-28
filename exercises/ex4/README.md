@@ -884,7 +884,7 @@ After completing these steps you will have added  Field Attributes for defining 
 4.	Save and activate your work.
 <br>![](/exercises/ex4/images/04_08_0040.png)
 
-5.	Return to the projection behavior definition called Z_C_TRAVEL_M_XXX.  As we have created new actions in our business object behavior definition, we now have to expose these in our projection as well.  Add the following lines tot he Z_C_TRAVEL_M_XXX definition after the commented *use delete* statement.
+5.	Return to the projection behavior definition called Z_C_TRAVEL_M_XXX.  As we have created new actions in our business object behavior definition, we now have to expose these in our projection as well.  Add the following lines to the Z_C_TRAVEL_M_XXX definition after the commented *use delete* statement.
 ```abap
   use action acceptTravel;
   use action rejectTravel;
