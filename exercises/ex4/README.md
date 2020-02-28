@@ -751,7 +751,7 @@ After completing these steps you will have added additional validation to your B
 2.	Save and activate your work.
 <br>![](/exercises/ex4/images/04_07_0020.png)
 
-3.	Now that we have some logic that we need to implement, we can now create our behavior implementation class for Z_I_TRAVEL_M_XXX.  Right-click on the behavior definition and choose “New Behavior Definition“.
+3.	Now that we have some logic that we need to implement, we can now create our behavior implementation class for Z_I_TRAVEL_M_XXX.  Right-click on the behavior definition and choose “New Behavior Implementation“.
 <br>![](/exercises/ex4/images/04_07_0030.png)
 
 4.	Enter the name of the class as Z_BP_I_TRAVEL_M_XXX where XXX is your group number.  Click “Next“, then “Finish“.
