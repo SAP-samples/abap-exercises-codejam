@@ -852,7 +852,7 @@ After completing these steps you will have added additional validation to your B
 
 After completing these steps you will have added  Field Attributes for defining mandatory fields statically, and defining these Field Attributes dynamically in the implementation.  You will have also created Custom Actions for your Behavior.
 
-1. Return to the Metadata Extension called Z_C_TRAVEL_M_XXX and modify it.  Change the @UI annotation for the TravelStatus column as shown here.  Save and activate your work.
+1. Return to the Metadata Extension called Z_C_TRAVEL_M_XXX and modify it.  Change the @UI annotation for the *overall_status(aka TravelStatus)* column as shown here.  Save and activate your work.
 ```abap
       @UI: {
           lineItem:       [ { position: 15, importance: #HIGH },
