@@ -1,6 +1,6 @@
 # Exercise 3 - ABAP RESTful Programming Model - Unmanaged
 
-In this exercise we will explore the new ABAP RESTful Programming Model, specifically the Unmanaged Scenario.  The unmanaged scenario provides a framework for the developer to have full control over the CRUD operations of their application. It is designed to allow developers to leverage existing assets, such as existing class/methods and function modules. The developer is fully responsible for handling all aspects of the transaction, from validation and locking of the data, to the save mechanism. We will create views over our data model, define behaviors, and service enable the data model as well.  
+In this exercise we will explore the new ABAP RESTful Programming Model, specifically the Unmanaged Scenario.  The unmanaged scenario provides a framework for the developer to have full control over the CRUD operations of their application. It is designed to allow developers to leverage existing assets, such as existing class methods and function modules. The developer is fully responsible for handling all aspects of the transaction, from validation and locking of the data, to the save mechanism. We will create views over our data model, define behaviors, and service enable the data model as well.  
 
 ## Exercise 3.1 Create the Business Object Views
 
@@ -24,10 +24,10 @@ After completing these steps you will have created the Business Object Views ove
 6.	The CDS definition editor will open with the following code.
 <br>![](/exercises/ex3/images/03_01_0060.png)
 
-7.	First, change the name of the sqlViewName annotation as shown here where XXX is your group number.  If you DO NOT want to type all of this code in the following steps, you may copy it from the solution.
+7.	First, change the name of the sqlViewName annotation as shown here where XXX is your group number.  
 <br>![](/exercises/ex3/images/03_01_0070.png)
 
-8.	There is a lot of code to add here. We’ll try to take it by sections.  This code is not only defining the associations to other tables/views as well as the columns that we want in our view, but also how these columns are presented in the user interface later on. The annotations are what drive this funtionality.  In this first section at the top, make sure that you add these annotations if they are not already there. 
+8.	There is a lot of code to add here. We’ll try to take it by sections.  This code is defining the associations to other tables/views as well as the columns that we want in our view.  In this first section at the top, make sure that you add these annotations if they are not already there. 
 <br>![](/exercises/ex3/images/03_01_0080.png)
 
 9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
@@ -176,7 +176,7 @@ define view Z_I_BookingSupplement_U_XXX
 
 ## Exercise 3.2 Create the Business Object Behavior Definition and Implementation
 
-After completing these steps you will hae created the Behavior Definitionand Implementation for your Busines Object Views.  The behavior definition defines what operations are possible for your Business Object. 
+After completing these steps you will have created the Behavior Definitionand Implementation for your Busines Object Views.  The behavior definition defines what operations are possible for your Business Object. 
 
 1.	Right-click on the Z_I_TRAVEL_U_XXX CDS Artifact and choose “New Behavior Defintion“.
 <br>![](/exercises/ex3/images/03_02_0010.png)
@@ -190,7 +190,7 @@ After completing these steps you will hae created the Behavior Definitionand Imp
 4.	Let’s modify this definition.  In this case, we don’t want a single implementation class for Travel, Booking, and BookingSupplement.  Instead lets define the implementation classes specifically for each definition.  First remove that from the first line so that it only contains the unmanaged key word.
 <br>![](/exercises/ex3/images/03_02_0040.png)
 
-5.	Give aliases to all definitions. Also add these lines for the implementation classes for each definition. Be use to replace XXX with your group number.
+5.	Give aliases to all definitions. Also add these lines for the implementation classes for each definition. Be sure to replace XXX with your group number.
 <br>![](/exercises/ex3/images/03_02_0050.png)
 
 6.	Inside the definition, add the following code before the create statement in the first definition.  The field keyword here allows you to set specific attributes of fields, for example, to set as read-only  or as required. 
@@ -247,7 +247,7 @@ action set_status_booked result [1] $self;
 
 ```
 
-12. Next, drop down tot he Z_I_BOOKINGSUPPLEMENT_X_XXX definition. Add the follwing lines of code before the create keyword.
+12. Next, drop down tot he Z_I_BOOKINGSUPPLEMENT_XXX definition. Add the follwing lines of code before the create keyword.
 ```abap
   field ( read only ) TravelID, BookingID, BookingSupplementID;
   field ( mandatory ) SupplementID, Price;
@@ -861,7 +861,7 @@ ENDCLASS.
 31.	Save and activate your work.
 <br>![](/exercises/ex3/images/03_02_0310.png)
 
-32.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKING_U_XXX.  Copy the following code tot the “Local Types“ tab.  As you can see, this Behavior Pool contains implementations for the READ, UPDATE and DELETE operations for **Bookings** as well as READ and CREATE for **BookingSupplement**.  
+32.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKING_U_XXX.  Copy the following code to the “Local Types“ tab.  As you can see, this Behavior Pool contains implementations for the READ, UPDATE and DELETE operations for **Bookings** as well as READ and CREATE for **BookingSupplement**.  
 ```abap
 **********************************************************************
 *
@@ -1248,7 +1248,7 @@ ENDCLASS.
 33.	Save and activate your work.
 <br>![](/exercises/ex3/images/03_02_0330.png)
 
-34.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKINGSUPPLEMENT_U_XXX.  Copy the following code tot the “Local Types“ tab.  As you can see, this Behavior Pool contains implementations for the UPDATE and DELETE operations for **BookingSupplement**.  
+34.	Use what you have learned and create another ABAP Class for a another Behavior Pool and call it Z_BP_I_BOOKINGSUPPLEMENT_U_XXX.  Copy the following code to the “Local Types“ tab.  As you can see, this Behavior Pool contains implementations for the READ, UPDATE and DELETE operations for **BookingSupplement**.  
 ```abap
 **********************************************************************
 *
@@ -1466,7 +1466,7 @@ After completing these steps you will have created Projection Views over your Bu
 4. Choose Projection View from the selection box and click “Finish“.
 <br>![](/exercises/ex3/images/03_03_0040.png)
 
-5.	Enter the code as shown here, and replace XXX with your group number. Note, that in the DEFINE ROOT VIEW statement, there is the extension  AS PROJECTION ON pointing to your Business Object view Z_I_TRAVEL_U_XXX.  In this projection view, not only are we filtering columsn, but we are adding value help declarations as well using annotations.  
+5.	Enter the code as shown here, and replace XXX with your group number. Note, that in the DEFINE ROOT VIEW statement, there is the extension  AS PROJECTION ON pointing to your Business Object view Z_I_TRAVEL_U_XXX.  In this projection view, not only are we filtering columns, but we are adding value help declarations as well using annotations.  
 ```abap
 @EndUserText.label: 'Travel Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
