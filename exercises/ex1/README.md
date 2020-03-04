@@ -47,7 +47,7 @@ response->set_text( |Hello World! | ).
 
 After completing these steps you will have modified your HTTP Handler Class to handle passing of URL parameters.
 
-1.	Return to the handler class and modify the hand_request method as shown here.  Call the get_form_fields method of the request object to get URL parameters, then check for specific commands such as “hello“ and “timestamp“.
+1.	Return to the handler class and modify the handle_request method as shown here.  Call the get_form_fields method of the request object to get URL parameters, then check for specific commands such as “hello“ and “timestamp“.
 ```abap
 DATA(lt_params) = request->get_form_fields(  ).
 READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
@@ -81,7 +81,7 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
 5.	You should get a 400 error because now your service is expecting a URL parameter to determine what it needs to do.  
 <br>![](/exercises/ex1/images/01_02_0050.png)
 
-6.	Go to the URL in the browser windown and add the parameter as shown.
+6.	Go to the URL in the browser window and add the parameter as shown.
 <br>![](/exercises/ex1/images/01_02_0060.png)
 
 7.	Now you should once again get the “Hello World!“.

@@ -1,10 +1,10 @@
 # Exercise 2 - Consuming Services via HTTP
 
-In this first exercise, we will create a class which leverages the HTTP connectivity classes and consume an external API from the SAP API Hub.  You can view APIs of the SAP API Hub at the following URL.
+In this exercise, we will create a class which leverages the HTTP connectivity classes and consume an external API from the SAP API Hub.  You can view APIs of the SAP API Hub at the following URL.
 
 https://api.sap.com/package/SAPS4HANACloud?section=Artifacts
 
-In this exercise, we will use the Bank – Read API, which allows us to retrieve a list of bank details.  This page gives you all the information about caling the API and also supplies the API key which we will need to supply when calling from our ABAP class.
+In this exercise, we will use the Bank – Read API, which allows us to retrieve a list of bank details.  This page gives you all the information about calling the API and also supplies the API key which we will need to supply when calling from our ABAP class.
 
 https://api.sap.com/api/API_BANKDETAIL_SRV/resource
 
@@ -97,7 +97,7 @@ After completing these steps you will have consumed an external API from the SAP
 4.	When the browser opens, change the URL to include cmd=bankdetails  
 <br>![](/exercises/ex2/images/02_02_0140.png)
 
-5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_API_HUB_MANAGER_XXX class for a another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud?section=Artifacts. Choose one that is an ODATA API and perhaps one that is a READ type operation
+5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_API_HUB_MANAGER_XXX class for another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud?section=Artifacts. Choose one that is an ODATA API and perhaps one that is a READ type operation
 <br>![](/exercises/ex2/images/02_02_0150.png)
 
 6. As your API keys are now exposed in your code, I would highly recommend that you return to your ZCL_API_HUB_MANAGER_XXX class and remove any hardcoded API keys from your code.
