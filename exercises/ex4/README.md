@@ -859,7 +859,7 @@ After completing these steps you will have added  Field Attributes for defining 
 
 ```
 
-2.	Go back to the Z_I_TRAVEL_M_XXX behavior definition. Before the create statement, add the following lines.  Here we are setting fields as mandatory, and also setting the travel_id field so that we can set the attributes of this field programatically in our behavior implementation.  We will circle back on that later.
+2.	Go back to the Z_I_TRAVEL_M_XXX behavior definition. Before the create statement, add the following lines.  Here we are setting fields as mandatory, and also setting the travel_id field so that we can set the attributes of this field programmatically in our behavior implementation.  We will circle back on that later.
 ```abap
 // mandatory fields that are required to create a travel
   field ( mandatory ) agency_id, overall_status, booking_fee, currency_code;
@@ -894,7 +894,7 @@ After completing these steps you will have added  Field Attributes for defining 
 
 ```
 
-7.	Add the implementation fort he *set_status_completed* method as shown here.  Make sure to replace XXX with your group number.
+7.	Add the implementation for the *set_status_completed* method as shown here.  Make sure to replace XXX with your group number.
 ```abap
   METHOD set_status_completed.
 
@@ -970,13 +970,13 @@ METHOD set_status_cancelled.
   ENDMETHOD.
 
 ```
-9.	We want to control the display have these accept and reject buttons programmically.  In the behavior definition we used the keyword “feature“ when defining the actions.  Now in our implementation, we can get access to these features and control access to them.  Once again, add a new method called *get_features*.
+9.	We want to control the display of these accept and reject buttons programmically.  In the behavior definition we used the keyword “feature“ when defining the actions.  Now in our implementation, we can get access to these features and control access to them.  Once again, add a new method called *get_features*.
 ```abap
    METHODS get_features  FOR FEATURES 
       IMPORTING keys REQUEST  requested_features FOR travel  RESULT result.
 
 ```
-10.	Add the implementation fort he set_status_cancelled method as shown here. Make sure to replace XXX with your group number. This method reads the entity and gives us access to the actions and allows us to set the buttons to enable/disabled based on that selected lines current status.  Here we are also programmically setting the “Travel ID“ field to read-only in edit mode.
+10.	Add the implementation for the set_status_cancelled method as shown here. Make sure to replace XXX with your group number. This method reads the entity and gives us access to the actions and allows us to set the buttons to enable/disabled based on that selected lines current status.  Here we are also programmically set the “Travel ID“ field to read-only in edit mode.
 ```abap
 METHOD get_features.
 
