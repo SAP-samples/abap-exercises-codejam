@@ -1891,7 +1891,7 @@ define service Z_SD_C_TRAVEL_U_XXX {
 9.	Select the Travel entity set, and click “Preview“.
 <br>![](/exercises/ex3/images/03_06_0090.png)
 
-10.	The browser will be launched where it may ask for you to log in.  Here you can preview the data and test the create, update, delete behaviors.  Play around with this preview UI and test your CRUD operations. Set some breakpoints in your code and see what methods are triggered in what senarios.
+10.	The browser will be launched where it may ask for you to log in.  Here you can preview the data and test the create, update, delete behaviors.  Play around with this preview UI and test your CRUD operations. Set some breakpoints in your code and see what methods are triggered in what scenarios.
 <br>![](/exercises/ex3/images/03_06_0100.png)
 
 ## Summary
