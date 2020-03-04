@@ -735,7 +735,7 @@ define service Z_SD_C_TRAVEL_M_XXX {
 
 After completing these steps you will have added additional validation to your Behavior Definitions for checking the values for *Customer* and *Begin_Date* and *End_Date*.
 
-1.	Return to your behavior definition called  Z_I_TRAVEL_M_XXX.  After the delete statement für behavior Z_I_TRAVEL_M_XXX, enter the following code. 
+1.	Return to your behavior definition called  Z_I_TRAVEL_M_XXX.  After the delete statement for behavior Z_I_TRAVEL_M_XXX, enter the following code. 
 ```abap
    // validations
   validation validateCustomer on save { field customer_id; }
