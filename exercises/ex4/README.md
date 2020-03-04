@@ -1,6 +1,6 @@
 # Exercise 4 - ABAP RESTful Programming Model - Managed
 
-In this exercise we will explore the new ABAP RESTful Programming Model, specifically the Managed Scenario.  The Managed scenario provides a framework for the developer to created applications quickly and easily while focusing mainly on the business logic as opposed to the nuts and bolts of the transaction. The framework is is designed to handle the CRUD operations and save mechanism automatically without the developer having to code for it.  The developer can focus more on the business logic of the application and add in additional validations. We will create views over our data model, define behaviors, and service enable the data model as well.   
+In this exercise we will explore the new ABAP RESTful Programming Model, specifically the Managed Scenario.  The Managed scenario provides a framework for the developer to create applications quickly and easily while focusing mainly on the business logic as opposed to the nuts and bolts of the transaction. The framework is designed to handle the CRUD operations and save mechanism automatically without the developer having to code for it.  The developer can focus more on the business logic of the application and add in additional validations. We will create views over our data model, define behaviors, and service enable the data model as well.   
 
 ## Exercise 4.1 Create the Business Object Views
 
@@ -24,10 +24,10 @@ After completing these steps you will have created the Business Object Views ove
 6.	The CDS definition editor will open with the following code.
 <br>![](/exercises/ex4/images/04_01_0060.png)
 
-7.	First, change the name of the sqlViewName annotation as shown here where XXX is your group number.  If you DO NOT want to type all of this code in the following steps, you may copy it from the solution.
+7.	First, change the name of the sqlViewName annotation as shown here where XXX is your group number.  
 <br>![](/exercises/ex4/images/04_01_0070.png)
 
-8.	There is a lot of code to add here. We’ll try to take it by sections.  This code is not only defining the associations to other tables/views as well as the columns that we want in our view, but also how these columns are presented in the user interface later on. The annotations are what drive this funtionality.  In this first section at the top, make sure that you add these annotations if they are not already there. 
+8.	There is a lot of code to add here. We’ll try to take it by sections.  This code is defining the associations to other tables/views as well as the columns that we want in our view.  In this first section at the top, make sure that you add these annotations if they are not already there. 
 <br>![](/exercises/ex4/images/04_01_0080.png)
 
 9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
@@ -130,8 +130,6 @@ define view Z_I_Booking_M_XXX
       _Connection
 
 }
-
-
 ```
 14.	Save your work.
 <br>![](/exercises/ex4/images/04_01_0140.png)
@@ -172,10 +170,6 @@ define view Z_I_BookSuppl_M_XXX
       _SupplementText
 }
 
-
-
-
-
 ```
 16.	Save your work.
 <br>![](/exercises/ex4/images/04_01_0160.png)
@@ -196,7 +190,7 @@ After completing these steps you will hae created the Behavior Definitionand Imp
 2.	Provide the default description, and change the Implementation Type to “Managed”.  Then click “Next”, then “Finish”.
 <br>![](/exercises/ex4/images/04_02_0020.png)
 
-3.	You will then see the Behavior Defintion editor. You should see 3 seperate behavior definitions here, one for Travel, Bookings, and BookingSupplement. 
+3.	You will then see the Behavior Defintion editor. You should see 3 seperate behavior definitions here, one for **Travel**, **Bookings**, and **BookingSupplement**. 
 <br>![](/exercises/ex4/images/04_02_0030.png)
 
 4.	Let’s modify this behavior definition.  We’l take it one at a time.  Start with the behavior for **Travel**.  Give the alias and define the implementation class as shown here. Keep the persistant table definition as it is. Uncomment the lock master and etag lines.  For etag, define the field as shown
@@ -264,7 +258,7 @@ After completing these steps you will have created Projection Views over your Bu
 4.	Choose Define Projection View from the selection box and click “Finish“.
 <br>![](/exercises/ex4/images/04_03_0040.png)
 
-5.	Enter the code as shown here. 
+5.	Enter the code as shown here and make sure to replace XXX with your group number.
 ```abap
 @EndUserText.label: 'Travel Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
@@ -322,7 +316,7 @@ define root view entity Z_C_TRAVEL_M_XXX
 
 ```
 
-6.	Use what you have learned and create another projection view for **Booking**. 
+6.	Use what you have learned and create another projection view called Z_C_BOOKING_M_XXX where XXX is your group number for **Booking**. 
 ```abap
 @EndUserText.label: 'Booking Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
@@ -446,7 +440,7 @@ define view entity Z_C_BookSuppl_M_XXX
 
 ## Exercise 4.4 Create the Metadata Extensions
 
-After completing these steps have created the Metadata Extensions. The Metadata Extensions are meant to seperate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
+After completing these steps you will have created the Metadata Extensions. The Metadata Extensions are meant to seperate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
 
 1.	Right-click on the Z_C_TRAVEL_M_XXX projection view and choose “New Metadata Extension“.  
 <br>![](/exercises/ex4/images/04_04_0010.png)
@@ -454,7 +448,7 @@ After completing these steps have created the Metadata Extensions. The Metadata 
 2.	Give the name as the same as the view, Z_C_TRAVEL_M_XXX where XXX is your group number.  Give a meaningful description and click “Next”, then “Finish”.
 <br>![](/exercises/ex4/images/04_04_0020.png)
 
-3.	Enter the code as shown here. 
+3.	Enter the code as shown here and make sure to replace XXX with your group number.
 ```abap
 @Metadata.layer: #CORE
 
