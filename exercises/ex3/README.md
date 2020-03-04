@@ -1640,7 +1640,7 @@ define view entity Z_C_BookingSupplement_U_XXX
 
 ## Exercise 3.4 Create the Metadata Extensions
 
-After completing these steps have created the Metadata Extensions. The Metadata Extensions are meant to seperate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
+After completing these steps you will have created the Metadata Extensions. The Metadata Extensions are meant to seperate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
 
 1.	Right-click on the Z_C_TRAVEL_U_XXX CDS artifact and choose “New Metadata Extension“.
 <br>![](/exercises/ex3/images/03_04_0010.png)
@@ -1866,7 +1866,7 @@ After completing these steps you will have created the Service Definition which 
 3.	The service definition is prefilled for you.  Here we are exposing only the Z_C_TRAVEL_U_XXX entity.
 <br>![](/exercises/ex3/images/03_06_0030.png)
 
-4.	Update the definition to expose the Z_C_BOOKING_U_XXX entity and Z_C_BOOKINGSUPPLEMENT_U_XXX as well.  Also add aliases to both as shown here. 
+4.	Update the definition to expose the Z_C_BOOKING_U_XXX entity and Z_C_BOOKINGSUPPLEMENT_U_XXX as well.  Also add aliases to all as shown here. 
 ```abap
 @EndUserText.label: 'Service Definition for Travel'
 define service Z_SD_C_TRAVEL_U_XXX {
@@ -1891,7 +1891,7 @@ define service Z_SD_C_TRAVEL_U_XXX {
 9.	Select the Travel entity set, and click “Preview“.
 <br>![](/exercises/ex3/images/03_06_0090.png)
 
-10.	The browser will be launched where it may ask for you to log in.  Here you can preview the data and test the create, update, delete behaviors.  Play around with this preview UI and test your CRUD operations. Set some breakpoints in your code and what methods are triggered in what senarios.
+10.	The browser will be launched where it may ask for you to log in.  Here you can preview the data and test the create, update, delete behaviors.  Play around with this preview UI and test your CRUD operations. Set some breakpoints in your code and see what methods are triggered in what senarios.
 <br>![](/exercises/ex3/images/03_06_0100.png)
 
 ## Summary
