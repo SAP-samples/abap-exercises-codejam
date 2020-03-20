@@ -1011,5 +1011,5 @@ METHOD get_features.
 
 ## Summary
 
-You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, added Validations and Field Attributes, and exposed your data model as an Odata service using the Managed Scenario of the RESTful Programming Model
+You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, added Validations and Field Attributes, and exposed your data model as an OData service using the Managed Scenario of the RESTful Programming Model
 

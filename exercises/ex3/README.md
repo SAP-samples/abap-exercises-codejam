@@ -1882,7 +1882,7 @@ define service Z_SD_C_TRAVEL_U_XXX {
 6.	Go to the sevice definition folder and right-click on your service definnition and choose “New Service Binding“.
 <br>![](/exercises/ex3/images/03_06_0060.png)
 
-7.	Give the name as Z_UI_C_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description.  Make sure the binding type is ODATA V2 -UI.  Click “Next“, then “Finish“.
+7.	Give the name as Z_UI_C_TRAVEL_U_XXX where XXX is your group number.  Give a meaningful description.  Make sure the binding type is OData V2 -UI.  Click “Next“, then “Finish“.
 <br>![](/exercises/ex3/images/03_06_0070.png)
 
 8.	In the service binding, click the “Activate“ button.
@@ -1896,6 +1896,6 @@ define service Z_SD_C_TRAVEL_U_XXX {
 
 ## Summary
 
-You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, and exposed your data model as an Odata service using the Unmanaged Scenario of the RESTful Programming Model
+You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, and exposed your data model as an OData service using the Unmanaged Scenario of the RESTful Programming Model
 
 Continue to - [Exercise 4 - ABAP RESTful Programming Model - Managed ](../ex4/README.md)
