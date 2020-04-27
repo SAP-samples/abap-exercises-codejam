@@ -339,7 +339,7 @@ define behavior for Z_I_BOOKING_U_XXX alias booking
 
 // behavior defintion for the BOOKING SUPPLEMENT sub node
 define behavior for Z_I_BookingSupplement_U_XXX alias bookingsupplement
-implementation in class Z_BP_i_bookingsupplement_U_XXX unique
+implementation in class z_bp_i_bookingsupplement_U_XXX unique
 
 {
 
