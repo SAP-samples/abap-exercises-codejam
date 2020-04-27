@@ -10,9 +10,9 @@ https://api.sap.com/api/API_BANKDETAIL_SRV/resource
 
 ## Exercise 2.1 Create API Hub Manager Class
 
-After completing these steps you will created a class which calls the whitelisted HTTP connecitivity classes.
+After completing these steps you will have created a class which calls the whitelisted HTTP connectivity classes.
 
-1. Right-click on your package and choose “New“, “Other ABAP Repository Object“.
+1. Right-click on your package and choose “New“, “ABAP Class“.
 <br>![](/exercises/ex2/images/02_01_0010.png)
 
 2. Name your new class as “ZCL_API_HUB_MANAGER_XXX“.  Click “Next“, then click “Finish“. Make sure to replace XXX with your group number.
@@ -33,7 +33,7 @@ DATA: go_http_client TYPE REF TO  if_web_http_client.
 5. Your code should now look like this.
 <br>![](/exercises/ex2/images/02_01_0050.png)
 
-6. Next, implement the CONSTRUCTOR method.  Here we will leverage the SAP delivered http connectivity classes in order to estabish an connection to an external HTTP endpoint.
+6. Next, implement the CONSTRUCTOR method.  Here we will leverage the SAP delivered HTTP connectivity classes in order to estabish a connection to an external HTTP endpoint.
 ```abap
 go_http_client = cl_web_http_client_manager=>create_by_http_destination(
             i_destination = cl_http_destination_provider=>create_by_url( gv_url ) ).
@@ -72,15 +72,15 @@ ENDTRY.
 r_json = lv_response.
 ```
 
-9.	Your code should now look like the following.
+12.	Your code should now look like the following.
 <br>![](/exercises/ex2/images/02_01_0120.png)
 
-10.	Save and activate your work.
+13.	Save and activate your work.
 <br>![](/exercises/ex2/images/02_01_0130.png)
 
 ## Exercise 2.2 Update Hello World 
 
-After completing these steps you will have consumed an external API from the SAP API hub, and viewed the results via the browser.
+After completing these steps you will have consumed an external API from the SAP API Hub, and viewed the results via the browser.
 
 1.	Now return to your ZCL_HELLO_WORLD_XXX class and modify it.  Add another WHEN condition to your CASE statement as shown here.  Make sure to replace XXX with your group number.
 ```abap
@@ -100,7 +100,7 @@ After completing these steps you will have consumed an external API from the SAP
 5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_API_HUB_MANAGER_XXX class for another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud?section=Artifacts. Choose one that is an OData API and perhaps one that is a READ type operation
 <br>![](/exercises/ex2/images/02_02_0150.png)
 
-6. As your API keys are now exposed in your code, I would highly recommend that you return to your ZCL_API_HUB_MANAGER_XXX class and remove any hardcoded API keys from your code.
+6. As your API keys are now exposed in your code, I would highly recommend that you return to your ZCL_API_HUB_MANAGER_XXX class and remove them.
 
 
 ## Summary
