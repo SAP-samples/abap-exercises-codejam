@@ -366,7 +366,7 @@ implementation in class z_bp_i_bookingsupplement_U_XXX unique
 16.	Save and Activate your work.  Yes, you have not created the behavior implementation classes yet, but that is ok. You can still activate at this point.
 <br>![](/exercises/ex3/images/03_02_0160.png)
 
-17.	Now we will create Behavior Implementations for *Travel, Booking and BookingSupplement*. Right-clilck on your behavior definition and choose, “New Behavior Implementation“.
+17.	Now we will create Behavior Implementations for *Travel, Booking and BookingSupplement*. Right-click on your behavior definition and choose, “New Behavior Implementation“.
 <br>![](/exercises/ex3/images/03_02_0170.png)
 
 18.	Give the name of the ABAP Class as Z_BP_I_TRAVEL_U_XXX.  Be sure to replace XXX with your group number. Technically, we refer to this as a “Behavior Pool“.  Click “Next“ and then “Finish“.
