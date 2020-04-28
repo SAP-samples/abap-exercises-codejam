@@ -176,7 +176,7 @@ define view Z_I_BookingSupplement_U_XXX
 
 ## Exercise 3.2 Create the Business Object Behavior Definition and Implementation
 
-After completing these steps you will have created the Behavior Definitionand Implementation for your Busines Object Views.  The behavior definition defines what operations are possible for your Business Object. 
+After completing these steps you will have created the Behavior Definition and Implementation for your Business Object Views.  The behavior definition defines what operations are possible for your Business Object. 
 
 1.	Right-click on the Z_I_TRAVEL_U_XXX CDS Artifact and choose “New Behavior Defintion“.
 <br>![](/exercises/ex3/images/03_02_0010.png)
@@ -184,7 +184,7 @@ After completing these steps you will have created the Behavior Definitionand Im
 2.	Provide the default description, and change the Implementation Type to “Unmanaged”.  Then click “Next”, then “Finish”.
 <br>![](/exercises/ex3/images/03_02_0020.png)
 
-3.	You will then see the Behavior Defintion editor. You should see 3 seperate behavior definitions here, one for Travel, Bookings, and BookingSupplement. 
+3.	You will then see the Behavior Defintion editor. You should see 3 separate behavior definitions here, one for Travel, Bookings, and BookingSupplement. 
 <br>![](/exercises/ex3/images/03_02_0030.png)
 
 4.	Let’s modify this definition.  In this case, we don’t want a single implementation class for Travel, Booking, and BookingSupplement.  Instead lets define the implementation classes specifically for each definition.  First remove that from the first line so that it only contains the unmanaged key word.
@@ -221,7 +221,7 @@ action set_status_booked result [1] $self;
   }
 
 ```
-9.	Next drop down the the second definition, the definition for Z_I_BOOKING_U_XXX.  Add the follwing lines of code before the create keyword.
+9.	Next drop down to the second definition, the definition for Z_I_BOOKING_U_XXX.  Add the following lines of code before the create keyword.
 ```abap
   field ( read only ) TravelID, BookingID;
   field ( mandatory ) BookingDate, CustomerID, AirlineID, ConnectionID, FlightDate;
@@ -230,7 +230,7 @@ action set_status_booked result [1] $self;
 10.	Now remove the create keyword, since we will handle the creation of bookings in association with the travel. So we only need the update and delete keywords.
 <br>![](/exercises/ex3/images/03_02_0100.png)
 
-11. After the delete keyword, add the following mapping statement.
+11. After the association keyword, add the following mapping statement.
 ```abap
   mapping for /dmo/booking
   {
@@ -247,7 +247,7 @@ action set_status_booked result [1] $self;
 
 ```
 
-12. Next, drop down tot he Z_I_BOOKINGSUPPLEMENT_XXX definition. Add the follwing lines of code before the create keyword.
+12. Next, drop down to the Z_I_BOOKINGSUPPLEMENT_XXX definition. Add the following lines of code before the create keyword.
 ```abap
   field ( read only ) TravelID, BookingID, BookingSupplementID;
   field ( mandatory ) SupplementID, Price;
