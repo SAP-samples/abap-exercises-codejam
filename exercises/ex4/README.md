@@ -182,7 +182,7 @@ define view Z_I_BookSuppl_M_XXX
 
 ## Exercise 4.2 Create the Business Object Behavior Definition and Implementation
 
-After completing these steps you will hae created the Behavior Definitionand Implementation for your Busines Object Views.  The behavior definition defines what operations are possible for your Business Object.
+After completing these steps you will hae created the Behavior Definition and Implementation for your Business Object Views.  The behavior definition defines what operations are possible for your Business Object.
 
 1.	Right-click on the Z_I_TRAVEL_M_XXX CDS Artifact and choose “New Behavior Defintion“.   
 <br>![](/exercises/ex4/images/04_02_0010.png)
@@ -190,7 +190,7 @@ After completing these steps you will hae created the Behavior Definitionand Imp
 2.	Provide the default description, and change the Implementation Type to “Managed”.  Then click “Next”, then “Finish”.
 <br>![](/exercises/ex4/images/04_02_0020.png)
 
-3.	You will then see the Behavior Defintion editor. You should see 3 seperate behavior definitions here, one for **Travel**, **Bookings**, and **BookingSupplement**. 
+3.	You will then see the Behavior Defintion editor. You should see 3 separate behavior definitions here, one for **Travel**, **Booking**, and **BookingSupplement**. 
 <br>![](/exercises/ex4/images/04_02_0030.png)
 
 4.	Let’s modify this behavior definition.  We’l take it one at a time.  Start with the behavior for **Travel**.  Give the alias and define the implementation class as shown here. Keep the persistant table definition as it is. Uncomment the lock master and etag lines.  For etag, define the field as shown
@@ -224,7 +224,7 @@ etag master last_changed_at
 }
 
 ```
-6.	Finally drop down tot he definition for **BookingSupplement**.  Update this definition as shown here.
+6.	Finally drop down to the definition for **BookingSupplement**.  Update this definition as shown here.
 ```abap
 define behavior for Z_I_BookSuppl_M_XXX alias booksuppl
 implementation in class Z_BP_I_BOOKINGSUPPLEMENT_M_XXX unique
@@ -440,7 +440,7 @@ define view entity Z_C_BookSuppl_M_XXX
 
 ## Exercise 4.4 Create the Metadata Extensions
 
-After completing these steps you will have created the Metadata Extensions. The Metadata Extensions are meant to seperate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
+After completing these steps you will have created the Metadata Extensions. The Metadata Extensions are meant to separate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
 
 1.	Right-click on the Z_C_TRAVEL_M_XXX projection view and choose “New Metadata Extension“.  
 <br>![](/exercises/ex4/images/04_04_0010.png)
