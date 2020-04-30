@@ -30,7 +30,7 @@ After completing these steps you will have created the Business Object Views ove
 8.	There is a lot of code to add here. We’ll try to take it by sections.  This code is defining the associations to other tables/views as well as the columns that we want in our view.  In this first section at the top, make sure that you add these annotations if they are not already there. 
 <br>![](/exercises/ex4/images/04_01_0080.png)
 
-9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
+9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel_m as Travel“.  This is an existing table already in the system.
 ```abap
 define root view Z_I_TRAVEL_M_XXX
   as select from /dmo/travel_m as Travel
@@ -84,7 +84,7 @@ define root view Z_I_TRAVEL_M_XXX
 12.	Save your work, but do not try to activate at this point as we have not created the **Booking** view yet.
 <br>![](/exercises/ex4/images/04_01_0120.png)
 
-13.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_M_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX. 
+13.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_M_XXX.  As you did before, add the code as shown here. Make sure to use your group number where there is XXX. 
 ```abap
 @AbapCatalog.sqlViewName: 'ZIBOOKING_M_XXX'
 @AbapCatalog.compiler.compareFilter: true
