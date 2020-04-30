@@ -238,7 +238,7 @@ lock dependent( travel_id = travel_id ) //authorization dependent( <local_field_
 }
 
 ```
-7.	At this point, this is all you need in order to have a working transactional application.  Later, we will come back and add additional functionality to your behavior definition. Save and activate your work.
+7.	At this point, this is all you need in order to have a working transactional application.  Later, we will come back and add additional functionality to your behavior definition. Save and activate your work.  You may see some warnings during activation, this is normal.
 <br>![](/exercises/ex4/images/04_02_0070.png)
 
 
