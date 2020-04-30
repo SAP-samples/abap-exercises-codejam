@@ -1640,7 +1640,7 @@ define view entity Z_C_BookingSupplement_U_XXX
 
 ## Exercise 3.4 Create the Metadata Extensions
 
-After completing these steps you will have created the Metadata Extensions. The Metadata Extensions are meant to seperate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
+After completing these steps you will have created the Metadata Extensions. The Metadata Extensions are meant to separate the UI specific annotations from the rest of the data model.  This makes for much cleaner code.
 
 1.	Right-click on the Z_C_TRAVEL_U_XXX CDS artifact and choose “New Metadata Extension“.
 <br>![](/exercises/ex3/images/03_04_0010.png)
@@ -1855,7 +1855,7 @@ After completing these steps you will have created the Behavior Definition Proje
 
 ## Exercise 3.6 Create the Service Definition and Service Binding
 
-After completing these steps you will have created the Service Definition which exposes the Projection Views, and the Service Binding which binds the Service Definition to a specific protocal and usage.
+After completing these steps you will have created the Service Definition which exposes the Projection Views, and the Service Binding which binds the Service Definition to a specific protocol and usage.
 
 1.	Select the Z_C_TRAVEL_U_XXX CDS artifact and right-click and choose “New Service Definition“.
 <br>![](/exercises/ex3/images/03_06_0010.png)
@@ -1876,7 +1876,7 @@ define service Z_SD_C_TRAVEL_U_XXX {
 }
 
 ```
-5.	Save and activation your work.
+5.	Save and activate your work.
 <br>![](/exercises/ex3/images/03_06_0050.png)
 
 6.	Go to the sevice definition folder and right-click on your service definnition and choose “New Service Binding“.
