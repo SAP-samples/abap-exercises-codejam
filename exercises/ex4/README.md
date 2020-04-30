@@ -134,7 +134,7 @@ define view Z_I_Booking_M_XXX
 14.	Save your work.
 <br>![](/exercises/ex4/images/04_01_0140.png)
 
-15.	Use what you have learned and create another view in the same way called Z_I_BOOKINGSUPPL_M_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX.
+15.	Use what you have learned and create another view in the same way called Z_I_BOOKSUPPL_M_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX.
 ```abap
 @AbapCatalog.sqlViewName: 'ZIBOOKSUPP_M_XXX'
 @AbapCatalog.compiler.compareFilter: true
