@@ -1,6 +1,6 @@
-# Exercise 3 - ABAP RESTful Programming Model - Unmanaged
+# Exercise 3 - ABAP RESTful Application Programming Model - Unmanaged
 
-In this exercise we will explore the new ABAP RESTful Programming Model, specifically the Unmanaged Scenario.  The unmanaged scenario provides a framework for the developer to have full control over the CRUD operations of their application. It is designed to allow developers to leverage existing assets, such as existing class methods and function modules. The developer is fully responsible for handling all aspects of the transaction, from validation and locking of the data, to the save mechanism. We will create views over our data model, define behaviors, and service enable the data model as well.  
+In this exercise we will explore the new ABAP RESTful Application Programming Model, specifically the Unmanaged Scenario.  The unmanaged scenario provides a framework for the developer to have full control over the CRUD operations of their application. It is designed to allow developers to leverage existing assets, such as existing class methods and function modules. The developer is fully responsible for handling all aspects of the transaction, from validation and locking of the data, to the save mechanism. We will create views over our data model, define behaviors, and service enable the data model as well.  
 
 ## Exercise 3.1 Create the Business Object Views
 
@@ -1896,6 +1896,6 @@ define service Z_SD_C_TRAVEL_U_XXX {
 
 ## Summary
 
-You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, and exposed your data model as an OData service using the Unmanaged Scenario of the RESTful Programming Model
+You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, and exposed your data model as an OData service using the Unmanaged Scenario of the ABAP RESTful Application Programming Model
 
-Continue to - [Exercise 4 - ABAP RESTful Programming Model - Managed ](../ex4/README.md)
+Continue to - [Exercise 4 - ABAP RESTful Application Programming Model - Managed ](../ex4/README.md)
