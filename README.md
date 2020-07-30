@@ -1,12 +1,12 @@
-# CodeJam - SAP Cloud Platform, ABAP Environment & ABAP RESTful Programming Model
+# CodeJam - SAP Cloud Platform, ABAP Environment & ABAP RESTful Application Programming Model
 
 ## Description
 
-This repository contains the material for the CodeJam on SAP Cloud Platform, ABAP Environment & ABAP RESTful Programming Model. Prerequisites and recommendations for this CodeJam are documented in the [prerequisites](prerequisites.md) file.
+This repository contains the material for the CodeJam on SAP Cloud Platform, ABAP Environment & ABAP RESTful Application Programming Model. Prerequisites and recommendations for this CodeJam are documented in the [prerequisites](prerequisites.md) file.
 
 ### CodeJam overview
 
-This CodeJam introduces attendees to the SAP Cloud Platform, ABAP Environment, aka Steampunk and the ABAP RESTful Programming Model. Developers can leverage the unmanaged scenario for extending existing applications and consuming existing ABAP resources. For brand new applications, developers can leverage the managed senario for building their application from the ground up.
+This CodeJam introduces attendees to the SAP Cloud Platform, ABAP Environment, aka Steampunk and the ABAP RESTful Application Programming Model. Developers can leverage the unmanaged scenario for extending existing applications and consuming existing ABAP resources. For brand new applications, developers can leverage the managed senario for building their application from the ground up.
 
 ### Material organization
 
@@ -30,14 +30,14 @@ Here's an overview of the exercises in this CodeJam.
 - [Exercise 2 - Consuming Services via HTTP](exercises/ex2/)
    - [Exercise 2.1 - Create the API Hub Manager Class](exercises/ex2#exercise-21-create-the-api-hub-manager-class)
     - [Exercise 2.2 - Update Hello World](exercises/ex2#exercise-22-update-hello-world)
-- [Exercise 3 - ABAP RESTFul Programming Model - Unmanaged](exercises/ex3/)
+- [Exercise 3 - ABAP RESTFul Application Programming Model - Unmanaged](exercises/ex3/)
     - [Exercise 3.1 - Create the Business Object Views](exercises/ex3#exercise-31-create-the-business-objects-views)
     - [Exercise 3.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex3#exercise-32-create-the-business-object-behavior-definition-and-implementation)
     - [Exercise 3.3 - Create the Projection Views](exercises/ex3#exercise-33-create-the-projection-views)
     - [Exercise 3.4 - Create the Metadata Extensions](exercises/ex3#exercise-34-create-the-metadata-extensions)
     - [Exercise 3.5 - Create the Behavior Defintion Projection](exercises/ex3#exercise-35-create-the-behavior-definition-projection)
     - [Exercise 3.6 - Create the Sevice Definition and Service Binding](exercises/ex3#exercise-36-create-the-service-definition-and-service-binding)
-- [Exercise 4 - ABAP RESTFul Programming Model - Managed](exercises/ex4/)
+- [Exercise 4 - ABAP RESTFul Application Programming Model - Managed](exercises/ex4/)
     - [Exercise 4.1 - Create the Business Object Views](exercises/ex4#exercise-41-create-the-business-objects-views)
     - [Exercise 4.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex4#exercise-42-create-the-business-object-behavior-definition-and-implementation)
     - [Exercise 4.3 - Create the Projection Views](exercises/ex4#exercise-43-create-the-projection-views)
