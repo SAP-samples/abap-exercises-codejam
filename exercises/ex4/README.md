@@ -1,6 +1,6 @@
-# Exercise 4 - ABAP RESTful Programming Model - Managed
+# Exercise 4 - ABAP RESTful Application Programming Model - Managed
 
-In this exercise we will explore the new ABAP RESTful Programming Model, specifically the Managed Scenario.  The Managed scenario provides a framework for the developer to create applications quickly and easily while focusing mainly on the business logic as opposed to the nuts and bolts of the transaction. The framework is designed to handle the CRUD operations and save mechanism automatically without the developer having to code for it.  The developer can focus more on the business logic of the application and add in additional validations. We will create views over our data model, define behaviors, and service enable the data model as well.   
+In this exercise we will explore the new ABAP RESTful Application Programming Model, specifically the Managed Scenario.  The Managed scenario provides a framework for the developer to create applications quickly and easily while focusing mainly on the business logic as opposed to the nuts and bolts of the transaction. The framework is designed to handle the CRUD operations and save mechanism automatically without the developer having to code for it.  The developer can focus more on the business logic of the application and add in additional validations. We will create views over our data model, define behaviors, and service enable the data model as well.   
 
 ## Exercise 4.1 Create the Business Object Views
 
@@ -1011,5 +1011,5 @@ METHOD get_features.
 
 ## Summary
 
-You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, added Validations and Field Attributes, and exposed your data model as an OData service using the Managed Scenario of the RESTful Programming Model
+You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, added Validations and Field Attributes, and exposed your data model as an OData service using the Managed Scenario of the ABAP RESTful Application Programming Model
 
