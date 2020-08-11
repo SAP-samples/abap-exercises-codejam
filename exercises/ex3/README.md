@@ -1631,6 +1631,7 @@ define view entity Z_C_BookingSupplement_U_XXX
       /* Associations */
       ///DMO/I_BookingSupplement_U
       _Booking : redirected to parent Z_C_Booking_U_XXX,
+      _Travel  : redirected to Z_C_Travel_U_XXX , 
       _Product,
       _SupplementText
 
