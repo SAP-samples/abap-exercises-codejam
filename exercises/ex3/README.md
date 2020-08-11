@@ -109,7 +109,7 @@ define view Z_I_BOOKING_U_XXX
       Booking.flight_price  as FlightPrice,
       @Semantics.currencyCode: true
       Booking.currency_code as CurrencyCode,
-      _Travel.LastChangedAt as LastChangedAt, -- Take over ETag from parent
+//    _Travel.LastChangedAt as LastChangedAt, -- Take over ETag from parent
 
       /* public associations */
       _Travel,
@@ -136,7 +136,7 @@ define view Z_I_BookingSupplement_U_XXX
 
   association        to parent Z_I_Booking_U_XXX as _Booking        on  $projection.TravelID  = _Booking.TravelID
                                                                    and $projection.BookingID = _Booking.BookingID
-
+  association [1..1] to Z_I_Travel_U_XXX        as _Travel         on  $projection.TravelID  = _Travel.TravelID  
   association [1..1] to /DMO/I_Supplement       as _Product        on  $projection.SupplementID = _Product.SupplementID
   association [1..*] to /DMO/I_SupplementText   as _SupplementText on  $projection.SupplementID = _SupplementText.SupplementID
 
@@ -155,7 +155,7 @@ define view Z_I_BookingSupplement_U_XXX
       @Semantics.currencyCode: true
       BookingSupplement.currency_code         as CurrencyCode,
 
-      _Booking.LastChangedAt                  as LastChangedAt,
+//      _Booking.LastChangedAt                  as LastChangedAt,
 
       /* Associations */
       _Booking,
