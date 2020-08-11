@@ -1791,9 +1791,7 @@ annotate view Z_C_Booking_U_XXX with
                              importance: #HIGH } ],
                              identification: [ { position: 80 } ] }
   FlightPrice;
-  
-  @UI.hidden: true
-  LastChangedAt;
+
 }
 
 ```
