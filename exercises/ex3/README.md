@@ -271,7 +271,7 @@ mapping for /dmo/book_suppl
 ```
 15. The completed behavior definition should now look very similar to this.
 ```abap
-unmanaged;
+implementation unmanaged;
 
 define behavior for Z_I_TRAVEL_U_XXX alias travel
    implementation in class z_bp_i_travel_u_xxx unique
