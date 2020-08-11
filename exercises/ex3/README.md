@@ -230,8 +230,10 @@ action set_status_booked result [1] $self;
 10.	Now remove the create keyword, since we will handle the creation of bookings in association with the travel. So we only need the update and delete keywords.
 <br>![](/exercises/ex3/images/03_02_0100.png)
 
-11. After the association keyword, add the following mapping statement.
+11. After the association keyword, add the following association and mapping statement.
 ```abap
+  association _Travel;
+
   mapping for /dmo/booking
   {
     AirlineID = carrier_id;
@@ -256,8 +258,9 @@ action set_status_booked result [1] $self;
 13.	Now remove the create keyword, since we will handle the creation of bookingsupplement in association with the booking. So we only need the update and delete keywords.
 <br>![](/exercises/ex3/images/03_02_0130.png)
 
-14.	After the delete keyword, add the following mapping statement.
+14.	After the delete keyword, add the following association and mapping statement.
 ```abap
+association _Travel;
 mapping for /dmo/book_suppl
   {
     BookingID           = booking_id;
@@ -290,7 +293,7 @@ define behavior for Z_I_TRAVEL_U_XXX alias travel
   action set_status_booked result [1] $self;
 
   association _Booking { create; }
-
+  
   mapping for /dmo/travel
   {
     AgencyID = agency_id;
@@ -322,7 +325,8 @@ define behavior for Z_I_BOOKING_U_XXX alias booking
   delete;
 
   association _BookSupplement abbreviation _Supplement { create; }
-
+  association _Travel;
+  
   mapping for /dmo/booking
   {
     AirlineID = carrier_id;
@@ -349,6 +353,8 @@ implementation in class z_bp_i_bookingsupplement_U_XXX unique
 
   update;
   delete;
+  
+  association _Travel;
 
   mapping for /dmo/book_suppl
   {
