@@ -159,6 +159,7 @@ define view Z_I_BookingSupplement_U_XXX
 
       /* Associations */
       _Booking,
+      _Travel,
       _Product,
       _SupplementText
 }
