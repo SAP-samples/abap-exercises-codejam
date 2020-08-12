@@ -1581,7 +1581,7 @@ define view entity Z_C_Booking_U_XXX
                                                      element: 'Currency' } } ]
       CurrencyCode,
       
-      LastChangedAt,
+//      LastChangedAt,
       
       /* public associations */
       _Travel: redirected to parent Z_C_Travel_U_XXX,
@@ -1629,7 +1629,7 @@ define view entity Z_C_BookingSupplement_U_XXX
                                                       element: 'Currency' } } ]
       CurrencyCode,
 
-      LastChangedAt,
+//      LastChangedAt,
 
       /* Associations */
       ///DMO/I_BookingSupplement_U
