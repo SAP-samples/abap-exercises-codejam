@@ -1038,7 +1038,7 @@ CLASS lhc_booking IMPLEMENTATION.
                        flightdate    =   COND #( WHEN <fs_booking_read>-%control-FlightDate       = cl_abap_behv=>flag_changed THEN ls_booking-flight_date    )
                        flightprice   =   COND #( WHEN <fs_booking_read>-%control-FlightPrice      = cl_abap_behv=>flag_changed THEN ls_booking-flight_price   )
                        currencycode  =   COND #( WHEN <fs_booking_read>-%control-CurrencyCode     = cl_abap_behv=>flag_changed THEN ls_booking-currency_code  )
-                       lastchangedat =   COND #( WHEN <fs_booking_read>-%control-LastChangedAt    = cl_abap_behv=>flag_changed THEN ls_travel_out-lastchangedat   )
+*                       lastchangedat =   COND #( WHEN <fs_booking_read>-%control-LastChangedAt    = cl_abap_behv=>flag_changed THEN ls_travel_out-lastchangedat   )
                      ) INTO TABLE et_booking.
           ELSE.
             "BookingID not found
