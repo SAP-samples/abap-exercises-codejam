@@ -1418,7 +1418,7 @@ CLASS lhc_supplement IMPLEMENTATION.
                         supplementid        = COND #( WHEN <fs_bookingsuppl_read>-%control-SupplementID        = cl_abap_behv=>flag_changed THEN ls_bookingsuppl-supplement_id  )
                         price               = COND #( WHEN <fs_bookingsuppl_read>-%control-Price               = cl_abap_behv=>flag_changed THEN ls_bookingsuppl-price  )
                         currencycode        = COND #( WHEN <fs_bookingsuppl_read>-%control-CurrencyCode        = cl_abap_behv=>flag_changed THEN ls_bookingsuppl-currency_code  )
-                        lastchangedat       = COND #( WHEN <fs_bookingsuppl_read>-%control-LastChangedAt       = cl_abap_behv=>flag_changed THEN ls_travel_out-lastchangedat   )
+*                       lastchangedat       = COND #( WHEN <fs_bookingsuppl_read>-%control-LastChangedAt       = cl_abap_behv=>flag_changed THEN ls_travel_out-lastchangedat   )
                       ) INTO TABLE et_bookingsupplement.
 
 
