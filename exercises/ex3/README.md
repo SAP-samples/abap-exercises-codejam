@@ -810,7 +810,8 @@ ENDCLASS.
                          flightdate    = COND #( WHEN <fs_travel_rba>-%control-FlightDate    = cl_abap_behv=>flag_changed THEN <fs_booking>-flight_date )
                          flightprice   = COND #( WHEN <fs_travel_rba>-%control-FlightPrice   = cl_abap_behv=>flag_changed THEN <fs_booking>-flight_price )
                          currencycode  = COND #( WHEN <fs_travel_rba>-%control-CurrencyCode  = cl_abap_behv=>flag_changed THEN <fs_booking>-currency_code )
-                         lastchangedat = COND #( WHEN <fs_travel_rba>-%control-LastChangedAt = cl_abap_behv=>flag_changed THEN ls_travel_out-lastchangedat ) )
+*                         lastchangedat = COND #( WHEN <fs_travel_rba>-%control-LastChangedAt = cl_abap_behv=>flag_changed THEN ls_travel_out-lastchangedat )
+)
                          INTO TABLE et_booking.
           ENDIF.
         ENDLOOP.
