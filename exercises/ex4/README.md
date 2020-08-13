@@ -976,7 +976,7 @@ METHOD set_status_cancelled.
       IMPORTING keys REQUEST  requested_features FOR travel  RESULT result.
 
 ```
-10.	Add the implementation for the set_status_cancelled method as shown here. Make sure to replace XXX with your group number. This method reads the entity and gives us access to the actions and allows us to set the buttons to enable/disabled based on that selected lines current status.  Here we are also programmically set the “Travel ID“ field to read-only in edit mode.
+10.	Add the implementation for the get_features method as shown here. Make sure to replace XXX with your group number. This method reads the entity and gives us access to the actions and allows us to set the buttons to enable/disabled based on that selected lines current status.  Here we are also programmically set the “Travel ID“ field to read-only in edit mode.
 ```abap
 METHOD get_features.
 
