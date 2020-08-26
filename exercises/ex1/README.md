@@ -1,6 +1,6 @@
 # Exercise 1 - Hello World
 
-In this exercise, we will create a very simple HTTP service in ABAP which can then be called from the browser.  For more information about system access, please see the {Getting Started](exercises/ex0) section.
+In this exercise, we will create a very simple HTTP service in ABAP which can then be called from the browser.  For more information about system access, please see the [Getting Started](exercises/ex0) section.
 
 ## Exercise 1.1 Creating Hello World
 
