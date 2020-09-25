@@ -1,4 +1,5 @@
 # CodeJam - SAP Cloud Platform, ABAP Environment & ABAP RESTful Application Programming Model
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-exercises-codejam)](https://api.reuse.software/info/github.com/SAP-samples/abap-exercises-codejam)
 
 ## Description
 
