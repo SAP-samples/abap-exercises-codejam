@@ -31,13 +31,13 @@ After completing these steps you will have created the Business Object Views ove
 <br>![](/exercises/ex3/images/03_01_0080.png)
 
 9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
-```abap
+```ABAP CDS
 define root view Z_I_TRAVEL_U_XXX
   as select from /dmo/travel as Travel
 
 ```
 10.	Next, add the composition and associations to other tables/views.  In this case we add a composition to the **Booking** view which we have not created yet. Make sure to replace XXX with your group number.
-```abap
+```ABAP CDS
   composition [0..*] of Z_I_BOOKING_U_XXX as _Booking
 
   association [0..1] to /DMO/I_Agency    as _Agency    
@@ -48,7 +48,7 @@ define root view Z_I_TRAVEL_U_XXX
                      on $projection.CurrencyCode    = _Currency.Currency
 ```
 11.	Finally add the columns and association references
-```abap
+```ABAP CDS
 {
  key Travel.travel_id     as TravelID,
      Travel.agency_id     as AgencyID,
@@ -76,7 +76,7 @@ define root view Z_I_TRAVEL_U_XXX
 <br>![](/exercises/ex3/images/03_01_0120.png)
 
 13.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX. 
-```abap
+```abap cds
 @AbapCatalog.sqlViewName: 'ZIBOOKING_U_XXX'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
@@ -124,7 +124,7 @@ define view Z_I_BOOKING_U_XXX
 <br>![](/exercises/ex3/images/03_01_0140.png)
 
 15. Use what you have learned and create another view in the same way called Z_I_BOOKINGSUPPLEMENT_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX.
-```abap
+```abap cds
 @AbapCatalog.sqlViewName: 'ZIBOOKSUPP_U_XXX'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
