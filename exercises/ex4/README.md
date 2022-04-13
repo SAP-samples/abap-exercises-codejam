@@ -31,13 +31,13 @@ After completing these steps you will have created the Business Object Views ove
 <br>![](/exercises/ex4/images/04_01_0080.png)
 
 9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel_m as Travel“.  This is an existing table already in the system.
-```abap
+```asddls
 define root view Z_I_TRAVEL_M_XXX
   as select from /dmo/travel_m as Travel
 
 ```
 10.	Next, add the composition and associations to other tables/views.  In this case we add a composition to the Booking view which we have not created yet. Make sure to replace XXX with your group number.
-```abap
+```asddls
   composition [0..*] of Z_I_Booking_M_XXX as _Booking
 
   association [0..1] to /DMO/I_Agency    as _Agency   on $projection.agency_id     = _Agency.AgencyID
@@ -47,7 +47,7 @@ define root view Z_I_TRAVEL_M_XXX
 
 ```
 11.	Finally add the columns and association references.
-```abap
+```asddls
 {   
   key travel_id,      
     agency_id,         
@@ -85,7 +85,7 @@ define root view Z_I_TRAVEL_M_XXX
 <br>![](/exercises/ex4/images/04_01_0120.png)
 
 13.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_M_XXX.  As you did before, add the code as shown here. Make sure to use your group number where there is XXX. 
-```abap
+```asddls
 @AbapCatalog.sqlViewName: 'ZIBOOKING_M_XXX'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
@@ -135,7 +135,7 @@ define view Z_I_Booking_M_XXX
 <br>![](/exercises/ex4/images/04_01_0140.png)
 
 15.	Use what you have learned and create another view in the same way called Z_I_BOOKSUPPL_M_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX.
-```abap
+```asddls
 @AbapCatalog.sqlViewName: 'ZIBOOKSUPP_M_XXX'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
@@ -194,7 +194,7 @@ After completing these steps you will hae created the Behavior Definition and Im
 <br>![](/exercises/ex4/images/04_02_0030.png)
 
 4.	Let’s modify this behavior definition.  We’l take it one at a time.  Start with the behavior for **Travel**.  Give the alias and define the implementation class as shown here. Keep the persistant table definition as it is. Uncomment the lock master and etag lines.  For etag, define the field as shown
-```abap
+```asddls
 define behavior for Z_I_TRAVEL_M_XXX alias travel
 implementation in class z_bp_i_travel_m_xxx unique
 persistent table /DMO/TRAVEL_M 
@@ -210,7 +210,7 @@ etag master last_changed_at
 
 ```
 5.	Drop down to the definition for **Booking**.  Update this definition as shown here.
-```abap
+```asddls
 define behavior for Z_I_BOOKING_M_XXX alias booking
 implementation in class Z_BP_I_BOOKING_M_XXX unique
 persistent table /DMO/BOOKING_M
@@ -225,7 +225,7 @@ etag master last_changed_at
 
 ```
 6.	Finally drop down to the definition for **BookingSupplement**.  Update this definition as shown here.
-```abap
+```asddls
 define behavior for Z_I_BookSuppl_M_XXX alias booksuppl
 implementation in class Z_BP_I_BOOKINGSUPPLEMENT_M_XXX unique
 persistent table /DMO/BOOKSUPPL_M
@@ -259,7 +259,7 @@ After completing these steps you will have created Projection Views over your Bu
 <br>![](/exercises/ex4/images/04_03_0040.png)
 
 5.	Enter the code as shown here and make sure to replace XXX with your group number.
-```abap
+```asddls
 @EndUserText.label: 'Travel Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 
@@ -317,7 +317,7 @@ define root view entity Z_C_TRAVEL_M_XXX
 ```
 
 6.	Use what you have learned and create another projection view called Z_C_BOOKING_M_XXX where XXX is your group number for **Booking**. 
-```abap
+```asddls
 @EndUserText.label: 'Booking Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 
@@ -389,7 +389,7 @@ define view entity Z_C_Booking_M_XXX
 ```
 
 7.	Use what you have learned and create another projection view for **BookingSupplement** called Z_C_BOOKSUPPL_M_XXX where XXX is your group number. Enter the following code as shown here. 
-```abap
+```asddls
 @EndUserText.label: 'Booking Supplement Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @Metadata.allowExtensions: true
@@ -449,7 +449,7 @@ After completing these steps you will have created the Metadata Extensions. The 
 <br>![](/exercises/ex4/images/04_04_0020.png)
 
 3.	Enter the code as shown here and make sure to replace XXX with your group number.
-```abap
+```asddls
 @Metadata.layer: #CORE
 
 @UI: { headerInfo: { typeName: 'Travel', 
@@ -529,7 +529,7 @@ annotate view Z_C_TRAVEL_M_XXX
 <br>![](/exercises/ex4/images/04_04_0040.png)
 
 5.	Use what you have learned and create another metadata extension for Z_C_BOOKING_M_XXX where XXX is your group numnber.  Enter the code as shown here. 
-```abap
+```asddls
 @Metadata.layer: #CORE
 
 @UI: {
@@ -604,7 +604,7 @@ annotate view Z_C_Booking_M_XXX
 <br>![](/exercises/ex4/images/04_04_0060.png)
 
 7.	Use what you have learned and create another metadata extension for Z_C_BOOKSUPPL_M_XXX where XXX is your group numnber.  Enter the code as shown here.
-```abap
+```asddls
 @Metadata.layer: #CORE
 
 @UI: { headerInfo: { typeName:       'Booking Supplement',
@@ -661,7 +661,7 @@ After completing these steps you will have created the Behavior Definition Proje
 <br>![](/exercises/ex4/images/04_05_0020.png)
 
 3.	Give aliases to all of the behavior definitions, add the user etag and comment out all use delete statements. 
-```abap
+```asddls
 projection;
 
 define behavior for Z_C_TRAVEL_M_XXX alias travel
@@ -704,7 +704,7 @@ After completing these steps you will have created the Service Definition which 
 <br>![](/exercises/ex4/images/04_06_0020.png)
 
 3.	Enter the code as shown here.  
-```abap
+```asddls
 @EndUserText.label: 'Service Definition for Travel'
 define service Z_SD_C_TRAVEL_M_XXX {
   expose Z_C_Travel_M_XXX as Travel;
@@ -736,7 +736,7 @@ define service Z_SD_C_TRAVEL_M_XXX {
 After completing these steps you will have added additional validation to your Behavior Definitions for checking the values for *Customer* and *Begin_Date* and *End_Date*.
 
 1.	Return to your behavior definition called  Z_I_TRAVEL_M_XXX.  After the delete statement for behavior Z_I_TRAVEL_M_XXX, enter the following code. 
-```abap
+```asddls
    // validations
   validation validateCustomer on save { field customer_id; }
   validation validateDates    on save { field begin_date, end_date; }
@@ -847,7 +847,7 @@ After completing these steps you will have added additional validation to your B
 After completing these steps you will have added  Field Attributes for defining mandatory fields statically, and defining these Field Attributes dynamically in the implementation.  You will have also created Custom Actions for your Behavior.
 
 1. Return to the Metadata Extension called Z_C_TRAVEL_M_XXX and modify it.  Change the @UI annotation for the *overall_status(aka TravelStatus)* column as shown here.  Save and activate your work.
-```abap
+```asddls
       @UI: {
           lineItem:       [ { position: 15, importance: #HIGH },
                             { type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' },
@@ -860,7 +860,7 @@ After completing these steps you will have added  Field Attributes for defining 
 ```
 
 2.	Go back to the Z_I_TRAVEL_M_XXX behavior definition. Before the create statement, add the following lines.  Here we are setting fields as mandatory, and also setting the travel_id field so that we can set the attributes of this field programmatically in our behavior implementation.  We will circle back on that later.
-```abap
+```asddls
 // mandatory fields that are required to create a travel
   field ( mandatory ) agency_id, overall_status, booking_fee, currency_code;
   field (features : instance ) travel_id;
@@ -868,7 +868,7 @@ After completing these steps you will have added  Field Attributes for defining 
 ```
 
 3.	Before the validation statements, enter the following codes as shown here.
-```abap
+```asddls
 // instance action and dynamic action control
   action  ( features: instance ) acceptTravel result [1] $self;
   action  ( features: instance ) rejectTravel result [1] $self;
@@ -879,7 +879,7 @@ After completing these steps you will have added  Field Attributes for defining 
 <br>![](/exercises/ex4/images/04_08_0040.png)
 
 5.	Return to the projection behavior definition called Z_C_TRAVEL_M_XXX.  As we have created new actions in our business object behavior definition, we now have to expose these in our projection as well.  Add the following lines to the Z_C_TRAVEL_M_XXX definition after the commented *use delete* statement.
-```abap
+```asddls
   use action acceptTravel;
   use action rejectTravel;
 
