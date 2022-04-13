@@ -70,33 +70,67 @@ After completing these steps you will have created an HTTP service along with it
 <br>![](/exercises/ex2/images/02_01_0120.png)
 
 
-## Exercise 2.2 Consume an external HTTP service
+## Exercise 2.2 Consume an external HTTP service in ABAP
 
 After completing these steps you will have consumed an external API from the SAP API Hub, and viewed the results via the browser.
 
-1.	Now return to your ZCL_HELLO_WORLD_XXX class and modify it.  Add another WHEN condition to your CASE statement as shown here.  Make sure to replace XXX with your group number.
+1. First, lets go to the SAP API Hub. From the browser, go to https://api.sap.com/api/API_BANKDETAIL_SRV/resource.  Log on to the site, you may have to register first. <br>![](/exercises/ex2/images/02_02_0010.png)
+
+2. Click the "Show API Key" button.
+<br>![](/exercises/ex2/images/02_02_0020.png)
+
+3. Next, click the "Copy Key and Close" button.  Paste this code somewhere in a safe place, we will need it a little later. 
+<br>![](/exercises/ex2/images/02_02_0030.png)
+
+4.	Now return to your ZCL_MY_HTTPSRV_XXX class and modify it.  Add a METHOD called get_bank_details with a returning parameter of type string to the private section. Also add the shell of the METHOD implementation as well.  
+<br>![](/exercises/ex2/images/02_02_0040.png)
+
+5. Add the implementation of the GET_BANK_DETAILS method as shown below.  Here we are utlizing the SAP delivered HTTP interface classes.  We access the request object and insert the API key and the execute the request and retrieve the result.  We then pass the result to the output parameter as JSON.
 ```abap
- when `bankdetails`.
-    response->set_text( new zcl_api_hub_manager_xxx(  )->get_bank_details( ) ).
+
+    DATA: lv_url TYPE string VALUE 'https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/'.
+    DATA: lo_http_client TYPE REF TO  if_web_http_client.
+
+    lo_http_client = cl_web_http_client_manager=>create_by_http_destination(
+              i_destination = cl_http_destination_provider=>create_by_url( lv_url ) ).
+
+    DATA(lo_request) = lo_http_client->get_http_request( ).
+
+    lo_request->set_header_fields( VALUE #(
+       (  name = 'Content-Type' value = 'application/json' )
+       (  name = 'Accept' value = 'application/json' )
+       (  name = 'APIKey' value = '<insert API key here>') ) ).  "<<-- API KEY!
+
+    lo_request->set_uri_path(
+       i_uri_path = lv_url && 'API_BANKDETAIL_SRV/A_BankDetail?$top=25&$format=json'  ).
+
+    TRY.
+        DATA(lv_response) = lo_http_client->execute( i_method = if_web_http_client=>get )->get_text(  ).
+      CATCH cx_web_http_client_error.
+    ENDTRY.
+
+    r_json = lv_response.
+
 ```
+6.	Your code should now look like this.
+<br>![](/exercises/ex2/images/02_02_0050.png)
 
-2.	Your code should now look like this.
-<br>![](/exercises/ex2/images/02_02_0120.png)
+7.	Next, go to the HANDLE_REQUEST method, and modify it.  Add another WHEN condition in the CASE statement.  When the URL parameter cmd is = getbankdetails, call the GET_BANK_DETAILS method and pass the returning string to the response object SET_TEXT method. 
+<br>![](/exercises/ex2/images/02_02_0060.png)
 
-3.	Return to the HTTP Service defintion and click the URL link.  
-<br>![](/exercises/ex2/images/02_02_0130.png)
+8.	Save and activate your work.
+<br>![](/exercises/ex2/images/02_02_0070.png)
 
-4.	When the browser opens, change the URL to include cmd=bankdetails  
-<br>![](/exercises/ex2/images/02_02_0140.png)
+9.	Once again return to the HTTP service and click the "URL" link.  Add the URL parameter as &cmd=getbankdetails and hit enter.  You should now see the bank details in JSON format. 
+<br>![](/exercises/ex2/images/02_02_0080.png)
 
-5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_API_HUB_MANAGER_XXX class for another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud?section=Artifacts. Choose one that is an OData API and perhaps one that is a READ type operation
-<br>![](/exercises/ex2/images/02_02_0150.png)
+5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_MY_HTTPSRV_XXX class for another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud/all. Choose one that is an OData API and perhaps one that is a READ type operation
 
-6. As your API keys are now exposed in your code, I would highly recommend that you return to your ZCL_API_HUB_MANAGER_XXX class and remove them.
+6. As your API keys are now exposed in your code, I would highly recommend that you return to your ZCL_MY_HTTPSRV_XXX class and remove them.
 
 
 ## Summary
 
-You've now created a new class which calls the SAP API Hub, updated your hello World to call this new class, and viewed your results in the browser. 
+You've now created a new HTTP service that exposes functionality from ABAP as well as you have learned how to consume an external service via HTTP. 
 
 Continue to - [Exercise 3 - ABAP RESTful Programming Model - Unmanaged ](../ex3/README.md)
