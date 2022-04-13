@@ -2,7 +2,7 @@
 
 In this exercise, we will create an HTTP serivce and custom ABAP HTTP handler class.  We will then consume an external HTTP service as well by leveraging the SAP API Hub.   You can view APIs of the SAP API Hub at the following URL.
 
-https://api.sap.com/package/SAPS4HANACloud?section=Artifacts
+https://api.sap.com/package/SAPS4HANACloud/all
 
 In this exercise, we will use the Bank – Read API, which allows us to retrieve a list of bank details.  This page gives you all the information about calling the API and also supplies the API key which we will need to supply when calling from our ABAP class.
 
