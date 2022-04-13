@@ -195,17 +195,17 @@ After completing these steps you will have created the Behavior Definition and I
 <br>![](/exercises/ex3/images/03_02_0050.png)
 
 6.	Inside the definition, add the following code before the create statement in the first definition.  The field keyword here allows you to set specific attributes of fields, for example, to set as read-only  or as required. 
-```abap
+```asddls
 field ( read only ) TravelID;
   field ( mandatory ) AgencyID, CustomerID, BeginDate, EndDate;
 ```
 7.	After the delete statement in the first definition, add the following line of code which defines a custom action called *set_status_booked*. 
-```abap 
+```asddls
 action set_status_booked result [1] $self;
 ```
 
 8.	In the first definition, after the association keyword, add the following mapping.  This allows us to map columns of the view back to the underlying table columns. We can then use this in the behavior implementation in our MOVE CORRESPONDING statements.
-```abap
+```asddls
   mapping for /dmo/travel
   {
     AgencyID = agency_id;
@@ -223,7 +223,7 @@ action set_status_booked result [1] $self;
 
 ```
 9.	Next drop down to the second definition, the definition for Z_I_BOOKING_U_XXX.  Add the following lines of code before the create keyword.
-```abap
+```asddls
   field ( read only ) TravelID, BookingID;
   field ( mandatory ) BookingDate, CustomerID, AirlineID, ConnectionID, FlightDate;
 ```
@@ -232,7 +232,7 @@ action set_status_booked result [1] $self;
 <br>![](/exercises/ex3/images/03_02_0100.png)
 
 11. After the association keyword, add the following association and mapping statement.
-```abap
+```asddls
   association _Travel;
 
   mapping for /dmo/booking
@@ -251,7 +251,7 @@ action set_status_booked result [1] $self;
 ```
 
 12. Next, drop down to the Z_I_BOOKINGSUPPLEMENT_XXX definition. Add the following lines of code before the create keyword.
-```abap
+```asddls
   field ( read only ) TravelID, BookingID, BookingSupplementID;
   field ( mandatory ) SupplementID, Price;
 
@@ -260,7 +260,7 @@ action set_status_booked result [1] $self;
 <br>![](/exercises/ex3/images/03_02_0130.png)
 
 14.	After the delete keyword, add the following association and mapping statement.
-```abap
+```asddls
 association _Travel;
 mapping for /dmo/book_suppl
   {
@@ -274,7 +274,7 @@ mapping for /dmo/book_suppl
 
 ```
 15. The completed behavior definition should now look very similar to this.
-```abap
+```asddls
 implementation unmanaged;
 
 define behavior for Z_I_TRAVEL_U_XXX alias travel
