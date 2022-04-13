@@ -25,10 +25,10 @@ If you finish an exercise early, please resist the temptation to continue with t
 Here's an overview of the exercises in this CodeJam.
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - Hello World](exercises/ex1/)
-    - [Exercise 1.1 - Create Hello World](exercises/ex1#exercise-11-creating-hello-world)
-    - [Exercise 1.2 - Extending Hello World](exercises/ex1#exercise-12-extending-hello-world)
-- [Exercise 2 - Consuming Services via HTTP](exercises/ex2/)
+- [Exercise 1 - Creating your first ABAP classes](exercises/ex1/)
+    - [Exercise 1.1 - Create Hello World class](exercises/ex1#exercise-11-creating-hello-world)
+    - [Exercise 1.2 - SELECT data from a database table](exercises/ex1#exercise-12-SELECT-data-from-a-database-table)
+- [Exercise 2 - Exposing and Consuming Services via HTTP](exercises/ex2/)
    - [Exercise 2.1 - Create the API Hub Manager Class](exercises/ex2#exercise-21-create-the-api-hub-manager-class)
     - [Exercise 2.2 - Update Hello World](exercises/ex2#exercise-22-update-hello-world)
 - [Exercise 3 - ABAP RESTFul Application Programming Model - Unmanaged](exercises/ex3/)
