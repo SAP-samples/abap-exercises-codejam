@@ -1,4 +1,4 @@
-# Exercise 1 - Hello World
+# Exercise 1 - Creating your first ABAP classes
 
 In this exercise, we will create a very simple "Hello World" class which outputs to the console.  In the second part of the exercise, we will create another class which SELECTs data from the database and displays the list in the console.   For more information about system access and package creation, please see the [Getting Started](../ex0/README.md) section.
 
