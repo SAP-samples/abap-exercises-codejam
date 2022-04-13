@@ -33,4 +33,4 @@ After completing these steps you will have accessed your trial account on SAP Cl
 ## Summary
 
 Now that you have connected to the system, logged on, and created your package, you are ready to start building your application.  
-Continue to - [Exercise 1 - Hello World](../ex1/README.md)
+Continue to - [Exercise 1 - Creating your first ABAP classes](../ex1/README.md)
