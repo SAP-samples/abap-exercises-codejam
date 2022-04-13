@@ -6,13 +6,13 @@ In this exercise, we will create a very simple "Hello World" class which outputs
 
 After completing these steps you will have created a "Hello World" ABAP Class.
 
-1. Right-click on your package and choose “New“, “ABAP Class“.
+1.  Right-click on your package and choose “New“, “ABAP Class“.
 <br>![](/exercises/ex1/images/01_01_0010.png)
 
-2. Give the name of the class as "ZCL_HELLO_XXX" where XXX is your group number.  Then click "Next".
+2.  Give the name of the class as "ZCL_HELLO_XXX" where XXX is your group number.  Then click "Next".
 <br>![](/exercises/ex1/images/01_01_0020.png)
 
-3.	Click "Finish"
+3.  Click "Finish"
 <br>![](/exercises/ex1/images/01_01_0030.png)
 
 4.	In the PUBLIC section of your class,  define the use of the interface IF_OO_ADT_CLASSRUN.  This interface basically gives you access to the console in ADT, which allows the developer to write the results to the console.
