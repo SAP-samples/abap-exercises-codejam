@@ -31,13 +31,13 @@ After completing these steps you will have created the Business Object Views ove
 <br>![](/exercises/ex3/images/03_01_0080.png)
 
 9.	After the annotations at the top, adjust the define view statement as shown here. Add the word “root“ and change the select from to “/dmo/travel as Travel“.  This is an existing table already in the system.
-```ABAP CDS
+```asddls
 define root view Z_I_TRAVEL_U_XXX
   as select from /dmo/travel as Travel
 
 ```
 10.	Next, add the composition and associations to other tables/views.  In this case we add a composition to the **Booking** view which we have not created yet. Make sure to replace XXX with your group number.
-```ABAP CDS
+```asddls
   composition [0..*] of Z_I_BOOKING_U_XXX as _Booking
 
   association [0..1] to /DMO/I_Agency    as _Agency    
@@ -48,7 +48,7 @@ define root view Z_I_TRAVEL_U_XXX
                      on $projection.CurrencyCode    = _Currency.Currency
 ```
 11.	Finally add the columns and association references
-```ABAP CDS
+```asddls
 {
  key Travel.travel_id     as TravelID,
      Travel.agency_id     as AgencyID,
@@ -76,7 +76,7 @@ define root view Z_I_TRAVEL_U_XXX
 <br>![](/exercises/ex3/images/03_01_0120.png)
 
 13.	Now, use what you have learned and create another view in the same way called Z_I_BOOKING_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX. 
-```abap cds
+```asddls
 @AbapCatalog.sqlViewName: 'ZIBOOKING_U_XXX'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
@@ -124,7 +124,7 @@ define view Z_I_BOOKING_U_XXX
 <br>![](/exercises/ex3/images/03_01_0140.png)
 
 15. Use what you have learned and create another view in the same way called Z_I_BOOKINGSUPPLEMENT_U_XXX.  As you did before, add the code as shown here. Make sure to use your group nubmer where there is XXX.
-```abap cds
+```asddls
 @AbapCatalog.sqlViewName: 'ZIBOOKSUPP_U_XXX'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
@@ -1476,7 +1476,7 @@ After completing these steps you will have created Projection Views over your Bu
 <br>![](/exercises/ex3/images/03_03_0040.png)
 
 5.	Enter the code as shown here, and replace XXX with your group number. Note, that in the DEFINE ROOT VIEW statement, there is the extension  AS PROJECTION ON pointing to your Business Object view Z_I_TRAVEL_U_XXX.  In this projection view, not only are we filtering columns, but we are adding value help declarations as well using annotations.  
-```abap
+```asddls
 @EndUserText.label: 'Travel Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 
@@ -1527,7 +1527,7 @@ define root view entity Z_C_Travel_U_XXX
 <br>![](/exercises/ex3/images/03_03_0060.png)
 
 7.	Use what you have learned and create another projection view called Z_C_BOOKING_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are filtering the columns and adding value helps via annotations.
-```abap
+```asddls
 @EndUserText.label: 'Booking Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 
@@ -1596,7 +1596,7 @@ _BookSupplement: redirected to composition child Z_C_BookingSupplement_U_XXX,
 <br>![](/exercises/ex3/images/03_03_0080.png)
 
 9.	Use what you have learned and create another projection view called Z_C_BOOKINGSUPPLEMENT_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are filtering the columns and adding value helps via annotations.
-```abap
+```asddls
 @EndUserText.label: 'Booking Supplement Projection View'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 
@@ -1659,7 +1659,7 @@ After completing these steps you will have created the Metadata Extensions. The 
 <br>![](/exercises/ex3/images/03_04_0020.png)
 
 3.	Enter the code as shown here, and replace XXX with your group number.  Here we are using the @UI annotations to define what the user interface will look like.    
-```abap
+```asddls
 @Metadata.layer: #CORE
 
 @UI: { headerInfo: { typeName: 'Travel', 
@@ -1734,7 +1734,7 @@ annotate view Z_C_Travel_U_XXX with
 <br>![](/exercises/ex3/images/03_04_0040.png)
 
 5.	Use what you have learned and create another metadata extension called Z_C_BOOKING_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are defining the user interface with @UI annotations.
-```abap
+```asddls
 @Metadata.layer: #CORE
 
 @UI: {
@@ -1803,7 +1803,7 @@ annotate view Z_C_Booking_U_XXX with
 <br>![](/exercises/ex3/images/03_04_0060.png)
 
 7.	Use what you have learned and create another metadata extension called Z_C_BOOKINGSUPPLEMENT_U_XXX. Enter the code as shown here. Make sure to replace XXX with your group number.  Once again, we are defining the user interface with @UI annotations.
-```abap
+```asddls
 @Metadata.layer: #CORE
 
 @UI: { headerInfo: { typeName: 'Booking Supplement',
@@ -1875,7 +1875,7 @@ After completing these steps you will have created the Service Definition which 
 <br>![](/exercises/ex3/images/03_06_0030.png)
 
 4.	Update the definition to expose the Z_C_BOOKING_U_XXX entity and Z_C_BOOKINGSUPPLEMENT_U_XXX as well.  Also add aliases to all as shown here. 
-```abap
+```asddls
 @EndUserText.label: 'Service Definition for Travel'
 define service Z_SD_C_TRAVEL_U_XXX {
   expose Z_C_Travel_U_XXX as Travel;
