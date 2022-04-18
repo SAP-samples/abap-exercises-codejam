@@ -6,10 +6,11 @@ In this exercise we will explore.....
 
 After completing these steps you will have created....
 
-1.	From your group package, right-click and choose “New“, then “Other ABAP Repository Object“.
+1.	Return to the SAP API Hub, and specifically to this page which shows the overview of the Bank Details API we've been working with.  
+    https://api.sap.com/api/API_BANKDETAIL_SRV/overview   Click on the "API Specification" link.
 <br>![](/exercises/ex3/images/03_01_0010.png)
 
-2.	Expand Core Data Services and choose “Data Definition”.  Click “Next”.
+2.	Next downbload the EDMX file to your desktop.
 <br>![](/exercises/ex3/images/03_01_0020.png)
 
 
