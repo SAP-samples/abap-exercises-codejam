@@ -17,14 +17,11 @@ After completing these steps you will have created....
 
 ## Exercise 3.2 Create....
 
-After completing these steps you will have created the Behavior Definition and Implementation for your Business Object Views.  The behavior definition defines what operations are possible for your Business Object. 
+After completing these steps you will have....
 
-1.	Right-click on the Z_I_TRAVEL_U_XXX CDS Artifact and choose “New Behavior Defintion“.
-<br>![](/exercises/ex3/images/03_02_0010.png)
+1.	Right-click ....
 
-2.	Provide the default description, and change the Implementation Type to “Unmanaged”.  Then click “Next”, then “Finish”.
-<br>![](/exercises/ex3/images/03_02_0020.png)
-
+2.	Provide the default description...
 
 ## Summary
 
