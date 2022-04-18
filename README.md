@@ -31,13 +31,9 @@ Here's an overview of the exercises in this CodeJam.
 - [Exercise 2 - Exposing and Consuming Services via HTTP](exercises/ex2/)
     - [Exercise 2.1 - Expose an HTTP serivce in ABAP](exercises/ex2#exercise-21-expose-an-http-service-in-abap)
     - [Exercise 2.2 - Consume an external HTTP service in ABAP](exercises/ex2#exercise-22-consume-an-external-http-service-in-abap)
-- [Exercise 3 - ABAP RESTFul Application Programming Model - Unmanaged](exercises/ex3/)
-    - [Exercise 3.1 - Create the Business Object Views](exercises/ex3#exercise-31-create-the-business-objects-views)
-    - [Exercise 3.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex3#exercise-32-create-the-business-object-behavior-definition-and-implementation)
-    - [Exercise 3.3 - Create the Projection Views](exercises/ex3#exercise-33-create-the-projection-views)
-    - [Exercise 3.4 - Create the Metadata Extensions](exercises/ex3#exercise-34-create-the-metadata-extensions)
-    - [Exercise 3.5 - Create the Behavior Defintion Projection](exercises/ex3#exercise-35-create-the-behavior-definition-projection)
-    - [Exercise 3.6 - Create the Sevice Definition and Service Binding](exercises/ex3#exercise-36-create-the-service-definition-and-service-binding)
+- [Exercise 3 - Service Consumption Model](exercises/ex3/)
+    - [Exercise 3.1 - IN PROGRESS](exercises/ex3#exercise-31-inprogress)
+    - [Exercise 3.2 - IN PRROGESS](exercises/ex3#exercise-32-inprogress)
 - [Exercise 4 - ABAP RESTFul Application Programming Model - Managed](exercises/ex4/)
     - [Exercise 4.1 - Create the Business Object Views](exercises/ex4#exercise-41-create-the-business-objects-views)
     - [Exercise 4.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex4#exercise-42-create-the-business-object-behavior-definition-and-implementation)
@@ -47,7 +43,13 @@ Here's an overview of the exercises in this CodeJam.
     - [Exercise 4.6 - Create the Sevice Definition and Service Binding](exercises/ex4#exercise-46-create-the-service-definition-and-service-binding)
     - [Exercise 4.7 - Add Validations to the Behavior Definition](exercises/ex4#exercise-47-add-validations-to-the-behavior-definition)
     - [Exercise 4.8 - Add Field Attributes and Custom Actions to the Behavior Definition](exercises/ex4#exercise-48-add-field-attributes-and-custom-actions-to-the-behavior-definition)
-
+- [Exercise 5 - ABAP RESTFul Application Programming Model - Unmanaged](exercises/ex5/)
+    - [Exercise 5.1 - Create the Business Object Views](exercises/ex5#exercise-51-create-the-business-objects-views)
+    - [Exercise 5.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex5#exercise-52-create-the-business-object-behavior-definition-and-implementation)
+    - [Exercise 5.3 - Create the Projection Views](exercises/ex5#exercise-53-create-the-projection-views)
+    - [Exercise 5.4 - Create the Metadata Extensions](exercises/ex5#exercise-54-create-the-metadata-extensions)
+    - [Exercise 5.5 - Create the Behavior Defintion Projection](exercises/ex5#exercise-55-create-the-behavior-definition-projection)
+    - [Exercise 5.6 - Create the Sevice Definition and Service Binding](exercises/ex5#exercise-56-create-the-service-definition-and-service-binding)
 
 
 <!---
