@@ -1013,3 +1013,4 @@ METHOD get_features.
 
 You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, added Validations and Field Attributes, and exposed your data model as an OData service using the Managed Scenario of the ABAP RESTful Application Programming Model
 
+Continue to - Exercise 5 - ABAP RESTful Programming Model - Managed
