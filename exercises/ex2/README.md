@@ -133,4 +133,4 @@ After completing these steps you will have consumed an external API from the SAP
 
 You've now created a new HTTP service that exposes functionality from ABAP as well as you have learned how to consume an external service via HTTP. 
 
-Continue to - [Exercise 3 - ABAP RESTful Programming Model - Unmanaged ](../ex3/README.md)
+Continue to - [Exercise 3 - Service Consumption Model ](../ex3/README.md)
