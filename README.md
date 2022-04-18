@@ -26,7 +26,7 @@ Here's an overview of the exercises in this CodeJam.
 
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Creating your first ABAP classes](exercises/ex1/)
-    - [Exercise 1.1 - Expose an HTTP Service in ABAP](exercises/ex1#exercise-11-expose-an-http-service-in-abap)
+    - [Exercise 1.1 - Creating Hello World class](exercises/ex1#exercise-11-creating-hello-world-class)
     - [Exercise 1.2 - SELECT data from a database table](exercises/ex1#exercise-12-SELECT-data-from-a-database-table)
 - [Exercise 2 - Exposing and Consuming Services via HTTP](exercises/ex2/)
     - [Exercise 2.1 - Expose an HTTP serivce in ABAP](exercises/ex2#exercise-21-expose-an-http-service-in-abap)
