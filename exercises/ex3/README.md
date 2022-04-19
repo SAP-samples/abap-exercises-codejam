@@ -49,6 +49,7 @@ After completing these steps you will have created....
     TYPES tt_za_bankdetail_xxx TYPE STANDARD TABLE OF za_bankdetail_xxx WITH EMPTY KEY.
     METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetail_xxx.
 ```
+
 <br>![](/exercises/ex3/images/03_01_0130.png)
 
 14.	Now add the shell of the method implementation as shown below.
