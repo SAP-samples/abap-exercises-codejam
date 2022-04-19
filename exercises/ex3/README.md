@@ -109,10 +109,116 @@ After completing these steps you will have created....
 26. Next, since we only have one filtering node, update these two statements as shown here. 
 <br>![](/exercises/ex3/images/03_01_0260.png)
 
-27. Next, save and activate your work.
+
+27.  You completed code should now look like this.
+```abap
+CLASS zcl_scm_xxx DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+    INTERFACES if_oo_adt_classrun .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+
+    TYPES tt_za_bankdetail_xxx TYPE STANDARD TABLE OF za_bankdetail_xxxx WITH EMPTY KEY.
+    METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetail_xxx.
+
+ENDCLASS.
+
+
+
+CLASS zcl_scm_xxx IMPLEMENTATION.
+
+  METHOD if_oo_adt_classrun~main.
+
+    out->write( get_bank_details_scm(  ) ).
+
+  ENDMETHOD.
+
+  METHOD get_bank_details_scm.
+
+
+    DATA:
+      lt_business_data TYPE TABLE OF za_bankdetail_xxxx,
+      lo_http_client   TYPE REF TO if_web_http_client,
+      lo_client_proxy  TYPE REF TO /iwbep/if_cp_client_proxy,
+      lo_request       TYPE REF TO /iwbep/if_cp_request_read_list,
+      lo_response      TYPE REF TO /iwbep/if_cp_response_read_lst.
+
+    DATA:
+      lo_filter_factory    TYPE REF TO /iwbep/if_cp_filter_factory,
+      lo_filter_node_1     TYPE REF TO /iwbep/if_cp_filter_node,
+* lo_filter_node_2    TYPE REF TO /iwbep/if_cp_filter_node,
+      lo_filter_node_root  TYPE REF TO /iwbep/if_cp_filter_node,
+      lt_range_BANKCOUNTRY TYPE RANGE OF za_bankdetail_xxxx-BankCountry.
+* lt_range_BANKINTERNALID TYPE RANGE OF <element_name>.
+
+
+    TRY.
+        " Create http client
+*DATA(lo_destination) = cl_http_destination_provider=>create_by_comm_arrangement(
+*                                             comm_scenario  = '<Comm Scenario>'
+*                                             comm_system_id = '<Comm System Id>'
+*                                             service_id     = '<Service Id>' ).
+*lo_http_client = cl_web_http_client_manager=>create_by_http_destination( lo_destination ).
+
+        DATA: lv_url TYPE string VALUE 'https://sandbox.api.sap.com/'.
+        lo_http_client = cl_web_http_client_manager=>create_by_http_destination(
+                        i_destination = cl_http_destination_provider=>create_by_url( lv_url ) ).
+
+        lo_http_client->get_http_request( )->set_header_fields( VALUE #(
+             (  name = 'APIKey' value = '<insert APi key here>') ) ).
+
+        lo_client_proxy = cl_web_odata_client_factory=>create_v2_remote_proxy(
+          EXPORTING
+            iv_service_definition_name = 'ZSCM_BANK_DETAILS_XXX'
+            io_http_client             = lo_http_client
+            iv_relative_service_root   = '/s4hanacloud/sap/opu/odata/sap/API_BANKDETAIL_SRV' ).
+
+
+        " Navigate to the resource and create a request for the read operation
+        lo_request = lo_client_proxy->create_resource_for_entity_set( 'A_BANKDETAIL' )->create_request_for_read( ).
+
+        " Create the filter tree
+        lo_filter_factory = lo_request->create_filter_factory( ).
+
+        lt_range_BANKCOUNTRY = VALUE #( ( sign = 'I' option = 'EQ' low = 'DE' high = ' ' ) ).
+
+        lo_filter_node_1  = lo_filter_factory->create_by_range( iv_property_path     = 'BANKCOUNTRY'
+                                                                it_range             = lt_range_BANKCOUNTRY ).
+*lo_filter_node_2  = lo_filter_factory->create_by_range( iv_property_path     = 'BANKINTERNALID'
+*                                                        it_range             = lt_range_BANKINTERNALID ).
+
+        lo_filter_node_root = lo_filter_node_1.
+        lo_request->set_filter( lo_filter_node_root ).
+
+        lo_request->set_top( 500 )->set_skip( 0 ).
+
+        " Execute the request and retrieve the business data
+        lo_response = lo_request->execute( ).
+        lo_response->get_business_data( IMPORTING et_business_data = rt_table ).
+
+      CATCH /iwbep/cx_cp_remote INTO DATA(lx_remote).
+        " Handle remote Exception
+        " It contains details about the problems of your http(s) connection
+
+      CATCH /iwbep/cx_gateway INTO DATA(lx_gateway).
+        " Handle Exception
+
+    ENDTRY.
+
+  ENDMETHOD.
+
+ENDCLASS.
+```
+
+28. Next, save and activate your work.
 <br>![](/exercises/ex3/images/03_01_0270.png)
 
-28. Finally, execute the class once again.  The results should now be shown with only rows where the BANKCOUNTRY = DE.
+29. Finally, execute the class once again.  The results should now be shown with only rows where the BANKCOUNTRY = DE.
 <br>![](/exercises/ex3/images/03_01_0280.png)
 
 ## Exercise 3.2 Create....
