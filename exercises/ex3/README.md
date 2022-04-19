@@ -106,7 +106,7 @@ After completing these steps you will have created a Service Consumption Model d
 ```
 <!---<br>![](/exercises/ex3/images/03_01_0250.png)--->
 
-26. Next, since we only have one filtering node, update these two statements as shown here. 
+26. Next, uncomment these two lines of code, and since we only have one filtering node, update these two statements as shown here. 
 <br>![](/exercises/ex3/images/03_01_0260.png)
 
 
@@ -142,7 +142,7 @@ CLASS zcl_scm_xxx IMPLEMENTATION.
 
 
     DATA:
-      lt_business_data TYPE TABLE OF za_bankdetail_xxx,
+      lt_business_data TYPE TABLE OF za_bankdetails_xxx,
       lo_http_client   TYPE REF TO if_web_http_client,
       lo_client_proxy  TYPE REF TO /iwbep/if_cp_client_proxy,
       lo_request       TYPE REF TO /iwbep/if_cp_request_read_list,
@@ -153,7 +153,7 @@ CLASS zcl_scm_xxx IMPLEMENTATION.
       lo_filter_node_1     TYPE REF TO /iwbep/if_cp_filter_node,
 * lo_filter_node_2    TYPE REF TO /iwbep/if_cp_filter_node,
       lo_filter_node_root  TYPE REF TO /iwbep/if_cp_filter_node,
-      lt_range_BANKCOUNTRY TYPE RANGE OF za_bankdetail_xxx-BankCountry.
+      lt_range_BANKCOUNTRY TYPE RANGE OF za_bankdetails_xxx-BankCountry.
 * lt_range_BANKINTERNALID TYPE RANGE OF <element_name>.
 
 
