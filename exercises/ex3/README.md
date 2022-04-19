@@ -86,9 +86,6 @@ After completing these steps you will have created....
 <br>![](/exercises/ex3/images/03_01_0190.png)
 
 20. Next, add the following line of code to the MAIN method implementatino.  Here we are simply writing out the results to the console. 
-<!---```abap
-    out->write( get_bank_details_scm(  ) ).
-``` --->
 <br>![](/exercises/ex3/images/03_01_0200.png)
 
 21. Next, save and activate your work.
