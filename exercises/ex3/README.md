@@ -142,7 +142,7 @@ CLASS zcl_scm_xxx IMPLEMENTATION.
 
 
     DATA:
-      lt_business_data TYPE TABLE OF za_bankdetail_xxxx,
+      lt_business_data TYPE TABLE OF za_bankdetail_xxx,
       lo_http_client   TYPE REF TO if_web_http_client,
       lo_client_proxy  TYPE REF TO /iwbep/if_cp_client_proxy,
       lo_request       TYPE REF TO /iwbep/if_cp_request_read_list,
@@ -153,7 +153,7 @@ CLASS zcl_scm_xxx IMPLEMENTATION.
       lo_filter_node_1     TYPE REF TO /iwbep/if_cp_filter_node,
 * lo_filter_node_2    TYPE REF TO /iwbep/if_cp_filter_node,
       lo_filter_node_root  TYPE REF TO /iwbep/if_cp_filter_node,
-      lt_range_BANKCOUNTRY TYPE RANGE OF za_bankdetail_xxxx-BankCountry.
+      lt_range_BANKCOUNTRY TYPE RANGE OF za_bankdetail_xxx-BankCountry.
 * lt_range_BANKINTERNALID TYPE RANGE OF <element_name>.
 
 
