@@ -227,7 +227,7 @@ After completing these steps you will have....
 
 1.	First, we need to create an account in the ES5 Demo Gateway system. For this, follow the tutorial here. https://developers.sap.com/tutorials/gateway-demo-signup.html
 
-2.	Provide the default description...
+2.	You can then access the ES5 system here.  https://sapes5.sapdevcenter.com/sap/bc/gui/sap/its/webgui
 
 ## Summary
 
