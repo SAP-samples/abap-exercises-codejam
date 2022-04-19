@@ -70,7 +70,7 @@ After completing these steps you will have created....
              (  name = 'APIKey' value = '<insert API key here>') ) ).
 
 ```
-<br>![](/exercises/ex3/images/03_01_0170.png)
+<!---<br>![](/exercises/ex3/images/03_01_0170.png)--->
 
 18. Next, modify the next statement where the client proxy object is created.  Update the service root parameter value as shown here. 
 ```abap
@@ -80,15 +80,15 @@ After completing these steps you will have created....
             io_http_client             = lo_http_client
             iv_relative_service_root   = '/s4hanacloud/sap/opu/odata/sap/API_BANKDETAIL_SRV' ).
 ```
-<br>![](/exercises/ex3/images/03_01_0180.png)
+<!---<br>![](/exercises/ex3/images/03_01_0180.png)--->
 
 19. Next, change the value passed to the SET_TOP method to 500.  And finally, change the importing parameter value to RT_TABLE.  RT_TABLE is the returning parameter of your method, so we are simply passing the results of the GET_BUSINESS_DATA method back to the caller so that we can write out the results to the console. 
 <br>![](/exercises/ex3/images/03_01_0190.png)
 
 20. Next, add the following line of code to the MAIN method implementatino.  Here we are simply writing out the results to the console. 
-```abap
+<!---```abap
     out->write( get_bank_details_scm(  ) ).
-```
+``` --->
 <br>![](/exercises/ex3/images/03_01_0200.png)
 
 21. Next, save and activate your work.
@@ -107,7 +107,7 @@ After completing these steps you will have created....
 ```abap
         lt_range_BANKCOUNTRY = VALUE #( ( sign = 'I' option = 'EQ' low = 'DE' high = ' ' ) ).
 ```
-<br>![](/exercises/ex3/images/03_01_0250.png)
+<!---<br>![](/exercises/ex3/images/03_01_0250.png)--->
 
 26. Next, since we only have one filtering node, update these two statements as shown here. 
 <br>![](/exercises/ex3/images/03_01_0260.png)
