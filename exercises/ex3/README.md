@@ -44,10 +44,10 @@ After completing these steps you will have created a Service Consumption Model d
 12. Use what you have learned and create a new class called ZCL_SCM_XXX where XXX is your group number.  Make sure to include the IF_OO_ADT_CLASSRUN interface and add the shell of the MAIN method implementation as shown below. 
 <br>![](/exercises/ex3/images/03_01_0120.png)
 
-13.	In the private section, add the following lines of code.  We want to encapsulate the logic into a functional method call which contains a returning parameter for the list of bank details.
+13.	In the private section, add the following lines of code. Make sure to replace XXX with your group number.  We want to encapsulate the logic into a functional method call which contains a returning parameter for the list of bank details.
 ```abap
-    TYPES tt_za_bankdetails_xxx TYPE STANDARD TABLE OF za_bankdetails_xxx WITH EMPTY KEY.
-    METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetails_xxx.
+    TYPES tt_za_bankdetails TYPE STANDARD TABLE OF za_bankdetails_xxx WITH EMPTY KEY.
+    METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetails.
 ```
 <!---<br>![](/exercises/ex3/images/03_01_0130.png) --->
 
@@ -123,8 +123,8 @@ CLASS zcl_scm_xxx DEFINITION
   PROTECTED SECTION.
   PRIVATE SECTION.
 
-    TYPES tt_za_bankdetails_xxx TYPE STANDARD TABLE OF za_bankdetails_xxx WITH EMPTY KEY.
-    METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetails_xxx.
+    TYPES tt_za_bankdetails TYPE STANDARD TABLE OF za_bankdetails_xxx WITH EMPTY KEY.
+    METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetails.
 
 ENDCLASS.
 
