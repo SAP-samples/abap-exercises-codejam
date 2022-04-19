@@ -1,10 +1,10 @@
 # Exercise 3 - Service Consumption Model
 
-In this exercise we will explore.....
+In this exercise we will explore how to use the Service Consumption Model concept to consume various services in ABAP.
 
-## Exercise 3.1 Create....
+## Exercise 3.1 Create a Service Consumption Model Definition for an OData Service
 
-After completing these steps you will have created....
+After completing these steps you will have created a Service Consumption Model definition for an OData Service exposed from the SAP API Hub.
 
 1.	Return to the SAP API Hub, and specifically to this page which shows the overview of the Bank Details API we've been working with.  
     https://api.sap.com/api/API_BANKDETAIL_SRV/overview   
@@ -221,7 +221,7 @@ ENDCLASS.
 29. Finally, execute the class once again.  The results should now be shown with only rows where the BANKCOUNTRY = DE.
 <br>![](/exercises/ex3/images/03_01_0280.png)
 
-## Exercise 3.2 Create....
+## Exercise 3.2 Create a Service Consumption Model Definition for an RFC Service
 
 After completing these steps you will have....
 
