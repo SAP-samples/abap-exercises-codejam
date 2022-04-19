@@ -38,7 +38,7 @@ After completing these steps you will have created a Service Consumption Model d
 10.	Now click "Finish".
 <br>![](/exercises/ex3/images/03_01_0100.png)
 
-11.	The Service Consumption Model objects have now been created for you.  When you take a look at the SCM definition, you can see that it provides code snippets for you to use in your code for different CRUD operations. 
+11.	The Service Consumption Model objects have now been created for you.  When you take a look at the SCM definition, you can see that it provides code snippets for you to use in your code for different CRUD operations.  Continue to the next step.
 <br>![](/exercises/ex3/images/03_01_0110.png)
 
 12. Use what you have learned and create a new class called ZCL_SCM_XXX where XXX is your group number.  Make sure to include the IF_OO_ADT_CLASSRUN interface and add the shell of the MAIN method implementation as shown below. 
