@@ -123,8 +123,8 @@ CLASS zcl_scm_xxx DEFINITION
   PROTECTED SECTION.
   PRIVATE SECTION.
 
-    TYPES tt_za_bankdetail_xxx TYPE STANDARD TABLE OF za_bankdetail_xxxx WITH EMPTY KEY.
-    METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetail_xxx.
+    TYPES tt_za_bankdetails_xxx TYPE STANDARD TABLE OF za_bankdetails_xxx WITH EMPTY KEY.
+    METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetails_xxx.
 
 ENDCLASS.
 
