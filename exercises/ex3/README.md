@@ -57,7 +57,7 @@ After completing these steps you will have created a Service Consumption Model d
 15.	Return to the Service Consumption Model definition and choose the "Read List" operation, then click "Copy to Clipboard".
 <br>![](/exercises/ex3/images/03_01_0150.png)
 
-16. Now, paste the code into the GET_BANK_DETAILS_SCM method.  Uncomment the lines of code shown here, and make sure to update the view name as shown.  Make sure to replace XXX with your group number. 
+16. Now, paste the code into the GET_BANK_DETAILS_SCM method. Update the view name as shown.  Make sure to replace XXX with your group number. 
 <br>![](/exercises/ex3/images/03_01_0160.png)
 
 17.	Copy the following code as the first lines within the TRY statement.  Here we will utilize the standard HTTP client classes provided by SAP. We will pass the URL and get an instance of the HTTP client object, where we then set the API key.  Make sure to insert your API key here from the API hub. 
