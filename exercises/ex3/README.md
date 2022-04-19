@@ -46,8 +46,8 @@ After completing these steps you will have created a Service Consumption Model d
 
 13.	In the private section, add the following lines of code.  We want to encapsulate the logic into a functional method call which contains a returning parameter for the list of bank details.
 ```abap
-    TYPES tt_za_bankdetail_xxx TYPE STANDARD TABLE OF za_bankdetail_xxx WITH EMPTY KEY.
-    METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetail_xxx.
+    TYPES tt_za_bankdetails_xxx TYPE STANDARD TABLE OF za_bankdetails_xxx WITH EMPTY KEY.
+    METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetails_xxx.
 ```
 <!---<br>![](/exercises/ex3/images/03_01_0130.png) --->
 
