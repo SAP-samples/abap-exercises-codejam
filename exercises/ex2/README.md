@@ -18,7 +18,7 @@ After completing these steps you will have created an HTTP service along with it
 2. Under "Connectivity, choose "HTTP Service" and click "Next".
 <br>![](/exercises/ex2/images/02_01_0020.png)
 
-3. Give the name of the service as ZMY_HTTPSRV_XXX where XXX is your group number.  Keep the handler class name as generated, then click "Next".
+3. Give the name of the service as ZHTTPSRV_XXX where XXX is your group number.  Keep the handler class name as generated, then click "Next".
 <br>![](/exercises/ex2/images/02_01_0030.png)
 
 4. Click "Finish".
