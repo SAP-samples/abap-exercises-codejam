@@ -7,7 +7,7 @@ This repository contains the material for the CodeJam on SAP Business Technology
 
 ### CodeJam overview
 
-This CodeJam introduces attendees to the SAP Business Technology Platform ABAP Environment, aka Steampunk and the ABAP RESTful Application Programming Model. Learn how to use proven and new technologies, such as Core Data Services (CDS) and behavior definition and implementation languages, to build SAP Fiori apps and OData services with the SAP BTP, ABAP Environment. In this hands-on experience, developers will create their first ABAP applications in the SAP BTP, ABAP Environment, expose and consume services via HTTP, and have the choice to explore the unmanaged or managed scenarios of the ABAP RESTful Application Programming Model.
+This CodeJam introduces attendees to the SAP Business Technology Platform ABAP Environment, aka Steampunk and the ABAP RESTful Application Programming Model. Learn how to use proven and new technologies, such as Core Data Services (CDS) and behavior definition and implementation languages, to build SAP Fiori apps and OData services with the SAP BTP, ABAP Environment. In this hands-on experience, developers will create their first ABAP applications in the SAP BTP, ABAP Environment, expose and consume services via HTTP, and explore the ABAP RESTful Application Programming Model.
 
 ### Material organization
 
