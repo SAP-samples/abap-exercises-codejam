@@ -33,6 +33,7 @@ Here's an overview of the exercises in this CodeJam.
     - [Exercise 2.2 - Consume an external HTTP service in ABAP](exercises/ex2#exercise-22-consume-an-external-http-service-in-abap)
 - [Exercise 3 - Service Consumption Model](exercises/ex3/)
     - [Exercise 3.1 - Create a Service Consumption Model Definition for an OData Service](exercises/ex3#exercise-31-create-a-service-consumption-model-definition-for-an-odata-service)   <!--    - [Exercise 3.2 - IN PRROGESS](exercises/ex3#exercise-32-inprogress)  -->
+<!---
 - [Exercise 4 - ABAP RESTFul Application Programming Model - Managed](exercises/ex4/)
     - [Exercise 4.1 - Create the Business Object Views](exercises/ex4#exercise-41-create-the-business-objects-views)
     - [Exercise 4.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex4#exercise-42-create-the-business-object-behavior-definition-and-implementation)
@@ -49,7 +50,7 @@ Here's an overview of the exercises in this CodeJam.
     - [Exercise 5.4 - Create the Metadata Extensions](exercises/ex5#exercise-54-create-the-metadata-extensions)
     - [Exercise 5.5 - Create the Behavior Defintion Projection](exercises/ex5#exercise-55-create-the-behavior-definition-projection)
     - [Exercise 5.6 - Create the Sevice Definition and Service Binding](exercises/ex5#exercise-56-create-the-service-definition-and-service-binding)
-
+-->
 
 <!---
 ### Feedback
