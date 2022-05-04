@@ -37,6 +37,7 @@ Here's an overview of the exercises in this CodeJam.
 - [Exercise 5 - ABAP RESTFul Application Programming Model - Unmanaged](https://developers.sap.com/group.abap-env-cds.html)
 
 <!---
+- [Exercise 4 - ABAP RESTFul Application Programming Model - Managed](exercises/ex4/)
     - [Exercise 4.1 - Create the Business Object Views](exercises/ex4#exercise-41-create-the-business-objects-views)
     - [Exercise 4.2 - Create the Business Object Behavior Definition and Implementation](exercises/ex4#exercise-42-create-the-business-object-behavior-definition-and-implementation)
     - [Exercise 4.3 - Create the Projection Views](exercises/ex4#exercise-43-create-the-projection-views)
