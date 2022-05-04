@@ -236,4 +236,3 @@ After completing these steps you will have....
 
 You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, and exposed your data model as an OData service using the Unmanaged Scenario of the ABAP RESTful Application Programming Model
 
-Continue to - [Exercise 4 - ABAP RESTful Application Programming Model - Managed ](../ex4/README.md)
