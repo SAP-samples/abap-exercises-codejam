@@ -221,18 +221,10 @@ ENDCLASS.
 29. Finally, execute the class once again.  The results should now be shown with only rows where the BANKCOUNTRY = DE.
 <br>![](/exercises/ex3/images/03_01_0280.png)
 
-<!---
-## Exercise 3.2 Create a Service Consumption Model Definition for an RFC Service
 
-After completing these steps you will have....
-
-1.	First, we need to create an account in the ES5 Demo Gateway system. For this, follow the tutorial here. https://developers.sap.com/tutorials/gateway-demo-signup.html
-
-2.	You can then access the ES5 system here.  https://sapes5.sapdevcenter.com/sap/bc/gui/sap/its/webgui  
---->
 
 
 ## Summary
 
-You've now created your Business Object data model, defined and implemented your Behaviors, created Projections over both, and exposed your data model as an OData service using the Unmanaged Scenario of the ABAP RESTful Application Programming Model
+You've now created your a Service Consumption Model for consuming an external service.
 
