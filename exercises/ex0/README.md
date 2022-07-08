@@ -4,9 +4,9 @@ In this exercise, you will connect to the system and create your package. Be sur
 
 ## System Access & Package Creation
 
-After completing these steps you will have accessed your trial account on SAP Cloud Platform, created a service instance for the ABAP Trial on SCP, created a connection to the system from ABAP Development Tools in Eclipse, and finally created your group package which will be used for the rest of your exercise.
+After completing these steps you will have accessed your trial account on SAP Business Technology Platform, created a service instance for the ABAP Trial on BTP, created a connection to the system from ABAP Development Tools in Eclipse, and finally created your group package which will be used for the rest of your exercise.
 
-1.  Access the SCP, ABAP Environment Trial system by following the directions outlined in this [tutorial](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html). Once complete, return to this document and continue with step 2.  
+1.  Access the BTP, ABAP Environment Trial system by following the directions outlined in this [tutorial](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html). Once complete, return to this document and continue with step 2.  
 
 2.	Right-click on the “Favorite Packages“ and choose “Add Package“.
 <br>![](/exercises/ex0/images/00_00_0020.png)
