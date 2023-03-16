@@ -1,8 +1,6 @@
 # CodeJam - ABAP Cloud, SAP Business Technology Platform, ABAP Environment & ABAP RESTful Application Programming Model
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-exercises-codejam)](https://api.reuse.software/info/github.com/SAP-samples/abap-exercises-codejam)
 
-https://github.com/SAP-samples/abap-exercises-codejam
-
 ## Description
 
 This repository contains the material for the CodeJam on ABAP Cloud, SAP Business Technology Platform, ABAP Environment & ABAP RESTful Application Programming Model. Prerequisites and recommendations for this CodeJam are documented in the [prerequisites](prerequisites.md) file.
