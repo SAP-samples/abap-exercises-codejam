@@ -82,7 +82,7 @@ After completing these steps you will have consumed an external API from the SAP
 3. Next, click the "Copy Key and Close" button.  Paste this code somewhere in a safe place, we will need it a little later. 
 <br>![](/exercises/ex2/images/02_02_0030.png)
 
-4.	Now return to your ZCL_MY_HTTPSRV_XXX class and modify it.  Add a METHOD called get_bank_details with a returning parameter of type string to the private section. Also add the shell of the METHOD implementation as well.  
+4.	Now return to your ZCL_HTTPSRV_XXX class and modify it.  Add a METHOD called get_bank_details with a returning parameter of type string to the private section. Also add the shell of the METHOD implementation as well.  
 <br>![](/exercises/ex2/images/02_02_0040.png)
 
 5. Add the implementation of the GET_BANK_DETAILS method as shown below.  Here we are utlizing the SAP delivered HTTP interface classes.  We access the request object and insert the API key and the execute the request and retrieve the result.  We then pass the result to the output parameter as JSON.
@@ -124,7 +124,7 @@ After completing these steps you will have consumed an external API from the SAP
 9.	Once again return to the HTTP service and click the "URL" link.  Add the URL parameter as &cmd=getbankdetails and hit enter.  You should now see the bank details in JSON format. 
 <br>![](/exercises/ex2/images/02_02_0080.png)
 
-5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_MY_HTTPSRV_XXX class for another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud/all. Choose one that is an OData API and perhaps one that is a READ type operation
+5.	CHALLENGE!  Use what you have learned and implement a new method in your ZCL_HTTPSRV_XXX class for another API.  You can choose one from this page. https://api.sap.com/package/SAPS4HANACloud/all. Choose one that is an OData API and perhaps one that is a READ type operation
 
 6. As your API keys are now exposed in your code, I would highly recommend that you return to your ZCL_MY_HTTPSRV_XXX class and remove them.
 
