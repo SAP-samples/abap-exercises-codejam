@@ -4,7 +4,7 @@ There are hardware, software and service prerequisites for participating in this
 
 ## Hardware
 
-None
+If attending an in-person CodeJam, please bring your own laptop. 
 
 ## Software
 
