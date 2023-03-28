@@ -20,7 +20,7 @@ After completing these steps you will have created a Service Consumption Model d
 4.	Click "Business Services", then choose "Service Consumption Model", then click "Next".
 <br>![](/exercises/ex3/images/03_01_0040.png)
 
-5.	Give the name as "ZSCM_BANK_DETAILS_XXX" where XXX is your group number.  Also, give a meaningful descriptio.  Set the "Remote Consumption Mode" to 'OData', then click "Next".
+5.	Give the name as "ZSCM_BANK_DETAILS_XXX" where XXX is your group number and give a meaningful description.  Set the "Remote Consumption Mode" to OData, then click "Next".
 <br>![](/exercises/ex3/images/03_01_0050.png)
 
 6.	Click the "Browse" button.
