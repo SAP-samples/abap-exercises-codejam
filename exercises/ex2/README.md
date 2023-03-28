@@ -115,7 +115,7 @@ After completing these steps you will have consumed an external API from the SAP
 6.	Your code should now look like this.
 <br>![](/exercises/ex2/images/02_02_0050.png)
 
-7.	Next, go to the HANDLE_REQUEST method, and modify it.  Add another WHEN condition in the CASE statement.  When the URL parameter cmd is = getbankdetails, call the GET_BANK_DETAILS method and pass the returning string to the response object SET_TEXT method. 
+7.	Next, go to the HANDLE_REQUEST method, and modify it.  Add another WHEN condition in the CASE statement.  When the URL parameter cmd is = getbankdetails, set the content type to 'application/json' and call the GET_BANK_DETAILS method and pass the returning string to the response object SET_TEXT method. 
 <br>![](/exercises/ex2/images/02_02_0060.png)
 
 8.	Save and activate your work.
