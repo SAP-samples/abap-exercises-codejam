@@ -26,7 +26,7 @@ After completing these steps you will have accessed your trial account on SAP Bu
 7.	Click “Next”.
 <br>![](/exercises/ex0/images/00_00_0070.png)
 
-8.	Click “Finish”.
+8.	If you do not currently have a transport request in this system, select the radiobutton to create one and give a description.  Click “Finish”.
 <br>![](/exercises/ex0/images/00_00_0080.png)
 
 
