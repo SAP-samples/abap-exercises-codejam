@@ -1,1 +1,38 @@
-For use by SAP
+{
+  "binding": {
+    "env": "cf",
+    "id": "c05aa13e-c628-4b19-b3cb-2b0a4f3141eb",
+    "type": "oauth",
+    "version": "1.0.1.1"
+  },
+  "catalogs": {
+    "abap": {
+      "path": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2",
+      "type": "sap_abap_catalog_v1"
+    }
+  },
+  "endpoints": {
+    "abap": "https://f2b95149-88ba-4dd0-b876-c823d5ce787f.abap.us10.hana.ondemand.com"
+  },
+  "preserve_host_header": true,
+  "sap.cloud.service": "com.sap.cloud.abap",
+  "systemid": "CJ1",
+  "uaa": {
+    "apiurl": "https://api.authentication.us10.hana.ondemand.com",
+    "clientid": "sb-xs-f2b95149-88ba-4dd0-b876-c823d5ce787f!b205323|xsuaa-abapcp-prod-us10!b1841",
+    "clientsecret": "c05aa13e-c628-4b19-b3cb-2b0a4f3141eb$L-RcWc4DkAH7h-bqcqE8k-4LP6LIs8PyLJvfA9Cb8rc=",
+    "credential-type": "binding-secret",
+    "identityzone": "codejam-abap-steampunk-system-4pye6uts",
+    "identityzoneid": "7c4b99c5-7f9f-4cdf-b185-59ad62f4ff27",
+    "sburl": "https://internal-xsuaa.authentication.us10.hana.ondemand.com",
+    "subaccountid": "7c4b99c5-7f9f-4cdf-b185-59ad62f4ff27",
+    "tenantid": "7c4b99c5-7f9f-4cdf-b185-59ad62f4ff27",
+    "tenantmode": "dedicated",
+    "uaadomain": "authentication.us10.hana.ondemand.com",
+    "url": "https://codejam-abap-steampunk-system-4pye6uts.authentication.us10.hana.ondemand.com",
+    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqo53MOKcp0cA9QrHz3tc\nlH7KYRAzPatxmVqHns7l7XkRRpGtJhzdNuAKeBBABN4pbiikyUq16fA1FpOEgeZQ\n7MqcFru0/eiAU1X1/N61Lgvljb4TvSXYaytsDG2i9fbX2CaX1Vbb0zPpt9HTJpvs\nk7q6LEcSIGk6VRtK8nG7Q1HJqYjKE0dvL1vavJ70XwxVgElaP6uolrLnYaD29G6/\niPl6xo4U+g1T12fI7dy2z6l8yXoe51vDxXGzr5hFfOT58o/9HZsfJD/9AfkU2A2y\n+Qi6bkW+/ImRnMTv8rjB/uyMkTJoYHp9ZoTjqUUnUvsFdrAvlrSv6Bq8yNXjqVKa\nbwIDAQAB\n-----END PUBLIC KEY-----",
+    "xsappname": "xs-f2b95149-88ba-4dd0-b876-c823d5ce787f!b205323|xsuaa-abapcp-prod-us10!b1841",
+    "zoneid": "7c4b99c5-7f9f-4cdf-b185-59ad62f4ff27"
+  },
+  "url": "https://f2b95149-88ba-4dd0-b876-c823d5ce787f.abap.us10.hana.ondemand.com"
+}
