@@ -29,7 +29,7 @@ After completing these steps you will have created a Service Consumption Model d
 7.	Navigate to the location where you saved the EDMX file eariler. 
 <br>![](/exercises/ex3/images/03_01_0070.png)
 
-8.	Change the name of the ABAP Artifact Name which had been generated for you. Name the object as ZA_BANKDETAILS_XXX where XXX is your group number.  Then click "Next".
+8.	Then click "Next".
 <br>![](/exercises/ex3/images/03_01_0080.png)
 
 9.	Once again, click "Next".
