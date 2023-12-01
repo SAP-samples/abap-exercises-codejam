@@ -167,7 +167,7 @@ CLASS zcl_scm_xxx IMPLEMENTATION.
                         i_destination = cl_http_destination_provider=>create_by_url( lv_url ) ).
 
         lo_http_client->get_http_request( )->set_header_fields( VALUE #(
-             (  name = 'APIKey' value = 'enter API key here') ) ).
+             (  name = 'APIKey' value = '<insert API key here>') ) ).
 
 
         " Create http client
