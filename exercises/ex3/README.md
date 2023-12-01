@@ -49,7 +49,7 @@ THIS EXERCISE IS BROKEN FROM HERE, CURRENTLY SHOWING ERROR CODE WHEN CLICKING FI
 
 13.	In the private section, add the following lines of code. Make sure to replace XXX with your group number.  We want to encapsulate the logic into a functional method call which contains a returning parameter for the list of bank details.
 ```abap
-    TYPES tt_za_bankdetails TYPE STANDARD TABLE OF za_bankdetails_xxx WITH EMPTY KEY.
+    TYPES tt_za_bankdetails TYPE STANDARD TABLE OF zscm_bank_details_xxx=>tys_a_bank_detail_type WITH EMPTY KEY.
     METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetails.
 ```
 <!---<br>![](/exercises/ex3/images/03_01_0130.png) --->
