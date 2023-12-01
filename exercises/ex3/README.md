@@ -77,9 +77,11 @@ THIS EXERCISE IS BROKEN FROM HERE, CURRENTLY SHOWING ERROR CODE WHEN CLICKING FI
 
 18. Next, modify the next statement where the client proxy object is created.  Update the service root parameter value as shown here. 
 ```abap
-        lo_client_proxy = cl_web_odata_client_factory=>create_v2_remote_proxy(
+        lo_client_proxy = /iwbep/cl_cp_factory_remote=>create_v2_remote_proxy(
           EXPORTING
-            iv_service_definition_name = 'ZSCM_BANK_DETAILS_XXX'
+             is_proxy_model_key       = VALUE #( repository_id       = 'DEFAULT'
+                                                 proxy_model_id      = 'ZSCM_BANK_DETAILS_XXX'
+                                                 proxy_model_version = '0001' )
             io_http_client             = lo_http_client
             iv_relative_service_root   = '/s4hanacloud/sap/opu/odata/sap/API_BANKDETAIL_SRV' ).
 ```
