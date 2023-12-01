@@ -35,6 +35,9 @@ After completing these steps you will have created a Service Consumption Model d
 9.	Once again, click "Next".
 <br>![](/exercises/ex3/images/03_01_0090.png)
 
+
+THIS EXERCISE IS BROKEN FROM HERE, CURRENTLY SHOWING ERROR CODE!
+
 10.	Now click "Finish".
 <br>![](/exercises/ex3/images/03_01_0100.png)
 
