@@ -128,74 +128,75 @@ CLASS zcl_scm_xxx DEFINITION
   PROTECTED SECTION.
   PRIVATE SECTION.
 
-    TYPES tt_za_bankdetails TYPE STANDARD TABLE OF za_bankdetails_xxx WITH EMPTY KEY.
+    TYPES tt_za_bankdetails TYPE STANDARD TABLE OF zscm_bank_details_xxx=>tys_a_bank_detail_type WITH EMPTY KEY.
     METHODS get_bank_details_scm RETURNING VALUE(rt_table) TYPE tt_za_bankdetails.
 
 ENDCLASS.
-
-
 
 CLASS zcl_scm_xxx IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.
 
-    out->write( get_bank_details_scm(  ) ).
+    out->write( get_bank_details_scm( ) ).
 
   ENDMETHOD.
 
   METHOD get_bank_details_scm.
 
-
     DATA:
-      lt_business_data TYPE TABLE OF za_bankdetails_xxx,
+      lt_business_data TYPE TABLE OF zscm_bank_details_xxx=>tys_a_bank_detail_type,
       lo_http_client   TYPE REF TO if_web_http_client,
       lo_client_proxy  TYPE REF TO /iwbep/if_cp_client_proxy,
       lo_request       TYPE REF TO /iwbep/if_cp_request_read_list,
       lo_response      TYPE REF TO /iwbep/if_cp_response_read_lst.
 
     DATA:
-      lo_filter_factory    TYPE REF TO /iwbep/if_cp_filter_factory,
-      lo_filter_node_1     TYPE REF TO /iwbep/if_cp_filter_node,
+      lo_filter_factory     TYPE REF TO /iwbep/if_cp_filter_factory,
+      lo_filter_node_1      TYPE REF TO /iwbep/if_cp_filter_node,
 * lo_filter_node_2    TYPE REF TO /iwbep/if_cp_filter_node,
-      lo_filter_node_root  TYPE REF TO /iwbep/if_cp_filter_node,
-      lt_range_BANKCOUNTRY TYPE RANGE OF za_bankdetails_xxx-BankCountry.
-* lt_range_BANKINTERNALID TYPE RANGE OF <element_name>.
+      lo_filter_node_root   TYPE REF TO /iwbep/if_cp_filter_node,
+      lt_range_BANK_COUNTRY TYPE RANGE OF zscm_bank_details_xxx=>tys_a_bank_detail_type-bank_country.
+* lt_range_BANK_INTERNAL_ID TYPE RANGE OF <element_name>.
+
 
 
     TRY.
-        " Create http client
-*DATA(lo_destination) = cl_http_destination_provider=>create_by_comm_arrangement(
-*                                             comm_scenario  = '<Comm Scenario>'
-*                                             comm_system_id = '<Comm System Id>'
-*                                             service_id     = '<Service Id>' ).
-*lo_http_client = cl_web_http_client_manager=>create_by_http_destination( lo_destination ).
 
         DATA: lv_url TYPE string VALUE 'https://sandbox.api.sap.com/'.
         lo_http_client = cl_web_http_client_manager=>create_by_http_destination(
                         i_destination = cl_http_destination_provider=>create_by_url( lv_url ) ).
 
         lo_http_client->get_http_request( )->set_header_fields( VALUE #(
-             (  name = 'APIKey' value = '<insert APi key here>') ) ).
+             (  name = 'APIKey' value = 'FZs2WGAO7g6zGIi72SEo0iHsf0c3TKu1') ) ).
 
-        lo_client_proxy = cl_web_odata_client_factory=>create_v2_remote_proxy(
+
+        " Create http client
+*DATA(lo_destination) = cl_http_destination_provider=>create_by_comm_arrangement(
+*                                             comm_scenario  = '<Comm Scenario>'
+*                                             comm_system_id = '<Comm System Id>'
+*                                             service_id     = '<Service Id>' ).
+*lo_http_client = cl_web_http_client_manager=>create_by_http_destination( lo_destination ).
+        lo_client_proxy = /iwbep/cl_cp_factory_remote=>create_v2_remote_proxy(
           EXPORTING
-            iv_service_definition_name = 'ZSCM_BANK_DETAILS_XXX'
+             is_proxy_model_key       = VALUE #( repository_id       = 'DEFAULT'
+                                                 proxy_model_id      = 'ZSCM_BANK_DETAILS_XXX'
+                                                 proxy_model_version = '0001' )
             io_http_client             = lo_http_client
             iv_relative_service_root   = '/s4hanacloud/sap/opu/odata/sap/API_BANKDETAIL_SRV' ).
 
+        ASSERT lo_http_client IS BOUND.
+
 
         " Navigate to the resource and create a request for the read operation
-        lo_request = lo_client_proxy->create_resource_for_entity_set( 'A_BANKDETAIL' )->create_request_for_read( ).
+        lo_request = lo_client_proxy->create_resource_for_entity_set( 'A_BANK_DETAIL' )->create_request_for_read( ).
 
         " Create the filter tree
         lo_filter_factory = lo_request->create_filter_factory( ).
-
-        lt_range_BANKCOUNTRY = VALUE #( ( sign = 'I' option = 'EQ' low = 'DE' high = ' ' ) ).
-
-        lo_filter_node_1  = lo_filter_factory->create_by_range( iv_property_path     = 'BANKCOUNTRY'
-                                                                it_range             = lt_range_BANKCOUNTRY ).
-*lo_filter_node_2  = lo_filter_factory->create_by_range( iv_property_path     = 'BANKINTERNALID'
-*                                                        it_range             = lt_range_BANKINTERNALID ).
+        lt_range_BANK_COUNTRY = VALUE #( ( sign = 'I' option = 'EQ' low = 'DE' high = ' ' ) ).
+        lo_filter_node_1  = lo_filter_factory->create_by_range( iv_property_path     = 'BANK_COUNTRY'
+                                                                it_range             = lt_range_BANK_COUNTRY ).
+*lo_filter_node_2  = lo_filter_factory->create_by_range( iv_property_path     = 'BANK_INTERNAL_ID'
+*                                                        it_range             = lt_range_BANK_INTERNAL_ID ).
 
         lo_filter_node_root = lo_filter_node_1.
         lo_request->set_filter( lo_filter_node_root ).
@@ -212,6 +213,11 @@ CLASS zcl_scm_xxx IMPLEMENTATION.
 
       CATCH /iwbep/cx_gateway INTO DATA(lx_gateway).
         " Handle Exception
+
+      CATCH cx_web_http_client_error INTO DATA(lx_web_http_client_error).
+        " Handle Exception
+        RAISE SHORTDUMP lx_web_http_client_error.
+
 
     ENDTRY.
 
