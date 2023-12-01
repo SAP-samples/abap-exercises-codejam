@@ -107,7 +107,7 @@ THIS EXERCISE IS BROKEN FROM HERE, CURRENTLY SHOWING ERROR CODE WHEN CLICKING FI
 
 25. Add the following line of code, in between the two statements that you have just uncommented.  Here we are simply filling the range table with a filter value. We want to filter the results where BANKCOUNTRY = DE.
 ```abap
-        lt_range_BANKCOUNTRY = VALUE #( ( sign = 'I' option = 'EQ' low = 'DE' high = ' ' ) ).
+        lt_range_BANK_COUNTRY = VALUE #( ( sign = 'I' option = 'EQ' low = 'DE' high = ' ' ) ).
 ```
 <!---<br>![](/exercises/ex3/images/03_01_0250.png)--->
 
