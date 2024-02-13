@@ -34,7 +34,7 @@ Here's an overview of the exercises in this CodeJam.
 - [Exercise 3 - Service Consumption Model](exercises/ex3/)
     - [Exercise 3.1 - Create a Service Consumption Model Definition for an OData Service](exercises/ex3#exercise-31-create-a-service-consumption-model-definition-for-an-odata-service)   <!--    - [Exercise 3.2 - IN PRROGESS](exercises/ex3#exercise-32-inprogress)  -->
 - [Exercise 4 - ABAP RESTFul Application Programming Model - Managed](https://developers.sap.com/group.abap-env-restful-managed.html)
-- [Exercise 5 - ABAP RESTFul Application Programming Model - Unmanaged](https://developers.sap.com/group.abap-env-cds.html)
+<!---- [Exercise 5 - ABAP RESTFul Application Programming Model - Unmanaged](https://developers.sap.com/group.abap-env-cds.html)  -->
 
 <!---
 - [Exercise 4 - ABAP RESTFul Application Programming Model - Managed](exercises/ex4/)
