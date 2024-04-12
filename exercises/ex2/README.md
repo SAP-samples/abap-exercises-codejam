@@ -36,7 +36,7 @@ After completing these steps you will have created an HTTP service along with it
     READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
     IF sy-subrc <> 0.
       response->set_status( i_code = 400
-                       i_reason = 'Bad request').
+                       i_reason = 'Bad request' ).
       RETURN.
     ENDIF.
     CASE lr_params->value.
@@ -47,7 +47,7 @@ After completing these steps you will have created an HTTP service along with it
                               | at { cl_abap_context_info=>get_system_time( ) TIME = ENVIRONMENT } | ).
 
       WHEN OTHERS.
-        response->set_status( i_code = 400 i_reason = 'Bad request').
+        response->set_status( i_code = 400 i_reason = 'Bad request' ).
     ENDCASE.
 ```
 
