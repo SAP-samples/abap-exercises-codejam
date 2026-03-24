@@ -5,19 +5,19 @@
 
 ## Description
 
-This repository contains the material for the SAP CodeJam topics covering: ABAP Cloud, SAP Business Technology Platform, ABAP Environment & ABAP RESTful Application Programming Model & Joule for developers. Prerequisites and recommendations for this CodeJam are documented in the [prerequisites](prerequisites.md) file.
+This repository contains the material for the SAP CodeJam topics covering: ABAP Cloud, SAP Business Technology Platform, ABAP Environment & ABAP RESTful Application Programming Model & Joule for developers. Prerequisites and recommendations for these CodeJams are documented in the [prerequisites](prerequisites.md) file.
 
 ### CodeJam overview
 
-These CodeJam topics introduces attendees to ABAP Cloud, the SAP Business Technology Platform ABAP Environment, aka Steampunk and the ABAP RESTful Application Programming Model. Learn how to use proven and new technologies, such as Core Data Services (CDS) and behavior definition and implementation languages, to build SAP Fiori apps and OData services with the SAP BTP, ABAP Environment. In this hands-on experience, developers will create their first ABAP applications in the SAP BTP, ABAP Environment, expose and consume services via HTTP, and explore the ABAP RESTful Application Programming Model, all while leverage Joule for developers.
+These CodeJam topics introduce attendees to ABAP Cloud, the SAP Business Technology Platform ABAP Environment, aka Steampunk and the ABAP RESTful Application Programming Model. Learn how to use proven and new technologies, such as Core Data Services (CDS) and behavior definition and implementation languages, to build SAP Fiori apps and OData services with the SAP BTP, ABAP Environment. In this hands-on experience, developers will create their first ABAP applications in the SAP BTP, ABAP Environment, expose and consume services via HTTP, and explore the ABAP RESTful Application Programming Model, all while leverage Joule for developers.
 
 ### Material organization
 
-The material consists of a series of exercises per each level.  Each level is meant to be a seperate CodeJam experience and each exercise is meant to be independent of each other so, attendees can potential pick and choose which exercise to work on.  
+The material consists of a series of exercises per topic focus.  Each is meant to be a seperate CodeJam experience and each exercise is meant to be independent of each other so, attendees can potential pick and choose which exercise to work on, but we will focus usually on one for the day.  
 
 ### The Exercises
 
-Here's an overview of the exercises for all versions of SAP CodeJam ABAP.  Depending on the specific topic of the day, the instructer will inform you which exercise level we will focus on.  
+Here's an overview of the exercises for all versions of SAP CodeJam ABAP.  Depending on the specific topic of the day, the instructer will inform you which exercise to work from below.  
 
 ### ABAP Cloud: The Basics
 
