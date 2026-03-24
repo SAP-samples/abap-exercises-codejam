@@ -20,9 +20,11 @@ During the CodeJam you will complete each exercise one at a time. At the end of 
 If you finish an exercise early, please resist the temptation to continue with the next one. Instead, explore what you've just done and see if you can find out more about the subject that was covered. That way we all stay on track together and can benefit from some reflection via the questions (and answers).
 -->
 
-### The exercises
+### The Exercises
 
-Here's an overview of the exercises in this CodeJam.
+Here's an overview of the exercises in this CodeJam.  Depending on the specific topic of the day, the instructer will inform you which exercise level we will focus on.  
+
+### ABAP Cloud: The Basics
 
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Creating your first ABAP classes](exercises/ex1/)
@@ -33,7 +35,15 @@ Here's an overview of the exercises in this CodeJam.
     - [Exercise 2.2 - Consume an external HTTP service in ABAP](exercises/ex2#exercise-22-consume-an-external-http-service-in-abap)
 - [Exercise 3 - Service Consumption Model](exercises/ex3/)
     - [Exercise 3.1 - Create a Service Consumption Model Definition for an OData Service](exercises/ex3#exercise-31-create-a-service-consumption-model-definition-for-an-odata-service)   <!--    - [Exercise 3.2 - IN PRROGESS](exercises/ex3#exercise-32-inprogress)  -->
-- [Exercise 4 - Build Fiori Apps with the ABAP RESTful Application Programming Model (RAP)](https://github.com/SAP-samples/abap-platform-rap100)  
+
+### ABAP RESTful Application Programming Model
+
+- [Exercise 1 - Build Fiori Apps with the ABAP RESTful Application Programming Model (RAP)](https://github.com/SAP-samples/abap-platform-rap100)  
+
+### ABAP Cloud and SAP Joule for developers
+
+- [Exercise 1 - Build SAP Fiori Apps with ABAP Cloud and SAP Joule for developers](https://github.com/SAP-samples/abap-platform-rap120)  
+
 
 <!---
 ### Feedback
