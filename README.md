@@ -1,4 +1,4 @@
-# SAP CodeJam ABAP Cloud
+# SAP CodeJam: ABAP Cloud
 
 ## ABAP Cloud, SAP Business Technology Platform, ABAP Environment, ABAP RESTful Application Programming Model, & Joule for developers
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-exercises-codejam)](https://api.reuse.software/info/github.com/SAP-samples/abap-exercises-codejam)
