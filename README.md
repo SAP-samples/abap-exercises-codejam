@@ -1,4 +1,6 @@
-# CodeJam Topics Covered - ABAP Cloud, SAP Business Technology Platform, ABAP Environment & ABAP RESTful Application Programming Model, & Joule for developers
+# SAP CodeJam ABAP Cloud
+
+## ABAP Cloud, SAP Business Technology Platform, ABAP Environment, ABAP RESTful Application Programming Model, & Joule for developers
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-exercises-codejam)](https://api.reuse.software/info/github.com/SAP-samples/abap-exercises-codejam)
 
 ## Description
@@ -15,7 +17,7 @@ The material consists of a series of exercises per each level.  Each level is me
 
 ### The Exercises
 
-Here's an overview of the exercises in this CodeJam.  Depending on the specific topic of the day, the instructer will inform you which exercise level we will focus on.  
+Here's an overview of the exercises for all versions of SAP CodeJam ABAP.  Depending on the specific topic of the day, the instructer will inform you which exercise level we will focus on.  
 
 ### ABAP Cloud: The Basics
 
@@ -27,15 +29,15 @@ Here's an overview of the exercises in this CodeJam.  Depending on the specific 
     - [Exercise 2.1 - Expose an HTTP serivce in ABAP](exercises/ex2#exercise-21-expose-an-http-service-in-abap)
     - [Exercise 2.2 - Consume an external HTTP service in ABAP](exercises/ex2#exercise-22-consume-an-external-http-service-in-abap)
 - [Exercise 3 - Service Consumption Model](exercises/ex3/)
-    - [Exercise 3.1 - Create a Service Consumption Model Definition for an OData Service](exercises/ex3#exercise-31-create-a-service-consumption-model-definition-for-an-odata-service)   <!--    - [Exercise 3.2 - IN PRROGESS](exercises/ex3#exercise-32-inprogress)  -->
+    - [Exercise 3.1 - Create a Service Consumption Model Definition for an OData Service](exercises/ex3#exercise-31-create-a-service-consumption-model-definition-for-an-odata-service)  
 
 ### ABAP RESTful Application Programming Model
 
-- [Exercise 1 - Build Fiori Apps with the ABAP RESTful Application Programming Model (RAP)](https://github.com/SAP-samples/abap-platform-rap100)  
+- [RAP100 - Build Fiori Apps with the ABAP RESTful Application Programming Model (RAP)](https://github.com/SAP-samples/abap-platform-rap100)  
 
 ### ABAP Cloud and SAP Joule for developers
 
-- [Exercise 1 - Build SAP Fiori Apps with ABAP Cloud and SAP Joule for developers](https://github.com/SAP-samples/abap-platform-rap120)  
+- [RAP120 - Build SAP Fiori Apps with ABAP Cloud and SAP Joule for developers](https://github.com/SAP-samples/abap-platform-rap120)  
 
 
 <!---
