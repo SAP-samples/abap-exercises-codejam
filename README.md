@@ -1,24 +1,17 @@
-# CodeJam - ABAP Cloud, SAP Business Technology Platform, ABAP Environment & ABAP RESTful Application Programming Model
+# CodeJam Topics Covered - ABAP Cloud, SAP Business Technology Platform, ABAP Environment & ABAP RESTful Application Programming Model, & Joule for developers
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-exercises-codejam)](https://api.reuse.software/info/github.com/SAP-samples/abap-exercises-codejam)
 
 ## Description
 
-This repository contains the material for the CodeJam on ABAP Cloud, SAP Business Technology Platform, ABAP Environment & ABAP RESTful Application Programming Model. Prerequisites and recommendations for this CodeJam are documented in the [prerequisites](prerequisites.md) file.
+This repository contains the material for the SAP CodeJam topics covering: ABAP Cloud, SAP Business Technology Platform, ABAP Environment & ABAP RESTful Application Programming Model & Joule for developers. Prerequisites and recommendations for this CodeJam are documented in the [prerequisites](prerequisites.md) file.
 
 ### CodeJam overview
 
-This CodeJam introduces attendees to ABAP Cloud, the SAP Business Technology Platform ABAP Environment, aka Steampunk and the ABAP RESTful Application Programming Model. Learn how to use proven and new technologies, such as Core Data Services (CDS) and behavior definition and implementation languages, to build SAP Fiori apps and OData services with the SAP BTP, ABAP Environment. In this hands-on experience, developers will create their first ABAP applications in the SAP BTP, ABAP Environment, expose and consume services via HTTP, and explore the ABAP RESTful Application Programming Model.
+These CodeJam topics introduces attendees to ABAP Cloud, the SAP Business Technology Platform ABAP Environment, aka Steampunk and the ABAP RESTful Application Programming Model. Learn how to use proven and new technologies, such as Core Data Services (CDS) and behavior definition and implementation languages, to build SAP Fiori apps and OData services with the SAP BTP, ABAP Environment. In this hands-on experience, developers will create their first ABAP applications in the SAP BTP, ABAP Environment, expose and consume services via HTTP, and explore the ABAP RESTful Application Programming Model, all while leverage Joule for developers.
 
 ### Material organization
 
-The material consists of a series of exercises. Each exercise is meant to be independent of each other so, attendees can potential pick and choose which exercise to work on.  Each exercise is contained in a directory, with a main 'readme' file containing the core exercise instructions, with optional supporting files, such as screenshots and sample files.
-
-<!---### Following the exercises
-
-During the CodeJam you will complete each exercise one at a time. At the end of each exercise there are questions; these are designed to help you think about the content just covered, and are to be discussed with the entire CodeJam class, led by the instructor, when everyone has finished that exercise.
-
-If you finish an exercise early, please resist the temptation to continue with the next one. Instead, explore what you've just done and see if you can find out more about the subject that was covered. That way we all stay on track together and can benefit from some reflection via the questions (and answers).
--->
+The material consists of a series of exercises per each level.  Each level is meant to be a seperate CodeJam experience and each exercise is meant to be independent of each other so, attendees can potential pick and choose which exercise to work on.  
 
 ### The Exercises
 
