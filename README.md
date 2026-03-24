@@ -1,6 +1,6 @@
 # SAP CodeJam: ABAP Cloud
 
-## ABAP Cloud, SAP Business Technology Platform, ABAP Environment, ABAP RESTful Application Programming Model, & Joule for developers
+## ABAP Cloud, SAP Business Technology Platform, ABAP Environment, ABAP RESTful Application Programming Model, & SAP Joule for developers
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-exercises-codejam)](https://api.reuse.software/info/github.com/SAP-samples/abap-exercises-codejam)
 
 ## Description
@@ -9,7 +9,7 @@ This repository contains the material for the SAP CodeJam topics covering: ABAP 
 
 ### CodeJam overview
 
-These CodeJam topics introduce attendees to ABAP Cloud, the SAP Business Technology Platform ABAP Environment, aka Steampunk and the ABAP RESTful Application Programming Model. Learn how to use proven and new technologies, such as Core Data Services (CDS) and behavior definition and implementation languages, to build SAP Fiori apps and OData services with the SAP BTP, ABAP Environment. In this hands-on experience, developers will create their first ABAP applications in the SAP BTP, ABAP Environment, expose and consume services via HTTP, and explore the ABAP RESTful Application Programming Model, all while leverage Joule for developers.
+These CodeJam topics introduce attendees to ABAP Cloud, the SAP Business Technology Platform ABAP Environment, aka Steampunk and the ABAP RESTful Application Programming Model. Learn how to use proven and new technologies, such as Core Data Services (CDS) and behavior definition and implementation languages, to build SAP Fiori apps and OData services with the SAP BTP, ABAP Environment. In this hands-on experience, developers will create their first ABAP applications in the SAP BTP, ABAP Environment, expose and consume services via HTTP, and explore the ABAP RESTful Application Programming Model, all while leveraging SAP Joule for developers.
 
 ### Material organization
 
