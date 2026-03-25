@@ -1,6 +1,6 @@
 # Exercise 2 - Exposing and Consuming Services via HTTP
 
-In this exercise, we will create an HTTP serivce and custom ABAP HTTP handler class.  We will then consume an external HTTP service as well by leveraging the SAP API Hub.   You can view APIs of the SAP API Hub at the following URL.
+In this exercise, we will create an HTTP service and custom ABAP HTTP handler class.  We will then consume an external HTTP service as well by leveraging the SAP API Hub.   You can view APIs of the SAP API Hub at the following URL.
 
 https://api.sap.com/package/SAPS4HANACloud/all
 
